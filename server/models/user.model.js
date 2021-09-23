@@ -3,11 +3,11 @@ const mongoose = require('./index');
 const Schema = mongoose.Schema;
 
 const userModel = new Schema({
-  first_name: {
+  firstName: {
     type: String,
     required: true
   },
-  last_name: {
+  lastName: {
     type: String,
     required: true
   },
@@ -23,4 +23,4 @@ const userModel = new Schema({
 
 const User = mongoose.model('User', userModel);
 
-module.export = User;
+module.exports = User;

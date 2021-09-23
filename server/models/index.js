@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost:27017/founditdatabase',
   },
   () => {
     console.log('Connected to mongoose server');
+    // mongoose.connection.db.dropDatabase();
   });
 
 module.exports = mongoose;
