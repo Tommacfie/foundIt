@@ -1,4 +1,5 @@
 const User = require('../models/user.model');
+const bcrypt = require('bcrypt');
 
 exports.loginUser = async (req, res) => {
   try {
@@ -9,7 +10,14 @@ exports.loginUser = async (req, res) => {
 };
 
 exports.createUser = async (req, res) => {
+
   try {
+    if (await User.findOne({ email: req.body.email })) {
+      return res.send('User already exists').status(400);
+    };
+
+    req.body.password = await bcrypt.hash(req.body.password, 10);
+
     const newUser = await User.create(req.body);
     res.send(newUser);
     res.status(201);
