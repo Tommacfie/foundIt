@@ -1,15 +1,16 @@
 const router = require('express').Router();
 const itemController = require('./controllers/item.controller');
 const userController = require('./controllers/user.controller');
-const authenticate = require('./middlewares/auth');
+const auth = require('./middlewares/auth');
 
-router.post('/login', authenticate);
+
+router.post('/login', auth.authenticate);
 router.post('/register', userController.createUser);
-router.get('/items', itemController.getItems);
-router.post('/items', itemController.postItem);
-router.delete('/items', itemController.deleteItem);
+router.get('/items', auth.authorise, itemController.getItems);
+router.post('/items', auth.authorise, itemController.postItem);
+router.delete('/items', auth.authorise, itemController.deleteItem);
 
 // DELETEME
-router.get('/get', userController.getUser);
+router.get('/get', auth.authorise, userController.getUser);
 
 module.exports = router;

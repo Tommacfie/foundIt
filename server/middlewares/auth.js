@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 const accessTokenSecret = 'theSecretAccessToken';
 
-const authenticate = async (req, res, next) => {
+exports.authenticate = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
     if (user) {
@@ -15,8 +15,8 @@ const authenticate = async (req, res, next) => {
         res.status(200);
         next();
       } else {
-        res.send('Invalid Password');
         res.status(401);
+        res.send('Invalid Password');
       }
     } else {
       res.status(404);
@@ -28,4 +28,24 @@ const authenticate = async (req, res, next) => {
   }
 };
 
-module.exports = authenticate;
+exports.authorise = async (req, res, next) => {
+  try {
+    const authHeader = req.headers.authorization;
+    if (authHeader) {
+      const token = authHeader.split(' ')[1];
+
+      jwt.verify(token, accessTokenSecret, (error, user) => {
+        if (error) {
+          return res.status(403).send('Invalid token');
+        }
+        req.user = user;
+        next();
+      });
+    } else {
+      res.status(401).send('Unauthorised acces');
+    }
+  } catch (error) {
+    res.send(error)
+    res.status(500);
+  }
+};
