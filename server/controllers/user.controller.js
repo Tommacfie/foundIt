@@ -2,28 +2,30 @@ const User = require('../models/user.model');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-exports.loginUser = async (req, res) => {
-  console.log('controller LOGIN'); //DELETEME
-  try {
-    const { email, password } = req.body;
+//DELETEME
+// exports.loginUser = async (req, res) => {
+//   console.log(req.headers, 'controller LOGIN'); //DELETEME
+//   try {
+//     const { email, password } = req.body;
 
-    const user = await User.findOne({ email: email });
+//     const user = await User.findOne({ email: email });
 
-    if (user) {
-      if (await bcrypt.compare(password, user.password)) {
-        return res.send('LOGIN SUCCESS').status(200);
-      } else {
-        return res.send('INCORRECT PASSWORD').status(401);
-      }
-    } else {
-      return res.send('USER DOESNT EXIST').status(400);
-    };
+//     if (user) {
+//       if (await bcrypt.compare(password, user.password)) {
+//         return res.send('LOGIN SUCCESS').status(200);
+//       } else {
+//         return res.send('INCORRECT PASSWORD').status(401);
+//       }
+//     } else {
+//       return res.send('USER DOESNT EXIST').status(400);
+//     };
 
-  } catch (error) {
-    res.send(error);
-    res.status(500);
-  }
-};
+//   } catch (error) {
+//     console.log(error);
+//     res.send(error);
+//     res.status(500);
+//   }
+// };
 
 exports.createUser = async (req, res) => {
   try {

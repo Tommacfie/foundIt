@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-// const dataBase = process.env.DATABASE;
+// const dataBase = process.env.DATABASE; //FIXME
 
 mongoose.connect('mongodb://localhost:27017/founditdatabase',
   {
