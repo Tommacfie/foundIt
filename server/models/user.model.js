@@ -1,6 +1,6 @@
 const mongoose = require('./index');
 
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const userModel = new Schema({
   first_name: {

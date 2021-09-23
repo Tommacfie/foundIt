@@ -1,6 +1,6 @@
 const mongoose = require('./index');
 
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const itemModel = new Schema({
   title: {
