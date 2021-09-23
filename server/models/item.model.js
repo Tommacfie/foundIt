@@ -20,15 +20,15 @@ const itemModel = new Schema({
     required: false,
     default: 'No image provided'
   },
-  whereFound: {
+  whereFoundOrLost: {
     type: String,
     required: true,
   },
-  lostFound: {
+  lostOrFound: {
     type: Boolean,
     required: true,
   },
-  submitted_by: {
+  submittedBy: {
     type: String,
     required: true
   }
