@@ -3,20 +3,36 @@ const bcrypt = require('bcrypt');
 
 exports.loginUser = async (req, res) => {
   try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email: email });
+
+    if (user) {
+      if (await bcrypt.compare(password, user.password)) {
+        return res.send('LOGIN').status(200);
+      } else {
+        return res.send('WRONG PASS').status(400);
+      }
+    } else {
+      return res.send('USER DOESNT EXIST').status(400);
+    }
 
   } catch (error) {
-
+    res.send(error);
+    res.status(500);
   }
 };
 
 exports.createUser = async (req, res) => {
 
   try {
-    if (await User.findOne({ email: req.body.email })) {
+    const email = req.body.email;
+    if (await User.findOne({ email: email })) {
       return res.send('User already exists').status(400);
     };
 
-    req.body.password = await bcrypt.hash(req.body.password, 10);
+    let password = req.body.password;
+    req.body.password = await bcrypt.hash(password, 10);
 
     const newUser = await User.create(req.body);
     res.send(newUser);
@@ -36,3 +52,28 @@ exports.getUser = async (req, res) => {
     res.status(500);
   }
 };
+
+// {
+//   "firstName": "Tom",
+//     "lastName": "Macfie",
+//       "email": "tom@macfie.com",
+//         "password": "ajax"
+// }
+// {
+//   "firstName": "Pat",
+//     "lastName": "Smela",
+//       "email": "pat@smela.com",
+//         "password": "neko"
+// }
+// {
+//   "firstName": "Kasia",
+//     "lastName": "Kowalska",
+//       "email": "kasia@kowalska.com",
+//         "password": "bazy"
+// }
+// {
+//     "firstName": "Kamil",
+//       "lastName": "Smela",
+//         "email": "kamil@smela.com",
+//           "password": "neko"
+// }
