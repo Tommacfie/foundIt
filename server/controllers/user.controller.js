@@ -1,7 +1,9 @@
 const User = require('../models/user.model');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 exports.loginUser = async (req, res) => {
+  console.log('controller LOGIN'); //DELETEME
   try {
     const { email, password } = req.body;
 
@@ -9,13 +11,13 @@ exports.loginUser = async (req, res) => {
 
     if (user) {
       if (await bcrypt.compare(password, user.password)) {
-        return res.send('LOGIN').status(200);
+        return res.send('LOGIN SUCCESS').status(200);
       } else {
-        return res.send('WRONG PASS').status(400);
+        return res.send('INCORRECT PASSWORD').status(401);
       }
     } else {
       return res.send('USER DOESNT EXIST').status(400);
-    }
+    };
 
   } catch (error) {
     res.send(error);
@@ -24,7 +26,6 @@ exports.loginUser = async (req, res) => {
 };
 
 exports.createUser = async (req, res) => {
-
   try {
     const email = req.body.email;
     if (await User.findOne({ email: email })) {
@@ -53,6 +54,7 @@ exports.getUser = async (req, res) => {
   }
 };
 
+//DELETEME
 // {
 //   "firstName": "Tom",
 //     "lastName": "Macfie",
