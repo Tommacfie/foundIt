@@ -2,9 +2,7 @@ const Item = require('../models/item.model');
 
 exports.getItems = async (req, res) => {
   try {
-    // console.log(req.body, 'items GET');
     const items = await Item.find();
-    // console.log(items, 'items GET');
     res.send(items);
     res.status(200);
   } catch (error) {
@@ -15,11 +13,9 @@ exports.getItems = async (req, res) => {
 
 exports.postItem = async (req, res) => {
   try {
-    console.log(req.body, 'items POST');
-    const { title, description, brandModel, image, whereFoundOrLost, lostOrFound, submittedBy } = req.body;
-    const postItem = await Item.create(req.body);
-    console.log(postItem, 'post');
-
+    const item = await Item.create(req.body);
+    res.send(item);
+    res.status(201);
   } catch (error) {
     res.send(error);
     res.status(500);
@@ -28,8 +24,10 @@ exports.postItem = async (req, res) => {
 
 exports.deleteItem = async (req, res) => {
   try {
-    console.log(req.body, 'items DELETE');
-
+    const itemId = req.body._id;
+    const item = await Item.findByIdAndDelete({ _id: itemId });
+    res.send(item);
+    res.status(204);
   } catch (error) {
     res.send(error);
     res.status(500);
