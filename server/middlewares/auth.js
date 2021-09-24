@@ -13,7 +13,8 @@ exports.authenticate = async (req, res, next) => {
       if (validatePassword) {
         const accessToken = jwt.sign(
           { userId: user._id }, accessTokenString,
-          { expiresIn: '5m' });
+          // { expiresIn: '5min' }
+        );
         const refreshToken = jwt.sign({ userId: user._id }, accessTokenStringRefresh);
 
         refreshTokens.push(refreshToken);
