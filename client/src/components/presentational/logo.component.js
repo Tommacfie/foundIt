@@ -1,9 +1,10 @@
 import React from 'react';
+import './logo.component.css';
 
 const Logo = () => {
 
   return (
-    <h1>FoundIt</h1>
+    <h1 id='logo'>FoundIt</h1>
   )
 };
 

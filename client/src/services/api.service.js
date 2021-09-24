@@ -1,11 +1,10 @@
-import React from 'react';
 import Config from '../config';
 const Api = {};
 
-const login = async (email, password) => {
-
-}
-const register = async () => { }
+//FIXME
+// const login = async (email, password) => {
+// }
+// const register = async () => { }
 
 Api.getItems = async () => {
   const response = await fetch(`${Config.server}/items`, {
