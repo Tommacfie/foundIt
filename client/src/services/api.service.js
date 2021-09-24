@@ -1,8 +1,10 @@
-import React from 'react-native';
+import React from 'react';
 import Config from '../config';
 const Api = {};
 
-const login = async () => { }
+const login = async (email, password) => {
+
+}
 const register = async () => { }
 
 Api.getItems = async () => {

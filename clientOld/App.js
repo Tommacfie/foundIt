@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Api from './services/api.service';
 import { useEffect, useState } from 'react';
+import Header from './components/presentational/header.component';
 
 
 const item = {
@@ -27,10 +28,7 @@ export default function App () {
 
   return (
     <View style={styles.container}>
-      {items.map(item => {
-        return <Text>{item.title}</Text>
-      })}
-      <Text>Open up App.js to start working on your app!</Text>
+      <Header />
       <StatusBar style="auto" />
     </View>
   );
