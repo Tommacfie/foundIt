@@ -4,6 +4,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import Api from './services/api.service';
 import { useEffect, useState } from 'react';
 
+
+const item = {
+  title: "Shoe",
+  description: "Red leather",
+  brandModel: 'Reebok',
+  image: "www.shoes.com",
+  whereFoundOrLost: "Gym",
+  lostOrFound: true,
+  submittedBy: "Me"
+}
+
 export default function App () {
   const [items, setItems] = useState([]);
 
