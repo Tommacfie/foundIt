@@ -22,17 +22,9 @@ const App = () => {
     })();
   }, []);
 
-
-  const userAuth = false;
-  // if (!userAuth) {
-  //   return (
-  //     <LoginScreen />
-  //   )
-  // }
-
   return (
     <Router>
-      {!userAuth &&
+      {isAuthorised &&
         <div>
           <Switch>
             <LoginScreen />

@@ -10,12 +10,21 @@ Api.login = async (email, password) => {
     body: JSON.stringify({ email, password })
   });
   const loginSuccess = await response.json();
-  console.log('LOGIN', loginSuccess);
   return loginSuccess;
 }
 
-//FIXME
-// const register = async () => { }
+
+Api.register = async (email, password, firstName, lastName) => {
+  const response = await fetch(`${Config.server}/register`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({ email, password, firstName, lastName })
+  });
+  const newUser = await response.json();
+  return newUser
+}
 
 Api.getItems = async () => {
   const response = await fetch(`${Config.server}/items`, {
