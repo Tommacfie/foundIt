@@ -5,7 +5,7 @@ import './main.screen.css';
 
 const HomeScreen = () => {
   const [items, setItems] = useState([]);
-  console.log(items);
+
   useEffect(() => {
     (async () => {
       const items = await Api.getItems();

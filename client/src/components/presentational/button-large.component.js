@@ -1,7 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const ButtonLarge = (props) => {
 
   return (
-    <div>{props.text}</div>
+    <div>
+      <Link to={`${props.link}`}>{props.text}</Link>
+
+    </div>
   )
 }
 

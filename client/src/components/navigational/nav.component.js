@@ -10,10 +10,10 @@ const NavBar = () => {
         <Link to='/home'>H</Link>
       </div>
       <div className='button add-button-container'>
-        <Link to='/create'>H</Link>
+        <Link to='/create'>+</Link>
       </div>
       <div className='button profile-button-container'>
-        <Link to='/profile'>H</Link>
+        <Link to='/profile'>P</Link>
       </div>
     </div>
   )

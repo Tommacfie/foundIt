@@ -2,31 +2,6 @@ const User = require('../models/user.model');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-//DELETEME
-// exports.loginUser = async (req, res) => {
-//   console.log(req.headers, 'controller LOGIN'); //DELETEME
-//   try {
-//     const { email, password } = req.body;
-
-//     const user = await User.findOne({ email: email });
-
-//     if (user) {
-//       if (await bcrypt.compare(password, user.password)) {
-//         return res.send('LOGIN SUCCESS').status(200);
-//       } else {
-//         return res.send('INCORRECT PASSWORD').status(401);
-//       }
-//     } else {
-//       return res.send('USER DOESNT EXIST').status(400);
-//     };
-
-//   } catch (error) {
-//     console.log(error);
-//     res.send(error);
-//     res.status(500);
-//   }
-// };
-
 exports.createUser = async (req, res) => {
   try {
     const email = req.body.email;
@@ -55,29 +30,3 @@ exports.getUser = async (req, res) => {
     res.status(500);
   }
 };
-
-//DELETEME
-// {
-//   "firstName": "Tom",
-//     "lastName": "Macfie",
-//       "email": "tom@macfie.com",
-//         "password": "ajax"
-// }
-// {
-//   "firstName": "Pat",
-//     "lastName": "Smela",
-//       "email": "pat@smela.com",
-//         "password": "neko"
-// }
-// {
-//   "firstName": "Kasia",
-//     "lastName": "Kowalska",
-//       "email": "kasia@kowalska.com",
-//         "password": "bazy"
-// }
-// {
-//     "firstName": "Kamil",
-//       "lastName": "Smela",
-//         "email": "kamil@smela.com",
-//           "password": "neko"
-// }
