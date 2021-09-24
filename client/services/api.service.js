@@ -1,26 +1,26 @@
 import React from 'react-native';
-import server from '../config';
-
+import Config from '../config';
 const Api = {};
 
 const login = async () => { }
 const register = async () => { }
 
 Api.getItems = async () => {
-  const items = await fetch(`${server}/items`, {
+  const response = await fetch(`${Config.server}/items`, {
     headers: {
-      authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRjYTdhZDc5NjI5NTA3YThiNjMwM2YiLCJpYXQiOjE2MzI0OTEwOTJ9.1QBvUMfsnjB4osRo2ixJmH0vPxoVW_N25ZDW17iqPBA'
+      authorization: Config.token
     }
   })
-  return items.json();
+  const items = await response.json();
+  return items;
 };
 
 Api.postItem = async (item) => {
-  const response = await fetch(`${server}/items`, {
+  const response = await fetch(`${Config.server}/items`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRjYTdhZDc5NjI5NTA3YThiNjMwM2YiLCJpYXQiOjE2MzI0OTEwOTJ9.1QBvUMfsnjB4osRo2ixJmH0vPxoVW_N25ZDW17iqPBA'
+      authorization: Config.token
     },
     body: JSON.stringify(item)
   })
@@ -29,11 +29,11 @@ Api.postItem = async (item) => {
 };
 
 Api.deleteItem = async (id) => {
-  const response = await fetch(`${server}/items`, {
+  const response = await fetch(`${Config.server}/items`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',
-      authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRjYTdhZDc5NjI5NTA3YThiNjMwM2YiLCJpYXQiOjE2MzI0OTEwOTJ9.1QBvUMfsnjB4osRo2ixJmH0vPxoVW_N25ZDW17iqPBA'
+      authorization: Config.token
     },
     body: JSON.stringify({ _id: id })
   })
