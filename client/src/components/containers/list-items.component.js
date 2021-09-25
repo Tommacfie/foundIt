@@ -1,13 +1,13 @@
 import Item from '../containers/item.component';
 
-
 const ItemsList = (props) => {
-  console.log(props);
+
+  console.log(props.data);
   return (
     <div>
       {
-        props.data.items.map(item => {
-          return <Item data={item} />
+        props.data.map(item => {
+          return <Item data={item} key={item._id} />
         })
       }
     </div>

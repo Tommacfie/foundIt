@@ -1,5 +1,10 @@
-.items-detail-display {
+.item-details-display {
+  width: 80vw;
+  height: 60vh;
+  padding: 4vh;
 display: flex;
 flex-direction: column;
-
+flex-wrap: nowrap;
+align-items: center;
+background-color: tomato;
 }

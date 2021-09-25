@@ -1,4 +1,4 @@
 .image-small {
-  width: 5vw;
-  height: 5vh
-}
+max-height: 8vh;
+max-width: 15vw;
+};

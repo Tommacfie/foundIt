@@ -20,7 +20,7 @@ const itemModel = new Schema({
     required: false,
     default: 'No image provided',
   },
-  whereFoundOrLost: {
+  location: {
     type: String,
     required: true,
   },

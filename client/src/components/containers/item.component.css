@@ -1,6 +1,23 @@
+.item {
+  margin-top: 2vh;
+  width: 75vw;
+  height: 10vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: left;
+}
 .item-image {
-
+width: 20vw;
+justify-self: center;
+align-self: center;
 }
 .item-text {
+display: flex;
+flex-direction: column;
+align-items: right;
+font-size: 10px;
+}
 
+* {
+  margin: 0;
 }

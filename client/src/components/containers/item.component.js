@@ -1,15 +1,15 @@
 import ImageSmall from '../presentational/image-small.component';
+import './item.component.css';
 
 const Item = (props) => {
   return (
     <div className='item'>
-      <h1>ITEM</h1>
       <div className='item-image'>
         <ImageSmall image={props.image} />
       </div>
       <div className='item-text'>
-        <h1>{props.title} {props.location}</h1>
-        <p>{props.description}</p>
+        <h3>{props.data.title} - {props.data.location}</h3>
+        <p>{props.data.description}</p>
       </div>
     </div>
   )

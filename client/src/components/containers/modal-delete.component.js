@@ -1,10 +1,12 @@
+import './modal-delete.component.css';
 import ButtonStd from '../presentational/button-std.component';
-const DeleteModal = (props) => {
+
+const ModalDelete = (props) => {
   return (
     <div className='modal-delete-component'>
-      <ButtonStd text={Yes} />
-      <ButtonStd text={No} />
+      <ButtonStd text={'Yes'} />
+      <ButtonStd text={'No'} />
     </div>
   )
 }
-export default DeleteModal;
+export default ModalDelete;

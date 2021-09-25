@@ -31,13 +31,9 @@ const App = () => {
         <Switch>
           <Route path='/login' exact component={LoginScreen} />
           <Route path='/register' exact component={RegisterScreen} />
-          {isAuthorised &&
-            <Route path="/home" exact component={HomeScreen} />
-          }
+          <Route path="/home" exact component={HomeScreen} />
           <Route path="/create" exact component={CreateItem} />
           <Route path="/profile" exact component={ProfileView} />
-
-
         </Switch>
         <NavBar />
       </div>
