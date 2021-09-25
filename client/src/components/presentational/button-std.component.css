@@ -1,3 +1,5 @@
 .button-std {
-
+border: 1px solid black;
+border-radius: 5px;
+box-shadow: 1px 1px 5px -2px black;
 }

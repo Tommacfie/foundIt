@@ -7,7 +7,6 @@ const RegisterScreen = () => {
   return (
     <div className='register-container'>
       <RegisterFormComponent />
-      <ButtonLarge text={'Register'} />
     </div>
   )
 };

@@ -6,15 +6,15 @@ import ItemDetailsDisplay from "../components/containers/item-details-display.co
 import ModalDelete from "../components/containers/modal-delete.component";
 import './main.screen.css';
 
-const HomeScreen = () => {
-  const [items, setItems] = useState([]);
+const HomeScreen = (props) => {
+  // const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      const items = await Api.getItems();
-      setItems(items);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const items = await Api.getItems();
+  //     setItems(items);
+  //   })();
+  // }, []);
 
   //DELETEME
   const item = {
@@ -27,12 +27,17 @@ const HomeScreen = () => {
     title: "Wedding Ring",
     _id: "614f0bcb36dc72798845b6e3"
   }
+  const isAuthorised = props.auth;
 
   return (
-    // <ItemsList data={items} />
-    // <ItemDetailsDisplay data={item} />
-    <ModalDelete />
+    <div>
+      {
+        !isAuthorised
+          ? <h1>Unauth</h1>
+          : <ItemsList data={props.data} />
 
+      }
+    </div>
   )
 };
 
