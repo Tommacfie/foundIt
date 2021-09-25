@@ -1,3 +1,10 @@
 .button-lrg {
-
+height: 10vh;
+width: 60vw;
+border: 1px solid black;
+border-radius: 15px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }

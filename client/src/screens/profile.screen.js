@@ -11,12 +11,10 @@ const ProfileView = (props) => {
         !isAuthorised
           ? <Redirect to='login' />
           :
-          <div>
-            <h3>Your Items</h3>
+          <div className='profile-screen'>
+            <h3 className='profile-header'>Your Items</h3>
             <ItemsList data={props.data} />
           </div>
-        // <ItemDetailsDisplay data={item} />
-        // <ModalDelete />
       }
     </div>
   )

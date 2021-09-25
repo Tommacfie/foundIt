@@ -15,7 +15,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className='button add-button-container'>
-        <Link to='/create'>
+        <Link to='/action'>
           <CreateIcon />
         </Link>
       </div>
