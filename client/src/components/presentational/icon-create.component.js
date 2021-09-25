@@ -4,7 +4,7 @@ import create from '../../assets/create.png';
 const CreateIcon = () => {
   return (
     <div>
-      <img src={create} className='create-icon'></img>
+      <img src={create} className='create-icon' alt='add-sign'></img>
     </div>
   )
 }

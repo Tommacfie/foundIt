@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Api from '../../services/api.service';
 
 const LoginForm = () => {
@@ -15,7 +15,7 @@ const LoginForm = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const log = await Api.login(userData);
+    // const log = await Api.login(userData);
     localStorage.setItem('isAuthenticated', 'true');
     window.location.pathname = '/home';
   };

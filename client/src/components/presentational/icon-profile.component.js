@@ -4,7 +4,7 @@ import profile from '../../assets/profile.png';
 const ProfileIcon = () => {
   return (
     <div>
-      <img src={profile} className='profile-icon'></img>
+      <img src={profile} className='profile-icon' alt='icon-profile'></img>
     </div>
   )
 }

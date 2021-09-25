@@ -4,7 +4,7 @@ const ImageLarge = (props) => {
 
   return (
     <div className='image-large-container'>
-      <img className='image-large' src={example}></img>
+      <img className='image-large' src={example} alt=''></img>
       {/* <img src={`${props.image}`} /> */}
     </div>
   )

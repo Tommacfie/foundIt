@@ -14,16 +14,16 @@ const HomeScreen = (props) => {
   // }, []);
 
   //DELETEME
-  const item = {
-    brandModel: "Gold",
-    description: "Diamond encrusted. Engraving inside. My wife had the engraving done on my birthday. It was a very special day",
-    image: "www.diamonds.com",
-    location: "Waterloo beach, Liverpool",
-    lostOrFound: true,
-    submittedBy: "Divorced",
-    title: "Wedding Ring",
-    _id: "614f0bcb36dc72798845b6e3"
-  }
+  // const item = {
+  //   brandModel: "Gold",
+  //   description: "Diamond encrusted. Engraving inside. My wife had the engraving done on my birthday. It was a very special day",
+  //   image: "www.diamonds.com",
+  //   location: "Waterloo beach, Liverpool",
+  //   lostOrFound: true,
+  //   submittedBy: "Divorced",
+  //   title: "Wedding Ring",
+  //   _id: "614f0bcb36dc72798845b6e3"
+  // }
   const isAuthorised = props.auth;
 
   return (

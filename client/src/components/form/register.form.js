@@ -22,13 +22,11 @@ const RegisterForm = () => {
       console.log('required');
       return
     }
-    const log = await Api.register(userData);
+    // const log = await Api.register(userData);
     localStorage.setItem('isAuthenticated', 'true');
     window.location.pathname = '/home';
   };
-  const clickReg = (event) => {
-    console.log('click');
-  }
+
   //FIX ME - add validation to form fields
   return (
     <form className='register-form'>
