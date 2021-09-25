@@ -13,7 +13,7 @@ const HomeScreen = (props) => {
   //   })();
   // }, []);
 
-  //DELETEME
+  //DELETEME - SOON
   // const item = {
   //   brandModel: "Gold",
   //   description: "Diamond encrusted. Engraving inside. My wife had the engraving done on my birthday. It was a very special day",
