@@ -33,14 +33,3 @@ exports.deleteItem = async (req, res) => {
     res.status(500);
   }
 };
-
-//DELETEME
-// {
-//   "title":
-//   "description":
-//   "brandModel":
-//   "image":
-//   "where":
-//   "lostFound":
-//   "submittedBy":
-// }

@@ -1,7 +1,8 @@
-const Express = require('express')
+const Express = require('express');
+
 const app = Express();
-const router = require('./router');
 const cors = require('cors');
+const router = require('./router');
 const { PORT, client } = require('./config'); //FIXME
 
 app.use(cors());
@@ -12,4 +13,3 @@ app.listen(PORT, (error) => {
   if (error) throw new Error(error);
   console.log(`Server running on port ${PORT}`);
 });
-

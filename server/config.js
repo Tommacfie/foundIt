@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+
 dotenv.config();
 
 const PORT = process.env.PORT;
@@ -14,6 +15,5 @@ module.exports = {
   dataBase,
   client,
   accessTokenString,
-  accessTokenStringRefresh
-}
-
+  accessTokenStringRefresh,
+};

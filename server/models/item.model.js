@@ -1,6 +1,6 @@
 const mongoose = require('./index');
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const itemModel = new Schema({
   title: {
@@ -9,7 +9,7 @@ const itemModel = new Schema({
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   brandModel: {
     type: String,
@@ -18,7 +18,7 @@ const itemModel = new Schema({
   image: {
     type: String,
     required: false,
-    default: 'No image provided'
+    default: 'No image provided',
   },
   whereFoundOrLost: {
     type: String,
@@ -30,8 +30,8 @@ const itemModel = new Schema({
   },
   submittedBy: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
 const Item = mongoose.model('Item', itemModel);

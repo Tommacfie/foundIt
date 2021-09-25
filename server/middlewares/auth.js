@@ -1,8 +1,9 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/user.model');
 const bcrypt = require('bcrypt');
-const { accessTokenString, accessTokenStringRefresh } = require('../config')
-const refreshTokens = [];
+const User = require('../models/user.model');
+const { accessTokenString, accessTokenStringRefresh } = require('../config');
+
+let refreshTokens = [];
 
 exports.authenticate = async (req, res, next) => {
   try {
@@ -52,13 +53,13 @@ exports.authorise = async (req, res, next) => {
       res.status(401).send('Unauthorised access');
     }
   } catch (error) {
-    res.send(error)
+    res.send(error);
     res.status(500);
   }
 };
 
-exports.logout = async (req, res, next) => {
+exports.logout = async (req, res) => {
   const { token } = req.body;
   refreshTokens = refreshTokens.filter(t => t !== token);
   res.send('Logged out');
-}
+};
