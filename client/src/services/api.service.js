@@ -14,13 +14,13 @@ Api.login = async (userData) => {
 }
 
 
-Api.register = async (email, password, firstName, lastName) => {
+Api.register = async (userData) => {
   const response = await fetch(`${Config.server}/register`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({ email, password, firstName, lastName })
+    body: JSON.stringify(userData)
   });
   const newUser = await response.json();
   return newUser

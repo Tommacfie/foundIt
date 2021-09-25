@@ -20,7 +20,7 @@ const LoginForm = () => {
     window.location.pathname = '/home';
   };
 
-
+  //FIX ME - add validation to form fields
   return (
     <div className='login-form'>
       <form
