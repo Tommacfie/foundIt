@@ -22,10 +22,6 @@ const App = () => {
 
   return (
     <Router>
-      {/* {!isAuthorised ? (
-        <LoginScreen />
-      )
-        : ( */}
       <div className='app-container'>
         <Header />
         <Switch>

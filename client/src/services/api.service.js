@@ -1,13 +1,13 @@
 import Config from '../config';
 const Api = {};
 
-Api.login = async (email, password) => {
+Api.login = async (userData) => {
   const response = await fetch(`${Config.server}/login`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify(userData)
   });
   const loginSuccess = await response.json();
   return loginSuccess;
