@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Tommacfie/FoundIt/issues"
   },
-  "homepage": "https://github.com/Tommacfie/FoundIt#readme"
+  "homepage": "https://github.com/Tommacfie/FoundIt#readme",
+  "dependencies": {
+    "eslint": "^7.32.0"
+  }
 }

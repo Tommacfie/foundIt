@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import Api from '../services/api.service';
+import ItemsList from "../components/containers/list-items.component";
 import './main.screen.css';
 
 const HomeScreen = () => {
@@ -14,7 +15,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <h1>HOME SCREEN</h1>
+    <ItemsList data={items} />
   )
 };
 
