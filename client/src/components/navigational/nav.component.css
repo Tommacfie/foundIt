@@ -6,4 +6,6 @@
 }
 .button {
   width: 33.33vw;
+  margin:auto;
+  text-align: center;
 }

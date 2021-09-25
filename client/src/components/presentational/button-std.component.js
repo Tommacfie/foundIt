@@ -4,7 +4,7 @@ import './button-std.component.css';
 const ButtonStd = (props) => {
   return (
     <div className='button-std'>
-      <Link to={`${props.link}`}>{props.text}</Link>
+      {/* <Link to={`${props.link}`}>{props.text}</Link> */}
     </div>
   )
 };
