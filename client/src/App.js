@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Api from './services/api.service';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomeScreen from './screens/home.screen.component';
 import LoginScreen from './screens/login.screen';
 import RegisterScreen from './screens/register.screen';
@@ -11,7 +11,7 @@ import Header from './components/presentational/header.component';
 import NavBar from './components/navigational/nav.component';
 
 const App = () => {
-  const [isAuthorised, setIsAuthorised] = useState(true);
+  const [isAuthorised, setIsAuthorised] = useState(false);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -27,13 +27,13 @@ const App = () => {
     <Router>
       <div className='app-container'>
         <Header />
-        <Routes>
-          <Route path='/login' element={<LoginScreen />} />
-          <Route path='/register' element={<RegisterScreen />} />
-          <Route path="/home" element={<HomeScreen data={items} auth={isAuthorised} />} />
-          <Route path="/create" element={<CreateItem />} />
-          <Route path="/profile" element={<ProfileView data={items} auth={isAuthorised} />} />
-        </Routes>
+        <Switch>
+          <Route path='/login'><LoginScreen /></Route>
+          <Route path='/register'  ><RegisterScreen /></Route>
+          <Route path="/home" ><HomeScreen data={items} auth={isAuthorised} /></Route>
+          <Route path="/create"><CreateItem /></Route>
+          <Route path="/profile"><ProfileView data={items} auth={isAuthorised} /></Route>
+        </Switch>
         <NavBar />
       </div>
     </Router>

@@ -1,9 +1,6 @@
 import React from "react";
-import { useState, useEffect } from 'react';
-import Api from '../services/api.service';
 import ItemsList from "../components/containers/list-items.component";
-import ItemDetailsDisplay from "../components/containers/item-details-display.component";
-import ModalDelete from "../components/containers/modal-delete.component";
+import { Redirect } from "react-router-dom";
 import './main.screen.css';
 
 const HomeScreen = (props) => {
@@ -33,7 +30,7 @@ const HomeScreen = (props) => {
     <div>
       {
         !isAuthorised
-          ? <h1>Unauth</h1>
+          ? <Redirect to='login' />
           : <ItemsList data={props.data} />
 
       }

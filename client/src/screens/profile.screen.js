@@ -1,5 +1,6 @@
 import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
+import { Redirect } from 'react-router-dom';
 import './profile.screen.css';
 
 const ProfileView = (props) => {
@@ -8,8 +9,12 @@ const ProfileView = (props) => {
     <div>
       {
         !isAuthorised
-          ? <h1>Unauth</h1>
-          : <ItemsList data={props.data} />
+          ? <Redirect to='login' />
+          :
+          <div>
+            <h3>Your Items</h3>
+            <ItemsList data={props.data} />
+          </div>
         // <ItemDetailsDisplay data={item} />
         // <ModalDelete />
       }
