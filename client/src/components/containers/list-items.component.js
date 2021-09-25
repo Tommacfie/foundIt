@@ -1,8 +1,6 @@
 import Item from '../containers/item.component';
 
 const ItemsList = (props) => {
-
-  console.log(props.data);
   return (
     <div>
       {
