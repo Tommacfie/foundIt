@@ -1,8 +1,16 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-const CreateItem = () => {
+const CreateItem = (props) => {
+  const isAuthenticated = props.auth;
+
   return (
-    <h1>CREATE ITEM</h1>
+    <div>
+      {!isAuthenticated
+        ? <Redirect to='login' />
+        : <h1>Authorised</h1>
+      }
+    </div>
   )
 }
 

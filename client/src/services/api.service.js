@@ -1,4 +1,5 @@
 import Config from '../config';
+console.log(Config);
 const Api = {};
 
 Api.login = async (userData) => {

@@ -29,7 +29,7 @@ const App = () => {
       <div className='app-container'>
         <Header />
         <Switch>
-          <Route path='/login'><LoginScreen /></Route>
+          <Route path='/login'><LoginScreen auth={isAuthorised} /></Route>
           <Route path='/register'  ><RegisterScreen /></Route>
           <Route path="/home" ><HomeScreen data={items} auth={isAuthorised} /></Route>
           <Route path='/action'><ActionScreen auth={isAuthorised} /></Route>
