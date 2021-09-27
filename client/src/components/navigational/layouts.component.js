@@ -9,11 +9,11 @@ import { useState } from 'react';
 
 const Layouts = () => {
   const [isAuthorised, setIsAuthorised] = useState(false);
-  const [userLogin, setUserLogin] = useState({}); //User login information
+  const [currentUser, setCurrentUser] = useState({}); //User login information
   console.log(isAuthorised, 'layouts');
   return (
     <LoginContext.Provider value={{ isAuthorised, setIsAuthorised }}>
-      <UserContext.Provider value={{ userLogin, setUserLogin }}>
+      <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <Switch>
           <Route path='/auth'><AuthComponent /></Route>
           <Route path='/app'><AppLayout /></Route>

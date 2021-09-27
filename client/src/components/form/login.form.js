@@ -8,7 +8,7 @@ import ButtonStd from '../presentational/button-std.component';
 const LoginForm = () => {
   const [userInput, setUserInput] = useState({ email: '', password: '' });
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  const { userLogin, setUserLogin } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const handleInputChange = (event) => {
     setUserInput((prevState) => {
@@ -25,8 +25,9 @@ const LoginForm = () => {
     const loggedIn = await Api.login(userInput);
 
     if (loggedIn) {
+      console.log(loggedIn);
       setIsAuthorised(true);
-      setUserLogin(loggedIn);
+      setCurrentUser(loggedIn);
       //FIX ME - submit login request to API
     }
   };

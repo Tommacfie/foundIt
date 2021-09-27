@@ -3,11 +3,16 @@ import ButtonStd from "../components/presentational/button-std.component";
 import { Redirect } from 'react-router-dom';
 import './profile.screen.css';
 import { useContext } from "react";
-import { LoginContext } from "../helpers.js/context";
+import { LoginContext, UserContext } from "../helpers.js/context";
 
 const ProfileView = (props) => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  console.log(isAuthorised, 'profile');
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const logout = () => {
+    setCurrentUser({});
+    setIsAuthorised(false);
+  }
   return (
     <div>
       {
@@ -17,6 +22,9 @@ const ProfileView = (props) => {
           <div className='profile-screen'>
             <h3 className='profile-header'>Your Items</h3>
             <ItemsList data={props.data} />
+            <div onClick={() => logout()}>
+              <ButtonStd text={'Logout'} />
+            </div>
           </div>
       }
     </div>

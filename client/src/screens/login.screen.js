@@ -8,7 +8,6 @@ import './login.screen.css';
 
 const LoginScreen = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  console.log(isAuthorised);
   return (<div>
     {!isAuthorised
       ? <div className='login-container'>
