@@ -31,12 +31,12 @@ const AppLayout = () => {
       <Route path="/app/profile" exact><ProfileView data={items} /></Route>
       <ItemContext.Provider value={{ itemData, setItemData }}>
         <Route path='/app/create' exact><ActionScreen /></Route>
-        <Route path="/app/create/lost"><CreateItem /></Route>
-        <Route path="/app/create/found"><CreateItem /></Route>
+        <Route path="/app/create/lost" exact><CreateItem /></Route>
+        <Route path="/app/create/found" exact><CreateItem /></Route>
+        <Route path='/app/create/lost/detail' ><ItemDetailsDisplay /> </Route>
+        <Route path='/app/create/found/detail' ><ItemDetailsDisplay /> </Route>
       </ItemContext.Provider>
-      <Route path='/app/create/lost/detail'><ItemDetailsDisplay /> </Route>
-      <Route path='/app/create/found/detail'><ItemDetailsDisplay /> </Route>
-      <Redirect from='/app' to='/app/home' exact />
+      {/* <Redirect from='/app' to='/app/home' exact /> */}
       <NavBar />
     </div>
   )

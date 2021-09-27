@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const Layouts = (props) => {
 
-  const [isAuthorised, setIsAuthorised] = useState(false);
+  const [isAuthorised, setIsAuthorised] = useState(true);
 
   return (
     <LoginContext.Provider value={{ isAuthorised, setIsAuthorised }}>
