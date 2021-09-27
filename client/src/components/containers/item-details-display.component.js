@@ -22,7 +22,7 @@ const ItemDetailsDisplay = (props) => {
 
   return (
     <div className='item-details-display' >
-      {/* <ImageLarge image={`${props.image}`} /> */}
+      <ImageLarge image={`${props.image}`} />
       <h1> {itemData.title}</h1>
       <h1>{itemData.brand}</h1>
       <h3>{itemData.location}</h3>

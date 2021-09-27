@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Api from '../../services/api.service';
 import { LoginContext } from '../../helpers.js/context';
 import { useContext } from 'react';
+import ButtonStd from '../presentational/button-std.component';
 
 const LoginForm = () => {
   const [userData, setUserData] = useState({ email: '', password: '' });
@@ -20,9 +21,9 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const log = await Api.login(userData);
-
-    if (log) {
+    const loggedIn = await Api.login(userData);
+    console.log(loggedIn);
+    if (loggedIn) {
       setIsAuthorised(true);
     }
   };
@@ -30,14 +31,7 @@ const LoginForm = () => {
   //FIX ME - add validation to form fields
   return (
     <div className='login-form'>
-      <form
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <form>
         <div className='form-group'>
           <label>email</label>
           <input className='form-control' type='text' name='email' onChange={(event) => handleInputChange(event)} />
@@ -46,7 +40,9 @@ const LoginForm = () => {
           <label>password</label>
           <input className='form-control' type='password' name='password' onChange={(event) => handleInputChange(event)} />
         </div>
-        <button type='submit' onClick={handleSubmit}>Login</button>
+        <div onClick={handleSubmit}>
+          <ButtonStd text={'Login'} />
+        </div>
       </form>
     </div>
   )

@@ -14,7 +14,11 @@ const ActionScreen = (props) => {
       {!isAuthorised
         ? <Redirect to='/auth/login' />
         :
-        <OptionComponent title={props.title} topButtonText={props.topButtonText} bottomButtonText={props.bottomButtonText} topButtonLink={props.topButtonLink} bottomButtonLink={props.bottomButtonLink} />
+        <OptionComponent title={props.title}
+          topButtonText={props.topButtonText}
+          bottomButtonText={props.bottomButtonText}
+          topButtonLink={props.topButtonLink}
+          bottomButtonLink={props.bottomButtonLink} />
       }
     </div>
   )
