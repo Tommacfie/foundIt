@@ -1,16 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import Api from '../../services/api.service';
-import { LoginContext } from '../../helpers.js/context';
+import { LoginContext, UserContext } from '../../helpers.js/context';
 import { useContext } from 'react';
 import ButtonStd from '../presentational/button-std.component';
 
 const LoginForm = () => {
-  const [userData, setUserData] = useState({ email: '', password: '' });
+  const [userInput, setUserInput] = useState({ email: '', password: '' });
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { userLogin, setUserLogin } = useContext(UserContext);
 
   const handleInputChange = (event) => {
-    setUserData((prevState) => {
+    setUserInput((prevState) => {
       return {
         ...prevState,
         [event.target.name]: event.target.value,
@@ -21,10 +22,12 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const loggedIn = await Api.login(userData);
-    console.log(loggedIn);
+    const loggedIn = await Api.login(userInput);
+
     if (loggedIn) {
       setIsAuthorised(true);
+      setUserLogin(loggedIn);
+      //FIX ME - submit login request to API
     }
   };
 

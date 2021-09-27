@@ -12,7 +12,6 @@ exports.getItems = async (req, res) => {
 };
 
 exports.postItem = async (req, res) => {
-  console.log('POST');
   try {
     const item = await Item.create(req.body);
     res.send(item);

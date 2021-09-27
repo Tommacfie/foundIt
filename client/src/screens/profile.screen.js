@@ -7,7 +7,7 @@ import { LoginContext } from "../helpers.js/context";
 
 const ProfileView = (props) => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-
+  console.log(isAuthorised, 'profile');
   return (
     <div>
       {

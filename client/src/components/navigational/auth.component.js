@@ -7,8 +7,8 @@ const AuthComponent = (props) => {
 
   return (
     <div className='auth-component'>
-      <Route path='/auth/login' exact> <LoginScreen auth={props.isAuth} /></Route>
-      <Route path='/auth/register' exact><RegisterScreen auth={props.isAuth} /></Route>
+      <Route path='/auth/login' exact> <LoginScreen /></Route>
+      <Route path='/auth/register' exact><RegisterScreen /></Route>
     </div>
   )
 }

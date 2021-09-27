@@ -19,7 +19,6 @@ const ItemSubmitForm = () => {
     })
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!userData.title || !userData.location || !userData.brand || !userData.description) {
@@ -27,7 +26,7 @@ const ItemSubmitForm = () => {
       return
     }
 
-    setItemData({ ...itemData, ...userData })
+    setItemData({ ...itemData, ...userData });
 
     history.push(`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/detail`)
   };

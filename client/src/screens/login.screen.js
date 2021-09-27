@@ -8,15 +8,12 @@ import './login.screen.css';
 
 const LoginScreen = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-
-
-
+  console.log(isAuthorised);
   return (<div>
     {!isAuthorised
       ? <div className='login-container'>
         <Logo />
         <LoginFormComponent />
-        {/* <ButtonLarge text={'Login'} link={'/app/home'} /> */}
         <Link to='/auth/register'>Register</Link>
       </div>
       :

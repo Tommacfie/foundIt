@@ -6,17 +6,9 @@ import './home.screen.component.css';
 import { LoginContext } from "../helpers.js/context";
 
 const HomeScreen = (props) => {
-  // const [items, setItems] = useState([]);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const items = await Api.getItems();
-  //     setItems(items);
-  //   })();
-  // }, []);
 
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-
+  console.log(isAuthorised, 'home');
   return (
     <div>
       {

@@ -6,6 +6,7 @@ const { accessTokenString, accessTokenStringRefresh } = require('../config');
 let refreshTokens = [];
 
 exports.authenticate = async (req, res, next) => {
+  console.log(req.body);
   try {
     const user = await User.findOne({ email: req.body.email });
     if (user) {

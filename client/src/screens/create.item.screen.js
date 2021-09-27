@@ -7,10 +7,11 @@ import { LoginContext } from '../helpers.js/context.js';
 
 const CreateItem = (props) => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  console.log(isAuthorised, 'create');
   return (
     <div>
       {!isAuthorised
-        ? <Redirect to='/login' />
+        ? <Redirect to='/auth/login' />
         : <ItemSubmitForm />
       }
     </div>
