@@ -10,10 +10,14 @@ const ItemDetailsDisplay = (props) => {
   const { itemData, setItemData } = useContext(ItemContext)
   console.log(itemData, 'details');
 
-  const submitItem = () => {
+  const submitItem = async () => {
     console.log('SUBMIT');
     //API POST
-    // const item = await Api.post()
+    const item = await Api.postItem({ ...itemData, submittedBy: 'me' });
+    console.log(item);
+
+
+    setItemData({});
   }
 
   return (
@@ -26,7 +30,7 @@ const ItemDetailsDisplay = (props) => {
       <div onClick={() => submitItem()}>
         <ButtonStd text={'Submit'} />
       </div>
-    </div >
+    </div>
   )
 }
 export default ItemDetailsDisplay;
