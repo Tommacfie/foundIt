@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import AuthComponent from './auth.component';
 import AppLayout from './app.component';
 import LoginScreen from '../../screens/login.screen';
@@ -14,7 +14,7 @@ const Layouts = (props) => {
       <Switch>
         <Route path='/auth'><AuthComponent /></Route>
         <Route path='/app'><AppLayout /></Route>
-        <Route path='/'><LoginScreen /></Route>
+        <Redirect from path='/' to='/auth/login'><LoginScreen /></Redirect>
       </Switch>
     </LoginContext.Provider>
   )

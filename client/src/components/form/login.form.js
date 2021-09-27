@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import Api from '../../services/api.service';
-// import { LoginContext } from '../../helpers.js/context';
+import { LoginContext } from '../../helpers.js/context';
+import { useContext } from 'react';
 
 const LoginForm = () => {
   const [userData, setUserData] = useState({ email: '', password: '' });
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
 
   const handleInputChange = (event) => {
     setUserData((prevState) => {
@@ -17,10 +19,12 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // const log = await Api.login(userData);
 
-    // localStorage.setItem('isAuthenticated', 'true');
-    window.location.pathname = '/home';
+    const log = await Api.login(userData);
+
+    if (log) {
+      setIsAuthorised(true);
+    }
   };
 
   //FIX ME - add validation to form fields

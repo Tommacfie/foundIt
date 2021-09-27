@@ -10,6 +10,7 @@ Api.login = async (userData) => {
     body: JSON.stringify(userData)
   });
   const loginSuccess = await response.json();
+  console.log(loginSuccess);
   return loginSuccess;
 }
 

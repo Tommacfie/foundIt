@@ -19,8 +19,8 @@ exports.authenticate = async (req, res, next) => {
         const refreshToken = jwt.sign({ userId: user._id }, accessTokenStringRefresh);
 
         refreshTokens.push(refreshToken);
-
-        res.json({ accessToken, refreshToken });
+        // { accessToken, refreshToken }
+        res.json(true);
         res.status(200);
         next();
       } else {

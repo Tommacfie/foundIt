@@ -7,7 +7,7 @@ import './login.screen.css';
 import { LoginContext } from "../helpers.js/context";
 import { useContext } from "react";
 
-const LoginScreen = (props) => {
+const LoginScreen = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
 
   return (<div>
@@ -15,7 +15,7 @@ const LoginScreen = (props) => {
       ? <div className='login-container'>
         <Logo />
         <LoginFormComponent />
-        <ButtonLarge text={'Login'} link={'/app/home'} />
+        {/* <ButtonLarge text={'Login'} link={'/app/home'} /> */}
         <Link to='/auth/register'>Register</Link>
       </div>
       :

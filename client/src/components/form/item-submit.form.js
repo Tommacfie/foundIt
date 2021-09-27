@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import ButtonStd from "../presentational/button-std.component";
 import './item-submit.form.css';
-import Api from '../../services/api.service';
+import { ItemContext } from "../../helpers.js/context";
 
 const ItemSubmitForm = () => {
   const [userData, setUserData] = useState({ title: '', location: '', brand: '', description: '' });
@@ -15,6 +16,8 @@ const ItemSubmitForm = () => {
     })
   };
 
+  const { itemData, setItemData } = useContext(ItemContext);
+  console.log(itemData);
   const handleSubmit = async (event) => {
     event.preventDefault();
     // if (!userData.title || !userData.location || !userData.brand || !userData.description) {
@@ -22,7 +25,8 @@ const ItemSubmitForm = () => {
     //   return
     // }
     // const log = await Api.postItem(userData);
-    window.location.pathname = `${window.location.pathname}/details`;
+    // <Link to='app/home' />
+    console.log('Submit');
   };
 
   //FIX ME - add validation to form fields
@@ -41,7 +45,9 @@ const ItemSubmitForm = () => {
         <input className='form-control' type='text' name='description' placeholder={'description'} onChange={(event) => handleInputChange(event)} />
       </div>
       <div onClick={handleSubmit}>
-        <ButtonStd text={'Next'} data={userData} />
+        <Link to={`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/detail`}>
+          <ButtonStd text={'Next'} data={userData} />
+        </Link>
       </div>
     </form>
   )
