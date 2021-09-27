@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Layouts from './components/navigational/layouts.component';

@@ -23,10 +23,10 @@ const LoginForm = () => {
     event.preventDefault();
 
     const loggedIn = await Api.login(userInput);
-
+    console.log(loggedIn);
     if (loggedIn) {
-      setIsAuthorised(true);
       setCurrentUser(loggedIn);
+      setIsAuthorised(true);
     }
   };
 

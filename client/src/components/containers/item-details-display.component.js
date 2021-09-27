@@ -13,10 +13,13 @@ const ItemDetailsDisplay = (props) => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const submitItem = async () => {
-    console.log(currentUser.user, 'current');
+    console.log(currentUser);
+    const userId = currentUser._id;
     //API POST
     //FIXME - Add userID and token to request
-    const item = await Api.postItem({ ...itemData, submittedBy: 'me' });
+
+    const item = await Api.postItem({ ...itemData, submittedBy: userId }, currentUser.accessToken);
+    console.log(item);
     setItemData({});
     history.push(`/app/postSubmit`);
   }

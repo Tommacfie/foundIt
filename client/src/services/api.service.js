@@ -26,22 +26,22 @@ Api.register = async (userData) => {
   return newUser
 }
 
-Api.getItems = async () => {
+Api.getItems = async (authorisation) => {
   const response = await fetch(`${Config.server}/items`, {
     headers: {
-      authorization: Config.token
+      authorization: `Bearer ${authorisation}`
     }
   })
   const items = await response.json();
   return items;
 };
 
-Api.postItem = async (item) => {
+Api.postItem = async (item, authorisation) => {
   const response = await fetch(`${Config.server}/items`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      authorization: Config.token
+      authorization: `Bearer ${authorisation}`
     },
     body: JSON.stringify(item)
   })
@@ -49,12 +49,12 @@ Api.postItem = async (item) => {
   return postedItem;
 };
 
-Api.deleteItem = async (id) => {
+Api.deleteItem = async (id, authorisation) => {
   const response = await fetch(`${Config.server}/items`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',
-      authorization: Config.token
+      authorization: `Bearer ${authorisation}`
     },
     body: JSON.stringify({ _id: id })
   })

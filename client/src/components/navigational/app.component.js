@@ -8,17 +8,18 @@ import CreateItem from "../../screens/create.item.screen";
 import ItemDetailsDisplay from '../containers/item-details-display.component';
 import Header from "../presentational/header.component";
 import NavBar from "./nav.component";
-import { LoginContext, ItemContext } from "../../helpers.js/context";
+import { LoginContext, ItemContext, UserContext } from "../../helpers.js/context";
 
 
 const AppLayout = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   const [items, setItems] = useState([]); // items from db
   const [itemData, setItemData] = useState({}); //currently submitting items
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
   useEffect(() => {
     (async () => {
-      const items = await Api.getItems();
+      const items = await Api.getItems(currentUser.accessToken);
       setItems(items);
     })();
   }, []);

@@ -8,7 +8,6 @@ import { LoginContext } from "../helpers.js/context";
 const HomeScreen = (props) => {
 
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  console.log(isAuthorised, 'home');
   return (
     <div>
       {

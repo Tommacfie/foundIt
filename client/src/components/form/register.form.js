@@ -1,14 +1,12 @@
 import React from 'react';
 import { useState, useContext } from 'react';
 import { LoginContext, UserContext } from '../../helpers.js/context';
-import { useHistory } from 'react-router';
 import ButtonStd from '../presentational/button-std.component';
 
 import Api from '../../services/api.service';
 import './register.form.css';
 
 const RegisterForm = () => {
-  const history = useHistory();
 
   const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '', password: '' });
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
@@ -30,7 +28,6 @@ const RegisterForm = () => {
       return
     }
     const registered = await Api.register(userData);
-    console.log(registered);
     setCurrentUser(registered);
     setIsAuthorised(true);
   };
