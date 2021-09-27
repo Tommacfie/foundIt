@@ -2,8 +2,9 @@ import ImageSmall from '../presentational/image-small.component';
 import './item.component.css';
 
 const Item = (props) => {
+
   return (
-    <div className='item'>
+    <div className={`item ${props.data.lostOrFound ? 'lost' : 'found'}`}>
       <div className='item-image'>
         <ImageSmall image={props.image} />
       </div>

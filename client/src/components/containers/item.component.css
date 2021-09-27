@@ -7,6 +7,12 @@
   display: flex;
   justify-content: left;
 }
+.lost {
+  background-color: tomato;
+}
+.found {
+  background-color: teal;
+}
 .item-image {
 width: 20vw;
 justify-self: center;

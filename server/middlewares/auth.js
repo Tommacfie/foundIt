@@ -6,7 +6,6 @@ const { accessTokenString, accessTokenStringRefresh } = require('../config');
 let refreshTokens = [];
 
 exports.authenticate = async (req, res, next) => {
-  console.log(req.body, 'authenticate');
   try {
     const user = await User.findOne({ email: req.body.email });
     if (user) {
@@ -46,10 +45,8 @@ exports.authorise = async (req, res, next) => {
     if (authHeader) {
       const token = authHeader.split(' ')[1];
 
-
       jwt.verify(token, accessTokenString, (error, user) => {
         if (error) return res.status(403).send('Invalid token');
-        console.log('greanted');
         req.user = user;
         next();
       });

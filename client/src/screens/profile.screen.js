@@ -13,6 +13,12 @@ const ProfileView = (props) => {
     setCurrentUser({});
     setIsAuthorised(false);
   }
+  const myList = props.data.filter(item => {
+
+    return item.submittedBy === currentUser._id
+  })
+
+  console.log(myList);
   return (
     <div>
       {
@@ -21,7 +27,7 @@ const ProfileView = (props) => {
           :
           <div className='profile-screen'>
             <h3 className='profile-header'>Your Items</h3>
-            <ItemsList data={props.data} />
+            <ItemsList data={myList} />
             <div onClick={() => logout()}>
               <ButtonStd text={'Logout'} />
             </div>
