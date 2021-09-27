@@ -1,23 +1,23 @@
 import ImageLarge from "../presentational/image-lrg.component";
 import './item-details-display.component.css';
-import { useContext, useState } from "react";
+import { useContext } from "react";
+import { useHistory } from 'react-router-dom';
 import { ItemContext, LoginContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 import ButtonStd from "../presentational/button-std.component";
 
 const ItemDetailsDisplay = (props) => {
+  const history = useHistory();
 
   const { itemData, setItemData } = useContext(ItemContext)
-  console.log(itemData, 'details');
 
   const submitItem = async () => {
     console.log('SUBMIT');
     //API POST
+    //FIXME - Add userID and token to request
     const item = await Api.postItem({ ...itemData, submittedBy: 'me' });
-    console.log(item);
-
-
     setItemData({});
+    history.push(`/app/postSubmit`);
   }
 
   return (

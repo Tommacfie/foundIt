@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import ButtonStd from "../presentational/button-std.component";
 import './item-submit.form.css';
 import { ItemContext } from "../../helpers.js/context";

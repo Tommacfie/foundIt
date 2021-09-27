@@ -18,10 +18,10 @@ const OptionComponent = (props) => {
     <div className='option-component'>
       <h2>{props.title}</h2>
       <div onClick={() => setLostOrFound(true)}>
-        <ButtonLarge text={props.lost} link={props.lostLink} />
+        <ButtonLarge text={props.topButtonText} link={props.topButtonLink} />
       </div>
       <div onClick={() => setLostOrFound(false)}>
-        <ButtonLarge text={props.found} link={props.foundLink} />
+        <ButtonLarge text={props.bottomButtonText} link={props.bottomButtonLink} />
       </div>
     </div>
   )

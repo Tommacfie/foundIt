@@ -30,11 +30,12 @@ const AppLayout = () => {
       <Route path='/app/home' exact><HomeScreen data={items} /></Route>
       <Route path="/app/profile" exact><ProfileView data={items} /></Route>
       <ItemContext.Provider value={{ itemData, setItemData }}>
-        <Route path='/app/create' exact><ActionScreen /></Route>
+        <Route path='/app/create' exact><ActionScreen title={'Have you lost OR found an item?'} topButtonText={'LOST'} bottomButtonText={'FOUND'} topButtonLink={'/app/create/lost'} bottomButtonLink={'/app/create/found'} /></Route>
         <Route path="/app/create/lost" exact><CreateItem /></Route>
         <Route path="/app/create/found" exact><CreateItem /></Route>
-        <Route path='/app/create/lost/detail' ><ItemDetailsDisplay /> </Route>
-        <Route path='/app/create/found/detail' ><ItemDetailsDisplay /> </Route>
+        <Route path='/app/create/lost/detail' exact><ItemDetailsDisplay /> </Route>
+        <Route path='/app/create/found/detail' exact><ItemDetailsDisplay /> </Route>
+        <Route path='/app/postSubmit' exact><ActionScreen title={'Thankyou for your submission'} topButtonText={'Return to Home'} bottomButtonText={'Submit another item'} topButtonLink={'/app/home'} bottomButtonLink={'/app/create'} /> </Route>
       </ItemContext.Provider>
       <Redirect from='/app' to='/app/home' exact />
       <NavBar />
