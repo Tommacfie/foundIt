@@ -18,7 +18,6 @@ const ProfileView = (props) => {
     return item.submittedBy === currentUser._id
   })
 
-  console.log(myList);
   return (
     <div>
       {
@@ -26,8 +25,14 @@ const ProfileView = (props) => {
           ? <Redirect to='/auth/login' />
           :
           <div className='profile-screen'>
-            <h3 className='profile-header'>Your Items</h3>
-            <ItemsList data={myList} />
+            {!myList.length
+              ? <h2>No items to display</h2>
+              :
+              <div>
+                <h3 className='profile-header'>Your Items</h3>
+                <ItemsList data={myList} />
+              </div>
+            }
             <div onClick={() => logout()}>
               <ButtonStd text={'Logout'} />
             </div>
