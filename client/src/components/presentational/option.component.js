@@ -5,8 +5,8 @@ const OptionComponent = (props) => {
   return (
     <div className='option-component'>
       <h2>{props.title}</h2>
-      <ButtonLarge text={props.lost} link={'/create'} />
-      <ButtonLarge text={props.found} link={'/create'} />
+      <ButtonLarge text={props.lost} link={props.lostLink} />
+      <ButtonLarge text={props.found} link={props.foundLink} />
     </div>
   )
 }

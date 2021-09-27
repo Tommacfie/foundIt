@@ -1,12 +1,19 @@
 import React from "react";
 import RegisterFormComponent from '../components/form/register.form';
-import ButtonLarge from '../components/presentational/button-large.component';
+import { Redirect } from 'react-router-dom';
 import './register.screen.css';
 
-const RegisterScreen = () => {
+const RegisterScreen = (props) => {
+  const isAuthenticated = props.auth;
+  console.log(props.auth);
   return (
-    <div className='register-container'>
-      <RegisterFormComponent />
+    <div>
+      {isAuthenticated
+        ? <Redirect to='/app/home' />
+        : <div className='register-container'>
+          <RegisterFormComponent />
+        </div>
+      }
     </div>
   )
 };

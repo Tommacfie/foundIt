@@ -5,11 +5,11 @@ import './item-details-display.component.css';
 const ItemDetailsDisplay = (props) => {
   return (
     <div className='item-details-display'>
-      <ImageLarge image={`${props.image}`} />
+      {/* <ImageLarge image={`${props.image}`} />
       <h1>{props.data.title},</h1>
       <h1>{props.data.brandModel}</h1>
       <h3>{props.data.location}</h3>
-      <p>{props.data.description}</p>
+      <p>{props.data.description}</p> */}
     </div>
   )
 }

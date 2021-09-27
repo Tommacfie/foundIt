@@ -13,11 +13,11 @@ const LoginScreen = (props) => {
       ? <div className='login-container'>
         <Logo />
         <LoginFormComponent />
-        <ButtonLarge text={'Login'} link={'/home'} />
-        <Link to='./register'>Register</Link>
+        <ButtonLarge text={'Login'} link={'/app/home'} />
+        <Link to='/auth/register'>Register</Link>
       </div>
       :
-      <Redirect to='/home' />
+      <Redirect to='/app/home' />
     }
   </div>
   )

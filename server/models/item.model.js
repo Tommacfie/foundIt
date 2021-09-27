@@ -11,7 +11,7 @@ const itemModel = new Schema({
     type: String,
     required: true,
   },
-  brandModel: {
+  brand: {
     type: String,
     required: true,
   },

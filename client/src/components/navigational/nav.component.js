@@ -6,21 +6,20 @@ import ProfileIcon from '../presentational/icon-profile.component';
 import './nav.component.css';
 
 const NavBar = () => {
-
   return (
     <div className='navBar-container'>
       <div className='button home-button-container'>
-        <Link to='/home'>
+        <Link to='/app/home'>
           <HomeIcon />
         </Link>
       </div>
       <div className='button add-button-container'>
-        <Link to='/action'>
+        <Link to='/app/create'>
           <CreateIcon />
         </Link>
       </div>
       <div className='button profile-button-container'>
-        <Link to='/profile'>
+        <Link to='/app/profile'>
           <ProfileIcon />
         </Link>
       </div>

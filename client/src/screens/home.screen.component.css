@@ -1,0 +1,9 @@
+.home-screen {
+  display:flex;
+  flex-direction: column;
+}
+.home-header {
+  height: 7vh;
+  text-align: center;
+  padding:0;
+}

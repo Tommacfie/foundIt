@@ -1,7 +1,7 @@
 import React from "react";
 import ItemsList from "../components/containers/list-items.component";
 import { Redirect } from "react-router-dom";
-import './main.screen.css';
+import './home.screen.component.css';
 
 const HomeScreen = (props) => {
   // const [items, setItems] = useState([]);
@@ -29,10 +29,15 @@ const HomeScreen = (props) => {
   return (
     <div>
       {
-        !isAuthorised
-          ? <Redirect to='login' />
-          : <ItemsList data={props.data} />
 
+        isAuthorised === false
+          ? <Redirect to='/auth/login' />
+          :
+
+          <div className='home-screen'>
+            <h3 className='home-header'>Home</h3>
+            <ItemsList data={props.data} />
+          </div>
       }
     </div>
   )
