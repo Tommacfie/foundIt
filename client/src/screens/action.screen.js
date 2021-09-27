@@ -1,23 +1,21 @@
 import './action.screen.css';
-import ButtonLarge from '../components/presentational/button-large.component';
 import OptionComponent from '../components/presentational/option.component';
 import { Redirect } from 'react-router-dom';
-import CreateItem from './create.item.screen';
+import { useContext } from 'react';
+import { LoginContext } from '../helpers.js/context';
+
 
 const ActionScreen = (props) => {
-  const isAuthorised = props.auth;
-  console.log(isAuthorised, 'action');
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   return (
     <div>
       {
         !isAuthorised
           ? <Redirect to='login' />
-          : <OptionComponent lost={'LOST'} found={'FOUND'} title={'Have you lost OR found an item?'} lostLink={'lost'} foundLink={'found'} />
+          : <OptionComponent lost={'LOST'} found={'FOUND'} title={'Have you lost OR found an item?'} lostLink={'/app/lost'} foundLink={'/app/found'} />
       }
     </div>
   )
 }
 
 export default ActionScreen;
-
-{/* <CreateItem lost={'LOST'} found={'FOUND'} title={'Have you lost OR found an item?'} */ }

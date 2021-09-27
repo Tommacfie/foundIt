@@ -2,13 +2,15 @@ import React from "react";
 import RegisterFormComponent from '../components/form/register.form';
 import { Redirect } from 'react-router-dom';
 import './register.screen.css';
+import { useContext } from "react";
+import { LoginContext } from "../helpers.js/context";
 
 const RegisterScreen = (props) => {
-  const isAuthenticated = props.auth;
-  console.log(props.auth);
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+
   return (
     <div>
-      {isAuthenticated
+      {isAuthorised
         ? <Redirect to='/app/home' />
         : <div className='register-container'>
           <RegisterFormComponent />

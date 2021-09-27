@@ -2,9 +2,11 @@ import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
 import { Redirect } from 'react-router-dom';
 import './profile.screen.css';
+import { useContext } from "react";
+import { LoginContext } from "../helpers.js/context";
 
 const ProfileView = (props) => {
-  const isAuthorised = props.auth;
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   return (
     <div>
       {

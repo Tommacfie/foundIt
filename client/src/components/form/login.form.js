@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Api from '../../services/api.service';
+// import { LoginContext } from '../../helpers.js/context';
 
 const LoginForm = () => {
   const [userData, setUserData] = useState({ email: '', password: '' });
@@ -13,10 +14,12 @@ const LoginForm = () => {
       }
     })
   };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     // const log = await Api.login(userData);
-    localStorage.setItem('isAuthenticated', 'true');
+
+    // localStorage.setItem('isAuthenticated', 'true');
     window.location.pathname = '/home';
   };
 

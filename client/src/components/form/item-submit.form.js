@@ -22,7 +22,7 @@ const ItemSubmitForm = () => {
     //   return
     // }
     // const log = await Api.postItem(userData);
-    window.location.pathname = '/item';
+    window.location.pathname = `${window.location.pathname}/details`;
   };
 
   //FIX ME - add validation to form fields

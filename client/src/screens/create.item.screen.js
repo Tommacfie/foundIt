@@ -1,15 +1,17 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import LostAndFoundForm from '../components/form/item-submit.form.js';
+import ItemSubmitForm from '../components/form/item-submit.form.js';
 import './create.item.screen.css';
+import { useContext } from 'react';
+import { LoginContext } from '../helpers.js/context.js';
 
 const CreateItem = (props) => {
-  const isAuthenticated = props.auth;
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   return (
     <div>
-      {!isAuthenticated
+      {!isAuthorised
         ? <Redirect to='/login' />
-        : <LostAndFoundForm />
+        : <ItemSubmitForm />
       }
     </div>
   )

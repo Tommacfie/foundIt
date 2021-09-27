@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './button-large.component.css';
 
 const ButtonLarge = (props) => {
-  console.log(props.link);
   return (
     <div className='button-lrg'>
       <Link to={`${props.link}`}>{props.text}</Link>
