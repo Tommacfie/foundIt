@@ -36,7 +36,7 @@ const AppLayout = () => {
         <Route path='/app/create/lost/detail' ><ItemDetailsDisplay /> </Route>
         <Route path='/app/create/found/detail' ><ItemDetailsDisplay /> </Route>
       </ItemContext.Provider>
-      {/* <Redirect from='/app' to='/app/home' exact /> */}
+      <Redirect from='/app' to='/app/home' exact />
       <NavBar />
     </div>
   )
