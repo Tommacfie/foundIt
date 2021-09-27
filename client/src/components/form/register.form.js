@@ -1,11 +1,18 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { LoginContext, UserContext } from '../../helpers.js/context';
+import { useHistory } from 'react-router';
 import ButtonStd from '../presentational/button-std.component';
+
 import Api from '../../services/api.service';
 import './register.form.css';
 
 const RegisterForm = () => {
+  const history = useHistory();
+
   const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '', password: '' });
+  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const handleInputChange = (event) => {
     setUserData((prevState) => {
@@ -19,12 +26,13 @@ const RegisterForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!userData.firstName || !userData.lastName || !userData.email || !userData.password) {
-      console.log('required');
+      //FIX ME - add validation
       return
     }
-    // const log = await Api.register(userData);
-    localStorage.setItem('isAuthenticated', 'true');
-    window.location.pathname = '/home';
+    const registered = await Api.register(userData);
+    console.log(registered);
+    setCurrentUser(registered);
+    setIsAuthorised(true);
   };
 
   //FIX ME - add validation to form fields

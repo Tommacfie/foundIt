@@ -5,12 +5,10 @@ import LoginScreen from '../../screens/login.screen';
 import { LoginContext, UserContext } from '../../helpers.js/context';
 import { useState } from 'react';
 
-
-
 const Layouts = () => {
   const [isAuthorised, setIsAuthorised] = useState(false);
   const [currentUser, setCurrentUser] = useState({}); //User login information
-  console.log(isAuthorised, 'layouts');
+
   return (
     <LoginContext.Provider value={{ isAuthorised, setIsAuthorised }}>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>

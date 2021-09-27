@@ -25,10 +25,8 @@ const LoginForm = () => {
     const loggedIn = await Api.login(userInput);
 
     if (loggedIn) {
-      console.log(loggedIn);
       setIsAuthorised(true);
       setCurrentUser(loggedIn);
-      //FIX ME - submit login request to API
     }
   };
 
