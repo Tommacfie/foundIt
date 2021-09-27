@@ -11,7 +11,7 @@ const ActionScreen = (props) => {
     <div>
       {
         !isAuthorised
-          ? <Redirect to='login' />
+          ? <Redirect to='/auth/login' />
           : <OptionComponent lost={'LOST'} found={'FOUND'} title={'Have you lost OR found an item?'} lostLink={'/app/lost'} foundLink={'/app/found'} />
       }
     </div>

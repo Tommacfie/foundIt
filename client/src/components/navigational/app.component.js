@@ -33,7 +33,7 @@ const AppLayout = () => {
       <Route path='/app/create' exact><ActionScreen /></Route>
       <Route path="/app/lost"><CreateItem /></Route>
       <Route path="/app/found"><CreateItem /></Route>
-      {/* <Route path='/item'><ItemDetailsDisplay auth={isAuthorised} /> </Route> */}
+      {/* <Route path='/item'><ItemDetailsDisplay  /> </Route> */}
       <Redirect from='/app' to='/app/home' exact />
       <NavBar />
     </div>

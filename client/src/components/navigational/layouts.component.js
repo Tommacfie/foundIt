@@ -12,12 +12,11 @@ const Layouts = (props) => {
   return (
     <LoginContext.Provider value={{ isAuthorised, setIsAuthorised }}>
       <Switch>
-        <Route path='/auth'><AuthComponent isAuth={isAuthorised} /></Route>
-        <Route path='/app'><AppLayout isAuth={isAuthorised} /></Route>
+        <Route path='/auth'><AuthComponent /></Route>
+        <Route path='/app'><AppLayout /></Route>
         <Route path='/'><LoginScreen /></Route>
       </Switch>
     </LoginContext.Provider>
-
   )
 }
 

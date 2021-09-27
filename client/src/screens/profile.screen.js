@@ -11,7 +11,7 @@ const ProfileView = (props) => {
     <div>
       {
         !isAuthorised
-          ? <Redirect to='login' />
+          ? <Redirect to='/auth/login' />
           :
           <div className='profile-screen'>
             <h3 className='profile-header'>Your Items</h3>

@@ -16,7 +16,7 @@ const HomeScreen = (props) => {
   // }, []);
 
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  console.log(isAuthorised);
+
   return (
     <div>
       {
