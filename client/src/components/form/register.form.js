@@ -28,7 +28,8 @@ const RegisterForm = () => {
       return
     }
     const registered = await Api.register(userData);
-    setCurrentUser(registered);
+    const newUser = await Api.login(userData);
+    setCurrentUser(newUser);
     setIsAuthorised(true);
   };
 
@@ -36,19 +37,15 @@ const RegisterForm = () => {
   return (
     <form className='register-form'>
       <div className='form-group'>
-        {/* <label>first name</label> */}
         <input className='form-control' type='text' name='firstName' placeholder={'first name'} onChange={(event) => handleInputChange(event)} />
       </div>
       <div className='form-group'>
-        {/* <label>last name</label> */}
         <input className='form-control' type='text' name='lastName' placeholder={'last name'} onChange={(event) => handleInputChange(event)} />
       </div>
       <div className='form-group'>
-        {/* <label>email</label> */}
         <input className='form-control' type='email' name='email' placeholder={'email'} onChange={(event) => handleInputChange(event)} />
       </div>
       <div className='form-group'>
-        {/* <label>password</label> */}
         <input className='form-control' type='password' name='password' placeholder={'password'} onChange={(event) => handleInputChange(event)} />
       </div>
       <div onClick={handleSubmit}>
