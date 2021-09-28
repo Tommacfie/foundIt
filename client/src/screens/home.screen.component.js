@@ -20,12 +20,12 @@ const HomeScreen = (props) => {
   }, []);
 
   return (
-    <div className='home-screen'>
+    <div >
       {
         !isAuthorised
           ? <Redirect to='/auth/login' />
           :
-          <div >
+          <div className='home-screen'>
             <h3 className='home-header'>Home</h3>
             <ItemsList data={items} />
           </div>

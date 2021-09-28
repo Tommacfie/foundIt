@@ -12,7 +12,7 @@ const ImageForm = () => {
 
   const { itemData, setItemData } = useContext(ItemContext);
   const [image, setImage] = useState({})
-  const [imageData, setImageData] = useState({});
+  // const [imageData, setImageData] = useState({});
 
   const handleSubmit = async () => {
     const formData = new FormData()

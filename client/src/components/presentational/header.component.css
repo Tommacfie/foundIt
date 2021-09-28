@@ -1,9 +1,10 @@
 .header-container {
-  margin-top: 10px;
   width: 100vw;
-  height: 8vh;
+padding-top: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid black;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--main-bg);
 }

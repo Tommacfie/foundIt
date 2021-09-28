@@ -2,6 +2,15 @@
 /* font-family: 'Alex Brush', cursive;
 font-family: 'Neucha', cursive;
 font-family: 'Open Sans', sans-serif; */
+
+:root {
+  --main-bg: rgb(241, 241, 241);
+  --silver-bg: rgb(233, 232, 230);
+  --border: rgba(99, 99, 99, 1);
+  --icons: rgba(39, 50, 53, 1);
+  --shadow: rgba(99, 99, 99, 0.205);
+}
+
 body {
   margin: 0;
   font-family: 'Neucha';
@@ -10,7 +19,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(3, 152, 163);
+  background-color: var(--silver-bg);
 }
 
 code {

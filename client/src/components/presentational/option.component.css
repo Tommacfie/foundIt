@@ -1,8 +1,11 @@
 .option-component {
-  height: 35vh;
-  width: 60vw;
+  height: 300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  padding: 20px;
+  background-color: rgba(248, 69, 37, 0.5);
+  box-shadow: 0 0 10px 10px var(--shadow);
 }

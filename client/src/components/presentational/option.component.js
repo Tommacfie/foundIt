@@ -17,10 +17,10 @@ const OptionComponent = (props) => {
   return (
     <div className='option-component'>
       <h2>{props.title}</h2>
-      <div onClick={() => setLostOrFound(true)}>
+      <div style={{ 'display': 'flex', "flexDirection": 'column', 'alignItems': 'center' }} onClick={() => setLostOrFound(true)}>
         <ButtonLarge text={props.topButtonText} link={props.topButtonLink} />
       </div>
-      <div onClick={() => setLostOrFound(false)}>
+      <div style={{ 'display': 'flex', "flexDirection": 'column', 'alignItems': 'center' }} onClick={() => setLostOrFound(false)}>
         <ButtonLarge text={props.bottomButtonText} link={props.bottomButtonLink} />
       </div>
     </div>

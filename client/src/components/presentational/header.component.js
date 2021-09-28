@@ -6,7 +6,6 @@ const Header = () => {
 
   return (
     <div className='header-container'>
-      <h3 className='header-back-btn'> B </h3>
       <Logo />
     </div>
   )
