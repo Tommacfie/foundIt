@@ -1,4 +1,14 @@
+.image-small-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 .image-small {
+  display: block;
 max-height: 8vh;
-max-width: 15vw;
+max-width: 12vw;
+height: auto;
+width: auto;
+margin: 5px;
 };

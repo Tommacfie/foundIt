@@ -1,9 +1,8 @@
 .item {
   margin-bottom: 2vh;
-  padding-top: 5px;
+padding: 10px;
   width: 75vw;
-  height: 10vh;
-  border: 1px solid black;
+  height: 30vh;
   display: flex;
   justify-content: left;
 }
@@ -11,19 +10,21 @@
   background-color: tomato;
 }
 .found {
-  background-color: teal;
+  background-color: rgb(3, 163, 163);
 }
 .item-image {
-width: 20vw;
+width: 80px;
 justify-self: center;
 align-self: center;
 }
 .item-text {
+  width: 250px;
 display: flex;
 flex-direction: column;
 align-items: right;
 font-size: 10px;
 overflow:hidden;
+padding: 5px;
 }
 
 * {

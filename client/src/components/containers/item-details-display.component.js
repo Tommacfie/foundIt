@@ -23,9 +23,8 @@ const ItemDetailsDisplay = (props) => {
 
   return (
     <div className='item-details-display' >
+      <h1> {itemData.title}, {itemData.brand}</h1>
       <ImageLarge image={itemData} />
-      <h1> {itemData.title}</h1>
-      <h1>{itemData.brand}</h1>
       <h3>{itemData.location}</h3>
       <p>{itemData.description}</p>
       <div onClick={() => submitItem()}>

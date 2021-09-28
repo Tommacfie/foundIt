@@ -35,11 +35,9 @@ const LoginForm = () => {
     <div className='login-form'>
       <form>
         <div className='form-group'>
-          <label>email</label>
           <input className='form-control' type='text' name='email' onChange={(event) => handleInputChange(event)} />
         </div>
         <div className='form-group'>
-          <label>password</label>
           <input className='form-control' type='password' name='password' onChange={(event) => handleInputChange(event)} />
         </div>
         <div onClick={handleSubmit}>

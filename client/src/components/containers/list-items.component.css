@@ -1,7 +1,9 @@
 .list-items {
-  height: 70vh;
+  height: 74vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
+  /* padding-right: 17px; */
+  box-sizing: content-box;
 }

@@ -1,5 +1,8 @@
 .button-std {
+  width: 30vw;
 border: 1px solid black;
 border-radius: 5px;
 box-shadow: 1px 1px 5px -2px black;
+text-align: center;
+padding-top: 5px;
 }

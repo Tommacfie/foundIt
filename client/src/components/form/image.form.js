@@ -3,8 +3,8 @@ import { ItemContext } from '../../helpers.js/context';
 import { useContext, useState } from 'react';
 import Axios from 'axios';
 import ImageLarge from '../presentational/image-lrg.component';
-import { Image } from 'cloudinary-react';
 import { useHistory } from 'react-router-dom';
+import ButtonStd from '../presentational/button-std.component';
 
 const ImageForm = () => {
 
@@ -24,7 +24,7 @@ const ImageForm = () => {
   }
 
   return (
-    <div>
+    <div className='image-form'>
       <h1>IMAGEFORM</h1>
       {Object.keys(image).length
         ? <ImageLarge image={itemData} />
@@ -38,7 +38,9 @@ const ImageForm = () => {
           setImage(event.target.files[0]);
         }}
       />
-      <button onClick={() => handleSubmit()}>Submit</button>
+      <div onClick={() => handleSubmit()}>
+        <ButtonStd text={'Submit'} />
+      </div>
     </div>
   )
 }
