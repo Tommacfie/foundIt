@@ -6,7 +6,7 @@ const ImageLarge = (props) => {
   console.log(props.image, 'call imglarge');
   return (
     <div>
-      {!props.image
+      {!Object.keys(props.image).length
         ? <h2>NO IMAGE TO DISPLAY</h2>
         : <div className='image-large-container'>
           <h1>IMAGE ZONE</h1>
