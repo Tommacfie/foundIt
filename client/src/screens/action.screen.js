@@ -7,7 +7,6 @@ import { LoginContext, ItemContext } from '../helpers.js/context';
 
 const ActionScreen = (props) => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  const { itemData, setItemData } = useContext(ItemContext);
 
   return (
     <div>

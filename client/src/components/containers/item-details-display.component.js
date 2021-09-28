@@ -16,7 +16,7 @@ const ItemDetailsDisplay = (props) => {
     const userId = currentUser._id;
 
     const item = await Api.postItem({ ...itemData, submittedBy: userId, image: `${itemData.data.url}` }, currentUser.accessToken,);
-    console.log(item, 'submitted item');
+    await Api.getItems(currentUser.accessToken);
     setItemData({});
     history.push(`/app/postSubmit`);
   }

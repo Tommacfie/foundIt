@@ -2,8 +2,9 @@ import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
 import { Redirect } from 'react-router-dom';
 import './profile.screen.css';
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { LoginContext, UserContext } from "../helpers.js/context";
+
 
 const ProfileView = (props) => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
@@ -14,7 +15,6 @@ const ProfileView = (props) => {
     setIsAuthorised(false);
   }
   const myList = props.data.filter(item => {
-
     return item.submittedBy === currentUser._id
   })
 
@@ -27,8 +27,7 @@ const ProfileView = (props) => {
           <div className='profile-screen'>
             {!myList.length
               ? <h2>No items to display</h2>
-              :
-              <div>
+              : <div>
                 <h3 className='profile-header'>Your Items</h3>
                 <ItemsList data={myList} />
               </div>

@@ -41,7 +41,13 @@ const AppLayout = () => {
         <Route path='/app/create/found/image' exact> <ImageForm /></Route>
         <Route path='/app/create/lost/detail' exact><ItemDetailsDisplay /> </Route>
         <Route path='/app/create/found/detail' exact><ItemDetailsDisplay /> </Route>
-        <Route path='/app/postSubmit' exact><ActionScreen title={'Thankyou for your submission'} topButtonText={'Return to Home'} bottomButtonText={'Submit another item'} topButtonLink={'/app/home'} bottomButtonLink={'/app/create'} /> </Route>
+        <Route path='/app/postSubmit' exact>
+          <ActionScreen title={'Thankyou for your submission'}
+            topButtonText={'Return to Home'}
+            bottomButtonText={'Submit another item'}
+            topButtonLink={'/app/home'}
+            bottomButtonLink={'/app/create'} />
+        </Route>
 
       </ItemContext.Provider>
 
