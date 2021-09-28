@@ -34,7 +34,7 @@ const LoginForm = () => {
   //FIX ME - add validation to form fields
   return (
     <div >
-      <form className='login-form'>
+      <form className='login-form' autoComplete='off'>
         <div className='form-group'>
           <input className='form-control' type='text' name='email' onChange={(event) => handleInputChange(event)} />
         </div>

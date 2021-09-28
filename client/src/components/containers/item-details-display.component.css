@@ -9,4 +9,5 @@
   align-items: center;
   background-color: tomato;
   box-shadow: 0 0 9px 5px var(--shadow);
+  text-align: center;
 }

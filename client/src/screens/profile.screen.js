@@ -29,9 +29,9 @@ const ProfileView = () => {
             {!myList.length
               ? <h2>No items to display</h2>
               : <div>
-                <div className='logout-button' onClick={() => logout()}>
+                <div style={{ 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center' }} className='logout-button' onClick={() => logout()}>
                   <h3 className='profile-header'>Your Items</h3>
-                  {/* <ButtonStd text={'Logout'} /> */}
+                  <ButtonStd text={'Logout'} />
                 </div>
                 <ItemsList className='items-list' data={myList} />
               </div>

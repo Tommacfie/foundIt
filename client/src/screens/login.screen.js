@@ -8,17 +8,19 @@ import './login.screen.css';
 
 const LoginScreen = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  return (<div>
-    {!isAuthorised
-      ? <div className='login-container'>
-        <Logo />
-        <LoginFormComponent />
-        <Link to='/auth/register'>Register</Link>
-      </div>
-      :
-      <Redirect to='/app/home' />
-    }
-  </div>
+
+  return (
+    <div>
+      {!isAuthorised
+        ? <div className='login-container'>
+          <Logo />
+          <LoginFormComponent />
+          <Link to='/auth/register'>Register</Link>
+        </div>
+        :
+        <Redirect to='/app/home' />
+      }
+    </div>
   )
 };
 

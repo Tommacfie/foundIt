@@ -33,7 +33,7 @@ const ItemSubmitForm = () => {
 
   //FIX ME - add validation to form fields
   return (
-    <form className='lost-found-form'>
+    <form className='lost-found-form' autoComplete='off'>
       <div className='form-group'>
         <input className='form-control' type='text' name='title' placeholder={'title'} onChange={(event) => handleInputChange(event)} />
       </div>

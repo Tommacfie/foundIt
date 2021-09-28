@@ -13,6 +13,7 @@ const RegisterScreen = (props) => {
       {isAuthorised
         ? <Redirect to='/app/home' />
         : <div className='register-container'>
+          <h1>Register</h1>
           <RegisterFormComponent />
           <Link to='/auth/login'>Back to Login</Link>
         </div>

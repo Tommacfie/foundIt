@@ -2,7 +2,7 @@
   justify-self: flex-start;
 }
 
-.register-container-form {
+.register-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
