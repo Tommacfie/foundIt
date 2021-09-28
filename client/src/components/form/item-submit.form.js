@@ -28,7 +28,7 @@ const ItemSubmitForm = () => {
 
     setItemData({ ...itemData, ...userData });
 
-    history.push(`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/detail`)
+    history.push(`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/image`);
   };
 
   //FIX ME - add validation to form fields

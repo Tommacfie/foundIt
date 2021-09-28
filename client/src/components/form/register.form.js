@@ -27,7 +27,7 @@ const RegisterForm = () => {
       //FIX ME - add validation
       return
     }
-    const registered = await Api.register(userData);
+    await Api.register(userData);
     const newUser = await Api.login(userData);
     setCurrentUser(newUser);
     setIsAuthorised(true);
