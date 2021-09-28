@@ -33,7 +33,6 @@ const RegisterForm = () => {
     setIsAuthorised(true);
   };
 
-  //FIX ME - add validation to form fields
   return (
     <form className='register-form'>
       <div className='form-group'>

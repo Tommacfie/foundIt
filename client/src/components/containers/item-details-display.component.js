@@ -13,20 +13,17 @@ const ItemDetailsDisplay = (props) => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const submitItem = async () => {
-    console.log(currentUser);
     const userId = currentUser._id;
-    //API POST
-    //FIXME - Add userID and token to request
 
-    const item = await Api.postItem({ ...itemData, submittedBy: userId }, currentUser.accessToken);
-    console.log(item);
+    const item = await Api.postItem({ ...itemData, submittedBy: userId, image: `${itemData.data.url}` }, currentUser.accessToken,);
+    console.log(item, 'submitted item');
     setItemData({});
     history.push(`/app/postSubmit`);
   }
 
   return (
     <div className='item-details-display' >
-      <ImageLarge image={`${props.image}`} />
+      <ImageLarge image={itemData} />
       <h1> {itemData.title}</h1>
       <h1>{itemData.brand}</h1>
       <h3>{itemData.location}</h3>

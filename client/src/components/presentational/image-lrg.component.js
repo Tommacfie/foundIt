@@ -1,11 +1,18 @@
 import example from './ex-image.png';
 import './image-large.component.css';
-const ImageLarge = (props) => {
+import { Image } from 'cloudinary-react';
 
+const ImageLarge = (props) => {
+  console.log(props.image, 'call imglarge');
   return (
-    <div className='image-large-container'>
-      <img className='image-large' src={example} alt=''></img>
-      {/* <img src={`${props.image}`} /> */}
+    <div>
+      {!props.image
+        ? <h2>NO IMAGE TO DISPLAY</h2>
+        : <div className='image-large-container'>
+          <h1>IMAGE ZONE</h1>
+          <img className='image-large' src={`${props.image.data.url}`} alt='No image to display' />
+        </div>
+      }
     </div>
   )
 };
