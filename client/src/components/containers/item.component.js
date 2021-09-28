@@ -7,11 +7,10 @@ const Item = (props) => {
   const displayDetails = () => {
     console.log('click');
   }
-
   return (
     <div className={`item ${props.data.lostOrFound ? 'lost' : 'found'}`} onClick={() => displayDetails()}>
       <div className='item-image'>
-        <ImageSmall image={props.image} />
+        <ImageSmall image={props.data.image} />
       </div>
       <div className='item-text'>
         <h3>{props.data.title} - {props.data.location}</h3>
