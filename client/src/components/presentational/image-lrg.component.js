@@ -5,10 +5,10 @@ const ImageLarge = (props) => {
 
   return (
     <div>
-      {!Object.keys(props.image).length
+      {props.image === undefined
         ? <h2>NO IMAGE TO DISPLAY</h2>
         : <div className='image-large-container'>
-          <img className='image-large' src={`${props.image.data.url}`} alt='No image to display' />
+          <img className='image-large' src={`${props.image}`} alt='No image to display' />
         </div>
       }
     </div>

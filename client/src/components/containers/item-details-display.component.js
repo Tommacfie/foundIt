@@ -8,23 +8,24 @@ import ButtonStd from "../presentational/button-std.component";
 
 const ItemDetailsDisplay = (props) => {
   const history = useHistory();
-
   const { itemData, setItemData } = useContext(ItemContext)
   const { currentUser, setCurrentUser } = useContext(UserContext);
+  console.log(itemData, 'itemData');
 
   const submitItem = async () => {
     const userId = currentUser._id;
 
-    const item = await Api.postItem({ ...itemData, submittedBy: userId, image: `${itemData.data.url}` }, currentUser.accessToken,);
+    await Api.postItem({ ...itemData, submittedBy: userId, image: image }, currentUser.accessToken,);
     await Api.getItems(currentUser.accessToken);
-    setItemData({});
     history.push(`/app/postSubmit`);
+    setItemData({});
   }
+  const image = URL.createObjectURL(itemData.image);
 
   return (
     <div className='item-details-display' >
       <h1> {itemData.title}, {itemData.brand}</h1>
-      <ImageLarge image={itemData} />
+      <ImageLarge image={image} />
       <h3>{itemData.location}</h3>
       <p>{itemData.description}</p>
       <div onClick={() => submitItem()}>

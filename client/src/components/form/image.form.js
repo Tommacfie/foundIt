@@ -12,23 +12,22 @@ const ImageForm = () => {
 
   const { itemData, setItemData } = useContext(ItemContext);
   const [image, setImage] = useState({})
-  // const [imageData, setImageData] = useState({});
+  const [imageRender, setImageRender] = useState({});
 
   const handleSubmit = async () => {
     const formData = new FormData()
     formData.append('file', image)
     formData.append('upload_preset', 'foundit')
 
-    const imageResponse = await Api.postImage(formData);
-    setItemData({ ...itemData, ...imageResponse });
+    setItemData({ ...itemData, image });
     history.push(`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/detail`);
   };
 
   return (
     <div className='image-form'>
       <h1>IMAGEFORM</h1>
-      {Object.keys(image).length
-        ? <ImageLarge image={itemData} />
+      {imageRender.length
+        ? <ImageLarge image={imageRender} />
         : <h1>no image</h1>
       }
       <input
@@ -41,6 +40,7 @@ const ImageForm = () => {
         accept='image/*'
         capture='environment'
         onChange={(event) => {
+          setImageRender(URL.createObjectURL(event.target.files[0]))
           setImage(event.target.files[0]);
         }}
       />
