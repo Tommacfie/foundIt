@@ -2,6 +2,7 @@ import './image-large.component.css';
 import { Image } from 'cloudinary-react';
 
 const ImageLarge = (props) => {
+
   return (
     <div>
       {!Object.keys(props.image).length

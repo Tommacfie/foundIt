@@ -1,4 +1,5 @@
 import Config from '../config';
+import Axios from 'axios';
 const Api = {};
 
 Api.login = async (userData) => {
@@ -62,4 +63,8 @@ Api.deleteItem = async (id, authorisation) => {
   return deletedItem;
 };
 
+Api.postImage = async (image) => {
+  const response = await Axios.post(Config.imageServer, image)
+  return response;
+}
 export default Api;

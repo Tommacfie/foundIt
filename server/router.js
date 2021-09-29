@@ -11,7 +11,4 @@ router.get('/items', auth.authorise, itemController.getItems);
 router.post('/items', auth.authorise, itemController.postItem);
 router.delete('/items', auth.authorise, itemController.deleteItem);
 
-// DELETEME
-router.get('/get', auth.authorise, userController.getUser);
-
 module.exports = router;
