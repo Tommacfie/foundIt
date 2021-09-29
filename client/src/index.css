@@ -7,8 +7,11 @@ font-family: 'Open Sans', sans-serif; */
   --main-bg: rgb(241, 241, 241);
   --silver-bg: rgb(233, 232, 230);
   --border: rgba(99, 99, 99, 1);
-  --icons: rgba(39, 50, 53, 1);
+  --icons: rgb(57, 72, 77);
   --shadow: rgba(99, 99, 99, 0.205);
+  --tomato: rgb(255, 160, 71);
+  --tomato-faded: rgba(248, 139, 37, 0.452);
+  --tomato-option: rgba(248, 139, 37, 0.603);
 }
 
 body {
@@ -20,6 +23,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--silver-bg);
+}
+
+input {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--main-bg);
+  font-size: 20px;
+  box-shadow: 0 0 5px 2px var(--shadow);
+}
+input:focus {
+  background-color: var(--tomato-faded);
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color:var(--tomato);
 }
 
 code {

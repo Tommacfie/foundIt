@@ -6,6 +6,6 @@
   justify-content: space-between;
   text-align: center;
   padding: 20px;
-  background-color: rgba(248, 69, 37, 0.5);
-  box-shadow: 0 0 10px 10px var(--shadow);
+  background-color: var(--tomato-option);
+  box-shadow: 0 0 15px 1px var(--shadow);
 }

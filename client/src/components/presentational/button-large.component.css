@@ -8,4 +8,5 @@ justify-content: center;
 border: 1px solid var(--border);
 border-radius: 15px;
 background-color: var(--main-bg);
+font-size: 20px;
 }

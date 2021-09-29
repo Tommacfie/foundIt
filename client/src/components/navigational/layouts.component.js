@@ -15,7 +15,7 @@ const Layouts = () => {
         <Switch>
           <Route path='/auth'><AuthComponent /></Route>
           <Route path='/app'><AppLayout /></Route>
-          <Redirect from path='/' to='/auth/login'><LoginScreen /></Redirect>
+          <Redirect from='/' to='/auth/login'><LoginScreen /></Redirect>
         </Switch>
       </UserContext.Provider>
     </LoginContext.Provider>

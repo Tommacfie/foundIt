@@ -47,7 +47,7 @@ const RegisterForm = () => {
       <div className='form-group' autoComplete='off'>
         <input className='form-control' type='password' name='password' placeholder={'password'} onChange={(event) => handleInputChange(event)} />
       </div>
-      <div style={{ 'margin-bottom': '10px' }} onClick={handleSubmit}>
+      <div style={{ 'marginBottom': '10px' }} onClick={handleSubmit}>
         <ButtonStd text={'Register'} />
       </div>
     </form>

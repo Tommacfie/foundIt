@@ -20,25 +20,25 @@ const ProfileView = () => {
   })
 
   return (
-    <div className='profile-screen'>
+    <div>
       {
         !isAuthorised
           ? <Redirect to='/auth/login' />
           :
-          <div>
+          <div >
             {!myList.length
               ? <h2>No items to display</h2>
-              : <div>
+              : <div className='profile-screen'>
+                <h3 className='profile-header'>Your Items</h3>
+                <ItemsList className='items-list' data={myList} />
                 <div style={{ 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center' }} className='logout-button' onClick={() => logout()}>
-                  <h3 className='profile-header'>Your Items</h3>
                   <ButtonStd text={'Logout'} />
                 </div>
-                <ItemsList className='items-list' data={myList} />
               </div>
             }
-
           </div>
       }
+
     </div>
   )
 };

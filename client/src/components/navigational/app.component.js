@@ -53,7 +53,7 @@ const AppLayout = () => {
       </ItemsContext.Provider>
       <Redirect from='/app' to='/app/home' exact />
       <NavBar />
-    </div >
+    </div>
   )
 }
 

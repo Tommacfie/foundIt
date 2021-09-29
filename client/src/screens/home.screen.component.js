@@ -20,7 +20,7 @@ const HomeScreen = (props) => {
   }, []);
 
   return (
-    <div >
+    <div>
       {
         !isAuthorised
           ? <Redirect to='/auth/login' />

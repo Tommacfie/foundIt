@@ -36,12 +36,12 @@ const LoginForm = () => {
     <div >
       <form className='login-form' autoComplete='off'>
         <div className='form-group'>
-          <input className='form-control' type='text' name='email' onChange={(event) => handleInputChange(event)} />
+          <input className='form-control' type='text' name='email' onChange={(event) => handleInputChange(event)} placeholder='email address' />
         </div>
         <div className='form-group'>
-          <input className='form-control' type='password' name='password' onChange={(event) => handleInputChange(event)} />
+          <input className='form-control' type='password' name='password' onChange={(event) => handleInputChange(event)} placeholder='password' />
         </div>
-        <div style={{ 'margin-bottom': '10px' }} className='login-button' onClick={handleSubmit}>
+        <div style={{ 'marginBottom': '10px' }} className='login-button' onClick={handleSubmit}>
           <ButtonStd text={'Login'} />
         </div>
       </form>
