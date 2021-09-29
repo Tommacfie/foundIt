@@ -15,11 +15,11 @@ const ImageForm = () => {
   const [imageRender, setImageRender] = useState({});
 
   const handleSubmit = async () => {
+
     const formData = new FormData()
     formData.append('file', image)
-    formData.append('upload_preset', 'foundit')
-
-    setItemData({ ...itemData, image });
+    formData.append('upload_preset', 'foundit');
+    setItemData({ ...itemData, image, formData });
     history.push(`/app/create/${itemData.lostOrFound ? 'lost' : 'found'}/detail`);
   };
 
@@ -30,7 +30,7 @@ const ImageForm = () => {
         ? <ImageLarge image={imageRender} />
         : <h1>no image</h1>
       }
-      <input
+      <input className='image-input'
         style={{
           'display': 'flex',
           'flexDirection': 'column',
@@ -40,8 +40,8 @@ const ImageForm = () => {
         accept='image/*'
         capture='environment'
         onChange={(event) => {
-          setImageRender(URL.createObjectURL(event.target.files[0]))
           setImage(event.target.files[0]);
+          setImageRender(URL.createObjectURL(event.target.files[0]))
         }}
       />
       <div onClick={() => handleSubmit()}>

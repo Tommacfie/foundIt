@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 const Item = (props) => {
   const history = useHistory();
   const displayDetails = () => {
-    console.log('click');
+    //FIXME
   }
   return (
     <div className={`item ${props.data.lostOrFound ? 'lost' : 'found'}`} onClick={() => displayDetails()}>

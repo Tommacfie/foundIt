@@ -2,7 +2,6 @@ import './image-large.component.css';
 import { Image } from 'cloudinary-react';
 
 const ImageLarge = (props) => {
-
   return (
     <div>
       {props.image === undefined

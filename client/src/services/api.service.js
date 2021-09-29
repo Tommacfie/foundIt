@@ -64,7 +64,11 @@ Api.deleteItem = async (id, authorisation) => {
 };
 
 Api.postImage = async (image) => {
-  const response = await Axios.post(Config.imageServer, image)
-  return response;
+  try {
+    const response = await Axios.post(Config.imageServer, image)
+    return response;
+  } catch (error) {
+    return error;
+  }
 }
 export default Api;

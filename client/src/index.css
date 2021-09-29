@@ -8,10 +8,11 @@ font-family: 'Open Sans', sans-serif; */
   --silver-bg: rgb(233, 232, 230);
   --border: rgba(99, 99, 99, 1);
   --icons: rgb(57, 72, 77);
-  --shadow: rgba(99, 99, 99, 0.205);
+  --shadow: rgba(99, 99, 99, 0.253);
   --tomato: rgb(255, 160, 71);
-  --tomato-faded: rgba(248, 139, 37, 0.452);
-  --tomato-option: rgba(248, 139, 37, 0.603);
+  --tomato-detail: rgba(255, 160, 71, 0.774);
+  --tomato-faded: rgba(248, 139, 37, 0.527);
+  --tomato-option: rgba(248, 139, 37, 0.596);
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--silver-bg);
+  border-color: var(--border);
 }
 
 input {
@@ -33,7 +35,12 @@ input {
   background-color: var(--main-bg);
   font-size: 20px;
   box-shadow: 0 0 5px 2px var(--shadow);
+  background-color: var(--tomato-faded);
 }
+::placeholder {
+  color: var(--icons);
+}
+
 input:focus {
   background-color: var(--tomato-faded);
   border: none;
