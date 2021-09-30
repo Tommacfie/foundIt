@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const { dataBase } = require('../config');
 
-dotenv.config();
-
-// const dataBase = process.env.DATABASE; //FIXME
-
-mongoose.connect('mongodb://localhost:27017/founditdatabase',
+mongoose.connect(dataBase,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

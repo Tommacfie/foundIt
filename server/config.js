@@ -8,8 +8,6 @@ const client = process.env.CLIENT;
 const accessTokenString = process.env.ACCESSTOKENSECRET;
 const accessTokenStringRefresh = process.env.REFRESHTOKENSECRET;
 
-// console.log(PORT, dataBase, client, tokenStringRefresh, 'config');//FIXME
-
 module.exports = {
   PORT,
   dataBase,
