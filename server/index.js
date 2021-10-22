@@ -1,9 +1,8 @@
 const Express = require('express');
-
 const app = Express();
 const cors = require('cors');
 const router = require('./router');
-const { PORT } = require('./config'); //FIXME
+const { PORT } = require('./config');
 
 app.use(cors());
 app.use(Express.json());

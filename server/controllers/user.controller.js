@@ -7,7 +7,6 @@ exports.createUser = async (req, res) => {
     if (await User.findOne({ email: email })) {
       return res.send('User already exists').status(400);
     }
-
     const password = req.body.password;
     req.body.password = await bcrypt.hash(password, 10);
 

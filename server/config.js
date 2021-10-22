@@ -1,17 +1,8 @@
 const dotenv = require('dotenv');
-
 dotenv.config();
 
-const PORT = process.env.PORT;
-const dataBase = process.env.DATABASE;
-const client = process.env.CLIENT;
-const accessTokenString = process.env.ACCESSTOKENSECRET;
-const accessTokenStringRefresh = process.env.REFRESHTOKENSECRET;
-
-module.exports = {
-  PORT,
-  dataBase,
-  client,
-  accessTokenString,
-  accessTokenStringRefresh,
-};
+exports.PORT = process.env.PORT;
+exports.dataBase = process.env.DATABASE;
+exports.client = process.env.CLIENT;
+exports.accessTokenString = process.env.ACCESSTOKENSECRET;
+exports.accessTokenStringRefresh = process.env.REFRESHTOKENSECRET;

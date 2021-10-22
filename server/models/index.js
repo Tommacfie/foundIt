@@ -8,7 +8,6 @@ mongoose.connect(dataBase,
   },
   () => {
     console.log('Connected to mongoose server');
-    // mongoose.connection.db.dropDatabase(); //DELETEME
   });
 
 module.exports = mongoose;
