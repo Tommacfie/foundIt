@@ -2,11 +2,11 @@ import './action.screen.css';
 import OptionComponent from '../components/presentational/option.component';
 import { Redirect } from 'react-router-dom';
 import { useContext } from 'react';
-import { LoginContext, ItemContext } from '../helpers.js/context';
+import { LoginContext } from '../helpers.js/context';
 
 
 const ActionScreen = (props) => {
-  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { isAuthorised } = useContext(LoginContext);
 
   return (
     <div>

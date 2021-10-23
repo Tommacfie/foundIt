@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import ItemsList from "../components/containers/list-items.component";
 import { Redirect } from "react-router-dom";
 import './home.screen.component.css';
@@ -8,8 +8,8 @@ import Api from "../services/api.service";
 
 const HomeScreen = (props) => {
 
-  const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { currentUser } = useContext(UserContext);
+  const { isAuthorised } = useContext(LoginContext);
   const { items, setItems } = useContext(ItemsContext);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const HomeScreen = (props) => {
       const items = await Api.getItems(currentUser.accessToken);
       setItems(items);
     })();
-  }, []);
+  });
 
   return (
     <div>

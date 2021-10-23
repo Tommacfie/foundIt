@@ -1,11 +1,8 @@
 import ImageSmall from '../presentational/image-small.component';
 import './item.component.css';
-import { useHistory } from 'react-router-dom';
 
 const Item = (props) => {
-  const history = useHistory();
   const displayDetails = () => {
-    //FIXME
   }
   return (
     <div className={`item ${props.data.lostOrFound ? 'lost' : 'found'}`} onClick={() => displayDetails()}>

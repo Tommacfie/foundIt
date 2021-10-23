@@ -1,6 +1,5 @@
 import { Route, Redirect } from "react-router-dom";
-import { useEffect, useState, useContext } from 'react';
-import Api from "../../services/api.service";
+import { useState, useContext } from 'react';
 import HomeScreen from "../../screens/home.screen.component";
 import ActionScreen from "../../screens/action.screen";
 import ProfileView from "../../screens/profile.screen";
@@ -9,21 +8,14 @@ import ItemDetailsDisplay from '../containers/item-details-display.component';
 import ImageForm from "../form/image.form";
 import Header from "../presentational/header.component";
 import NavBar from "./nav.component";
-import { LoginContext, ItemContext, UserContext, ItemsContext } from "../../helpers.js/context";
+import { LoginContext, ItemContext, ItemsContext } from "../../helpers.js/context";
 
 
 const AppLayout = () => {
-  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { isAuthorised } = useContext(LoginContext);
   const [items, setItems] = useState([]); // items from db
   const [itemData, setItemData] = useState({}); //currently submitting items
-  const { currentUser, setCurrentUser } = useContext(UserContext);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const items = await Api.getItems(currentUser.accessToken);
-  //     setItems(items);
-  //   })();
-  // }, []);
   return (
     <div className='app-container'>
       {!isAuthorised && <Redirect to='/auth/login' />}

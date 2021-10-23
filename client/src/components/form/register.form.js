@@ -9,8 +9,8 @@ import './register.form.css';
 const RegisterForm = () => {
 
   const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '', password: '' });
-  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { setIsAuthorised } = useContext(LoginContext);
+  const { setCurrentUser } = useContext(UserContext);
 
   const handleInputChange = (event) => {
     setUserData((prevState) => {

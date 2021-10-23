@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './button-std.component.css';
 
 const ButtonStd = (props) => {

@@ -4,7 +4,6 @@ import { useContext, useState } from 'react';
 import ImageLarge from '../presentational/image-lrg.component';
 import { useHistory } from 'react-router-dom';
 import ButtonStd from '../presentational/button-std.component';
-import Api from '../../services/api.service';
 
 const ImageForm = () => {
 

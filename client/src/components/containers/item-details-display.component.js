@@ -9,7 +9,7 @@ import ButtonStd from "../presentational/button-std.component";
 const ItemDetailsDisplay = (props) => {
   const history = useHistory();
   const { itemData, setItemData } = useContext(ItemContext)
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
 
   const submitItem = async () => {
     const userId = currentUser._id;

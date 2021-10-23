@@ -2,14 +2,14 @@ import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
 import { Redirect } from 'react-router-dom';
 import './profile.screen.css';
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 
 
 const ProfileView = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { items, setItems } = useContext(ItemsContext);
+  const { items } = useContext(ItemsContext);
 
   const logout = () => {
     setCurrentUser({});

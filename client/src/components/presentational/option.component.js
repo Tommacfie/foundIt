@@ -5,7 +5,7 @@ import { ItemContext } from '../../helpers.js/context';
 
 const OptionComponent = (props) => {
 
-  const { itemData, setItemData } = useContext(ItemContext);
+  const { setItemData } = useContext(ItemContext);
 
   const setLostOrFound = (arg) => {
     if (arg) {

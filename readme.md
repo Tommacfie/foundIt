@@ -55,6 +55,8 @@ foundIt/server npx nodemon
 
 ### FrontEnd
 
+- This will start the frontend server.
+
 ```
 foundIt/client % npm start
 ```

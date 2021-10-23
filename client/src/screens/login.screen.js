@@ -7,7 +7,7 @@ import { useContext } from "react";
 import './login.screen.css';
 
 const LoginScreen = () => {
-  const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
+  const { isAuthorised } = useContext(LoginContext);
 
   return (
     <div>
