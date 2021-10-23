@@ -9,6 +9,7 @@ exports.getItems = async (req, res) => {
     res.send(error);
     res.status(500);
   }
+  return;
 };
 
 exports.postItem = async (req, res) => {
