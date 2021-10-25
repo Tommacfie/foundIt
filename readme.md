@@ -4,7 +4,7 @@
 FoundIt is an app designed to reunite people with their lost possessions. Users can submit descriptions of items they have lost -or found- as well as images.
 
 ## Contributors
-- [Tom Macfie] (https://www.linkedin.com/in/tom-macfie/)
+- [Tom Macfie](https://www.linkedin.com/in/tom-macfie/)
 
 ## Technologies
 The technologies I used to build this app:
