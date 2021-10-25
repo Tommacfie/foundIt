@@ -6,6 +6,9 @@ FoundIt is an app designed to reunite people with their lost possessions. Users 
 ## Contributors
 - [Tom Macfie](https://www.linkedin.com/in/tom-macfie/)
 
+## Screenshots
+<img width="375" alt="Screenshot 2021-10-23 at 17 23 31" src="https://user-images.githubusercontent.com/70334875/138652106-14cb2ff2-e23a-41fc-9342-c04fb4018e8e.png">
+
 ## Technologies
 The technologies I used to build this app:
 
