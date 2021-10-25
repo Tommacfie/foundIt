@@ -13,10 +13,10 @@ FoundIt is an app designed to reunite people with their lost possessions. Users 
 The technologies I used to build this app:
 
 ### Frontend
-[React](https://reactjs.org/)
+[React](https://reactjs.org/), [Cloudinary](http://cloudinary.com/)
 
 ### Backend
-[NodeJs](https://nodejs.org/en/), [Express](http://expressjs.com/), [JWT](https://jwt.io/), [Cloudinary](http://cloudinary.com/)
+[NodeJs](https://nodejs.org/en/), [Express](http://expressjs.com/), [JWT](https://jwt.io/)
 
 ## Getting Started
 
