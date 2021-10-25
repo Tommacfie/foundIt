@@ -50,7 +50,7 @@ You will need to create a MongoDb database. You can set the database's URL by fo
 - This will start the server and the database.
 
 ```
-foundIt/server npx nodemon
+foundIt/server % npx nodemon
 ```
 
 ### FrontEnd
