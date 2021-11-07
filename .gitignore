@@ -35,3 +35,5 @@ dist
 .env.production.local
 .env
 .DS_Store
+foundIt-demo.mov
+foundIt-demo720.mov

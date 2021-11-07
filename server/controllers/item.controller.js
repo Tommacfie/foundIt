@@ -21,6 +21,7 @@ exports.postItem = async (req, res) => {
     res.send(error);
     res.status(500);
   }
+  return;
 };
 
 exports.deleteItem = async (req, res) => {
@@ -33,4 +34,5 @@ exports.deleteItem = async (req, res) => {
     res.send(error);
     res.status(500);
   }
+  return;
 };
