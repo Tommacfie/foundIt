@@ -17,7 +17,6 @@ exports.createUser = async (req, res) => {
     res.send(error);
     res.status(500);
   }
-  return;
 };
 exports.getUser = async (req, res) => {
   try {
@@ -28,5 +27,4 @@ exports.getUser = async (req, res) => {
     res.send(error);
     res.status(500);
   }
-  return;
 };

@@ -6,7 +6,6 @@ const { accessTokenString, accessTokenStringRefresh } = require('../config');
 let refreshTokens = [];
 
 exports.authenticate = async (req, res, next) => {
-
   try {
     const user = await User.findOne({ email: req.body.email });
 
@@ -22,9 +21,13 @@ exports.authenticate = async (req, res, next) => {
 
         refreshTokens.push(refreshToken);
 
-        const { firstName, lastName, email, _id } = user;
+        const {
+          firstName, lastName, email, _id,
+        } = user;
 
-        res.json({ firstName, lastName, email, _id, accessToken, refreshToken });
+        res.json({
+          firstName, lastName, email, _id, accessToken, refreshToken,
+        });
         res.status(200);
         next();
       } else {
@@ -63,6 +66,6 @@ exports.authorise = async (req, res, next) => {
 
 exports.logout = async (req, res) => {
   const { token } = req.body;
-  refreshTokens = refreshTokens.filter(t => t !== token);
+  refreshTokens = refreshTokens.filter((t) => t !== token);
   res.send('Logged out');
 };

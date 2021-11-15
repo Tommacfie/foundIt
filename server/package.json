@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "populate": "node users.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,7 @@
     "mocha": "^9.1.2",
     "mongoose": "^6.0.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
 }
