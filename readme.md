@@ -62,7 +62,7 @@ foundIt/server % npx nodemon
 
 - There is another script for dropping the entire database and data
 
-1. Start the backend server (using ``` foundIt/server % npx nodemon ```)
+1. Start the backend server using ``` foundIt/server % npx nodemon ```
 
 2. Populate the server using ```npm run populate```
 
