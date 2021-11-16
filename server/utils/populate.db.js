@@ -4,7 +4,7 @@ const usersArray = [
   {
     firstName: "Tom",
     lastName: "Macfie",
-    email: "c@c.com",
+    email: "t@t.com",
     password: "ajax",
   },
   {
@@ -60,7 +60,7 @@ const itemsArray = [
   },
   {
     title: "Wife",
-    description: "We were at the Cavern and she dissapeared with a doorman",
+    description: "We were at the Cavern and she disappeared with a doorman",
     brand: "Blonde",
     image:
       "https://res.cloudinary.com/diuadqc2m/image/upload/v1635145746/3_The-Cavern-Club-on-Mathew-Street-Liverpool_rwh6in.jpg",
@@ -82,11 +82,10 @@ const populateDb = async () => {
       });
       const userObj = await response.json();
       const { _id } = userObj;
-      console.log(userObj);
-      itemsArray[i].submittedBy = _id;
-      console.log("itemsArray", itemsArray[i]);
 
-      const itemResponse = await fetch("http://localhost:3001/test/items", {
+      itemsArray[i].submittedBy = _id;
+
+      await fetch("http://localhost:3001/test/items", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -95,7 +94,6 @@ const populateDb = async () => {
       });
     }
   } catch (error) {
-    console.log(error);
     return error;
   }
 };

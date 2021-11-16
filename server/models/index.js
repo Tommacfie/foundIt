@@ -11,5 +11,4 @@ mongoose.connect(
     console.log("Connected to mongoose server");
   }
 );
-// mongoose.connection.dropDatabase();
 module.exports = mongoose;

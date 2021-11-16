@@ -7,7 +7,9 @@
     "start": "node dist/index.js",
     "build": "tsc -p tsconfig.json",
     "populate": "node utils/populate.db.js",
-    "format": "prettier . --write "
+    "drop": "node utils/drop.db.js",
+    "format": "prettier \"./**/*.{js,jsx,ts,tsx,html,css}\" --write ",
+    "lint": "eslint \"./**/*.{js,jsx,ts,tsx,html,css}\" --quiet"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,8 @@
     "node-fetch": "^2.6.5"
   },
   "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.4.1"
   }

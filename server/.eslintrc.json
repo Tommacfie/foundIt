@@ -7,9 +7,6 @@
   },
   "extends": ["airbnb", "prettier"],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": 12
   },
   "rules": {
