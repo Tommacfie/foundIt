@@ -31,11 +31,11 @@ const ProfileView = () => {
               : <div className='profile-screen'>
                 <h3 className='profile-header'>Your Items</h3>
                 <ItemsList className='items-list' data={myList} />
+              </div>
+            }
                 <div style={{ 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center' }} className='logout-button' onClick={() => logout()}>
                   <ButtonStd text={'Logout'} />
                 </div>
-              </div>
-            }
           </div>
       }
 

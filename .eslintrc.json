@@ -7,7 +7,8 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,10 +20,11 @@
     "react"
   ],
   "rules": {
-    "no-console": "off",
+    "no-console": "warn",
     "no-underscore-dangle": "off",
     "prefer-destructuring": "off",
     "consistent-return": "off",
-    "object-shorthand": "off"
+    "object-shorthand": "off",
+    "no-restricted-syntax": "off"
   }
 }

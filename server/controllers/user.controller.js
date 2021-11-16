@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user.model');
 
 exports.createUser = async (req, res) => {
+  console.log('hello');
   try {
     const email = req.body.email;
     if (await User.findOne({ email: email })) {

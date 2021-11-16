@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { dataBase } = require('../config');
+const mongoose = require("mongoose");
+const { dataBase } = require("../config");
 
 mongoose.connect(
   dataBase,
@@ -8,8 +8,8 @@ mongoose.connect(
     useUnifiedTopology: true,
   },
   () => {
-    console.log('Connected to mongoose server');
-  },
+    console.log("Connected to mongoose server");
+  }
 );
 // mongoose.connection.dropDatabase();
 module.exports = mongoose;
