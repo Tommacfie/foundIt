@@ -58,15 +58,6 @@ You will need to create a MongoDb database. You can set the database's URL by fo
 foundIt/server % npx nodemon
 ```
 
-### FrontEnd
-
-- This will start the frontend server.
-
-```
-foundIt/client % npm start
-```
-#### Notes
-
 - There is a script for populating the database with mock users and mock items
 
 - There is another script for dropping the entire database and data
@@ -76,3 +67,13 @@ foundIt/client % npm start
 2. Populate the server using ```npm run populate```
 
 3. Drop the database and data using ```npm run drop```
+
+### FrontEnd
+
+- This will start the frontend server.
+
+```
+foundIt/client % npm start
+```
+
+
