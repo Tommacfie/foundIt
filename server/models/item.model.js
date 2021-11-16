@@ -1,4 +1,4 @@
-const mongoose = require('./index');
+const mongoose = require("./index");
 
 const { Schema } = mongoose;
 
@@ -18,7 +18,7 @@ const itemModel = new Schema({
   image: {
     type: String,
     required: false,
-    default: 'No image provided',
+    default: "No image provided",
   },
   location: {
     type: String,
@@ -34,6 +34,6 @@ const itemModel = new Schema({
   },
 });
 
-const Item = mongoose.model('Item', itemModel);
+const Item = mongoose.model("Item", itemModel);
 
 module.exports = Item;

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc -p tsconfig.json",
-    "populate": "node utils/populate.db.js"
+    "populate": "node utils/populate.db.js",
+    "format": "prettier . --write "
   },
   "keywords": [],
   "author": "",
