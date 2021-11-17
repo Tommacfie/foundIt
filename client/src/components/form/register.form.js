@@ -1,10 +1,9 @@
-import React from "react";
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { LoginContext, UserContext } from "../../helpers.js/context";
 import ButtonStd from "../presentational/button-std.component";
 
 import Api from "../../services/api.service";
-import "./register.form.css";
+import "../../scss/register.form.scss";
 
 const RegisterForm = () => {
   const [userData, setUserData] = useState({

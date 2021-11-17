@@ -1,4 +1,4 @@
-import "./image-large.component.css";
+import "../../scss/image-large.component.scss";
 
 const ImageLarge = (props) => {
   return (

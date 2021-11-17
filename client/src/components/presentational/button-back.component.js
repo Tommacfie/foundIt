@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import back from "../../assets/back";
+import back from "../../assets/back.png";
 
 const ButtonBack = (props) => {
   return (

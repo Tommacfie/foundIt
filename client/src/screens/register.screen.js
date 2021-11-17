@@ -2,7 +2,7 @@ import { Redirect, Link } from "react-router-dom";
 import React, { useContext } from "react";
 
 import RegisterFormComponent from "../components/form/register.form";
-import "./register.screen.css";
+import "../scss/register.screen.scss";
 import { LoginContext } from "../helpers.js/context";
 
 const RegisterScreen = () => {

@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
-import "./profile.screen.css";
+import "../scss/profile.screen.scss";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 
 const ProfileView = () => {

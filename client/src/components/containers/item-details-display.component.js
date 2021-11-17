@@ -1,10 +1,10 @@
-import ImageLarge from "../presentational/image-lrg.component";
-import "./item-details-display.component.css";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
+import ImageLarge from "../presentational/image-lrg.component";
 import { ItemContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 import ButtonStd from "../presentational/button-std.component";
+import "../../scss/item-details-display.component.scss"
 
 const ItemDetailsDisplay = () => {
   const history = useHistory();

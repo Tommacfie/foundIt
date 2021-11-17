@@ -1,5 +1,5 @@
 import ImageSmall from "../presentational/image-small.component";
-import "./item.component.css";
+import "../../scss/item.component.scss";
 
 const Item = (props) => {
   const displayDetails = () => {};

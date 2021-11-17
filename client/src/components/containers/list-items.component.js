@@ -1,5 +1,5 @@
-import Item from "../containers/item.component";
-import "./list-items.component.css";
+import Item from "./item.component";
+import "../../scss/list-items.component.scss";
 
 const ItemsList = (props) => {
   return (

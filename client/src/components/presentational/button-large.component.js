@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./button-large.component.css";
+import "../../scss/button-large.component.scss";
 
 const ButtonLarge = (props) => {
   return (

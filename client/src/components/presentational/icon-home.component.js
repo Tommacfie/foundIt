@@ -1,5 +1,5 @@
-import "./icon-home.component.css";
 import home from "../../assets/home.png";
+import "../../scss/icon-home.component.scss";
 
 const HomeIcon = () => {
   return (

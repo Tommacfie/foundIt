@@ -1,7 +1,7 @@
-import "./option.component.css";
-import ButtonLarge from "./button-large.component";
 import { useContext } from "react";
 import { ItemContext } from "../../helpers.js/context";
+import ButtonLarge from "./button-large.component";
+import "../../scss/option.component.scss";
 
 const OptionComponent = (props) => {
   const { setItemData } = useContext(ItemContext);

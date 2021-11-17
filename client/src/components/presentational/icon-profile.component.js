@@ -1,5 +1,5 @@
-import "./icon-profile.component.css";
 import profile from "../../assets/profile.png";
+import "../../scss/icon-profile.component.scss";
 
 const ProfileIcon = () => {
   return (

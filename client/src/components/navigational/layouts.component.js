@@ -1,9 +1,9 @@
 import { Switch, Route, Redirect } from "react-router-dom";
+import { useState } from "react";
 import AuthComponent from "./auth.component";
 import AppLayout from "./app.component";
 import LoginScreen from "../../screens/login.screen";
 import { LoginContext, UserContext } from "../../helpers.js/context";
-import { useState } from "react";
 
 const Layouts = () => {
   const [isAuthorised, setIsAuthorised] = useState(false);

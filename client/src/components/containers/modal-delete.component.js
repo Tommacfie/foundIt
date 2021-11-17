@@ -1,5 +1,5 @@
-import "./modal-delete.component.css";
 import ButtonStd from "../presentational/button-std.component";
+import "../../scss/modal-delete.component.scss";
 
 const ModalDelete = () => {
   return (
