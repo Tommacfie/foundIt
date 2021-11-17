@@ -1,4 +1,4 @@
-import React, { useContext }  from "react";
+import React, { useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Logo from "../components/presentational/logo.component";
 import LoginFormComponent from "../components/form/login.form";

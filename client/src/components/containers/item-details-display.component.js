@@ -4,7 +4,7 @@ import ImageLarge from "../presentational/image-lrg.component";
 import { ItemContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 import ButtonStd from "../presentational/button-std.component";
-import "../../scss/item-details-display.component.scss"
+import "../../scss/item-details-display.component.scss";
 
 const ItemDetailsDisplay = () => {
   const history = useHistory();
