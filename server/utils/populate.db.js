@@ -2,28 +2,28 @@ const fetch = require("node-fetch");
 
 const usersArray = [
   {
-    firstName: "Tom",
-    lastName: "Macfie",
+    firstName: "Tim",
+    lastName: "MacDonald",
     email: "t@t.com",
-    password: "ajax",
+    password: "1234",
   },
   {
     firstName: "Chris",
-    lastName: "Macfie",
-    email: "cm@cm.com",
-    password: "everton",
+    lastName: "Farlowe",
+    email: "c@c.com",
+    password: "4321",
   },
   {
     firstName: "Kat",
-    lastName: "Kowalska",
+    lastName: "Kristianssen",
     email: "k@k.com",
-    password: "bazy",
+    password: "abcd",
   },
   {
     firstName: "Sam",
-    lastName: "Andrus",
+    lastName: "Wise",
     email: "s@s.com",
-    password: "miri",
+    password: "dcba",
   },
 ];
 const itemsArray = [
