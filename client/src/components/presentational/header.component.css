@@ -1,6 +1,6 @@
 .header-container {
   width: 100vw;
-padding-top: 10px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

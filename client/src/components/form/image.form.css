@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+}
 
-  .image-input {
-background-color: var(--silver-bg);
-  }
+.image-input {
+  background-color: var(--silver-bg);
+}

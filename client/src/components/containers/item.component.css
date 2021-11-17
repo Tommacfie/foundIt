@@ -16,18 +16,18 @@
   box-shadow: 0px 0px 5px 5px rgba(92, 128, 128, 0.103);
 } */
 .item-image {
-width: 80px;
-justify-self: center;
-align-self: center;
+  width: 80px;
+  justify-self: center;
+  align-self: center;
 }
 .item-text {
   width: 250px;
-display: flex;
-flex-direction: column;
-align-items: right;
-font-size: 10px;
-overflow:hidden;
-padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  font-size: 10px;
+  overflow: hidden;
+  padding: 5px;
 }
 
 * {

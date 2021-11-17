@@ -1,6 +1,6 @@
-import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Layouts from './components/navigational/layouts.component';
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Layouts from "./components/navigational/layouts.component";
 
 const App = () => {
   return (

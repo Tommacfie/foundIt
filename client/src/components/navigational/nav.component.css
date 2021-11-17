@@ -7,7 +7,7 @@
 }
 .button {
   width: 33.33vw;
-  margin:auto;
+  margin: auto;
   text-align: center;
   filter: opacity(0.3);
   color: var(--icons);
