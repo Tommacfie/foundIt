@@ -1,26 +1,23 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node":true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types":"off"
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-underscore-dangle": "off",
+    "prefer-destructuring": "off",
+    "object-shorthand": "off",
+    "no-restricted-syntax": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+  }
 }
