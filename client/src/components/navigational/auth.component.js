@@ -3,7 +3,7 @@ import RegisterScreen from "../../screens/register.screen";
 import LoginScreen from "../../screens/login.screen";
 import "./auth.component.css";
 
-const AuthComponent = (props) => {
+const AuthComponent = () => {
   return (
     <div className="auth-component">
       <Route path="/auth/login" exact>

@@ -1,5 +1,6 @@
-import Config from "../config";
 import Axios from "axios";
+import Config from "../config";
+
 const Api = {};
 
 Api.login = async (userData) => {

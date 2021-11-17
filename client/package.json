@@ -9,9 +9,6 @@
     "axios": "^0.21.4",
     "cloudinary-react": "^1.7.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^19.0.0",
-    "eslint-config-prettier": "^8.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.1",
@@ -25,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier . --write",
-    "lint": "lint ."
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +43,10 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.0",
     "prettier": "^2.4.1"
   }
 }

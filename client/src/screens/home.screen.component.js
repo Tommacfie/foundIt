@@ -6,7 +6,7 @@ import "./home.screen.component.css";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 import Api from "../services/api.service";
 
-const HomeScreen = (props) => {
+const HomeScreen = () => {
   const { currentUser } = useContext(UserContext);
   const { isAuthorised } = useContext(LoginContext);
   const { items, setItems } = useContext(ItemsContext);

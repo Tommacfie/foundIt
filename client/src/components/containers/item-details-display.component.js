@@ -6,7 +6,7 @@ import { ItemContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 import ButtonStd from "../presentational/button-std.component";
 
-const ItemDetailsDisplay = (props) => {
+const ItemDetailsDisplay = () => {
   const history = useHistory();
   const { itemData, setItemData } = useContext(ItemContext);
   const { currentUser } = useContext(UserContext);
