@@ -3,7 +3,7 @@ import "../../scss/components/list-items.component.scss";
 
 const ItemsList = (props) => {
   return (
-    <div className="list-items">
+    <div className="items-list">
       {props.data.map((item) => {
         return <Item data={item} key={item._id} />;
       })}

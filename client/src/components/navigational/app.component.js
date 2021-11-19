@@ -20,7 +20,7 @@ const AppLayout = () => {
   const [itemData, setItemData] = useState({}); //currently submitting items
 
   return (
-    <div className="app-container">
+    <>
       {!isAuthorised && <Redirect to="/auth/login" />}
       <Header />
       <ItemsContext.Provider value={{ items, setItems }}>
@@ -74,7 +74,7 @@ const AppLayout = () => {
       </ItemsContext.Provider>
       <Redirect from="/app" to="/app/home" exact />
       <NavBar />
-    </div>
+    </>
   );
 };
 

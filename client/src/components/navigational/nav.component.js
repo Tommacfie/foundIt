@@ -7,18 +7,18 @@ import "../../scss/components/nav.component.scss";
 
 const NavBar = () => {
   return (
-    <div className="navBar-container">
-      <div className="button home-button-container">
+    <div className="navbar">
+      <div className="button navbar__home-button">
         <Link to="/app/home">
           <HomeIcon />
         </Link>
       </div>
-      <div className="button add-button-container">
+      <div className="button navbar__add-button">
         <Link to="/app/create">
           <CreateIcon />
         </Link>
       </div>
-      <div className="button profile-button-container">
+      <div className="button navbar__profile-button">
         <Link to="/app/profile">
           <ProfileIcon />
         </Link>

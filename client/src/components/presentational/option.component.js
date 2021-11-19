@@ -15,7 +15,7 @@ const OptionComponent = (props) => {
   };
   return (
     <div className="option-component">
-      <h2>{props.title}</h2>
+      <h2 className='option-component__header'>{props.title}</h2>
       <div
         style={{
           display: "flex",

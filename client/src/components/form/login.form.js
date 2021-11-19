@@ -29,20 +29,20 @@ const LoginForm = () => {
 
   //FIX ME - add validation to form fields
   return (
-    <div>
+    <>
       <form className="login-form" autoComplete="off">
-        <div className="form-group">
+        <div className="login-form__form-group">
           <input
-            className="form-control"
+            className="login-form__input"
             type="text"
             name="email"
             onChange={(event) => handleInputChange(event)}
             placeholder="email address"
           />
         </div>
-        <div className="form-group">
+        <div className="login-form__form-group">
           <input
-            className="form-control"
+            className="login-form__input"
             type="password"
             name="password"
             onChange={(event) => handleInputChange(event)}
@@ -57,7 +57,7 @@ const LoginForm = () => {
           <ButtonStd text={"Login"} />
         </div>
       </form>
-    </div>
+    </>
   );
 };
 

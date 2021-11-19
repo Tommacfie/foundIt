@@ -43,36 +43,36 @@ const RegisterForm = () => {
 
   return (
     <form className="register-form" autoComplete="off">
-      <div className="form-group">
+      <div className="register-form__form-group">
         <input
-          className="form-control"
+          className="register-form__input"
           type="text"
           name="firstName"
           placeholder={"first name"}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group" autoComplete="off">
         <input
-          className="form-control"
+          className="register-form__input"
           type="text"
           name="lastName"
           placeholder={"last name"}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group" autoComplete="off">
         <input
-          className="form-control"
+          className="register-form__input"
           type="email"
           name="email"
           placeholder={"email"}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group" autoComplete="off">
         <input
-          className="form-control"
+          className="register-form__input"
           type="password"
           name="password"
           placeholder={"password"}

@@ -24,11 +24,11 @@ const ImageForm = () => {
 
   return (
     <div className="image-form">
-      <h1>IMAGEFORM</h1>
+      <h1 className='image-form__header'>IMAGEFORM</h1>
       {imageRender.length ? (
         <ImageLarge image={imageRender} />
       ) : (
-        <h1>no image</h1>
+        <h1 className='image-form__header--no-image'>no image</h1>
       )}
       <input
         className="image-input"
