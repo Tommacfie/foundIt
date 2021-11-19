@@ -2,7 +2,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { useState } from "react";
 import AuthComponent from "./auth.component";
 import AppLayout from "./app.component";
-import LoginScreen from "../../screens/login.screen";
+import LoginScreen from "../../pages/login.page";
 import { LoginContext, UserContext } from "../../helpers.js/context";
 
 const Layouts = () => {

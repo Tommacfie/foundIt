@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CreateIcon from "../presentational/icon-create.component";
 import HomeIcon from "../presentational/icon-home.component";
 import ProfileIcon from "../presentational/icon-profile.component";
-import "../../scss/nav.component.scss";
+import "../../scss/components/nav.component.scss";
 
 const NavBar = () => {
   return (

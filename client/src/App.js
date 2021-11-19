@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Layouts from "./components/navigational/layouts.component";
-import "./scss/App.scss";
+import "./scss/layouts/App.scss";
 
 const App = () => {
   return (

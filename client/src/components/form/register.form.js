@@ -3,7 +3,7 @@ import { LoginContext, UserContext } from "../../helpers.js/context";
 import ButtonStd from "../presentational/button-std.component";
 
 import Api from "../../services/api.service";
-import "../../scss/register.form.scss";
+import "../../scss/components/register.form.scss";
 
 const RegisterForm = () => {
   const [userData, setUserData] = useState({

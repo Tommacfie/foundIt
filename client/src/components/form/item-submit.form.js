@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import ButtonStd from "../presentational/button-std.component";
 import { ItemContext } from "../../helpers.js/context";
-import "../../scss/item-submit.form.scss";
+import "../../scss/components/item-submit.form.scss";
 
 const ItemSubmitForm = () => {
   const [userData, setUserData] = useState({

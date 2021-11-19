@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { ItemContext } from "../../helpers.js/context";
 import ImageLarge from "../presentational/image-lrg.component";
 import ButtonStd from "../presentational/button-std.component";
-import "../../scss/image.form.scss";
+import "../../scss/components/image.form.scss";
 
 const ImageForm = () => {
   const history = useHistory();

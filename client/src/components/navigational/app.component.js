@@ -1,9 +1,9 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext } from "react";
-import HomeScreen from "../../screens/home.screen.component";
-import ActionScreen from "../../screens/action.screen";
-import ProfileView from "../../screens/profile.screen";
-import CreateItem from "../../screens/create.item.screen";
+import HomeScreen from "../../pages/home.page.component";
+import ActionScreen from "../../pages/action.page";
+import ProfileView from "../../pages/profile.page";
+import CreateItem from "../../pages/create.item.page";
 import ItemDetailsDisplay from "../containers/item-details-display.component";
 import ImageForm from "../form/image.form";
 import Header from "../presentational/header.component";

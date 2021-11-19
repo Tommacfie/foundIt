@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import Logo from "../components/presentational/logo.component";
 import LoginFormComponent from "../components/form/login.form";
 import { LoginContext } from "../helpers.js/context";
-import "../scss/components/login.screen.scss";
+import "../scss/pages/login.page.scss";
 
 const LoginScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
