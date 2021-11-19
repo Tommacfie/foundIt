@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 @mixin input {
   margin-bottom: 10px;
