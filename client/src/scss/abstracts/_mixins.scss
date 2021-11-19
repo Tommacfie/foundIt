@@ -15,9 +15,8 @@
   border: none;
   border-radius: 5px;
   padding: 20px;
-  background-color: var(--main-bg);
   font-size: 20px;
-  box-shadow: 0 0 5px 2px var(--shadow);
-  background-color: var(--tomato-faded);
-
+}
+@mixin focus {
+  box-shadow: 0 0 5px 2px $shadow;
 }

@@ -1,8 +1,9 @@
 .register-form {
-  width: 70vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@include flex-column;
+&__input {
+  @include input;
+}
+&__input:focus {
+@include focus;
+}
 }

@@ -9,6 +9,7 @@
 .app {
 height: 100vh;
 }
-a {
+a, a:link, a:visited {
   text-decoration: none;
+  color: black;
 }
