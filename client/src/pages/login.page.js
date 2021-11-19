@@ -9,9 +9,9 @@ const LoginScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
 
   return (
-    <div>
+    <>
       {!isAuthorised ? (
-        <div className="login-container">
+        <div className="login-page">
           <Logo />
           <LoginFormComponent />
           <Link to="/auth/register">Register</Link>
@@ -19,7 +19,7 @@ const LoginScreen = () => {
       ) : (
         <Redirect to="/app/home" />
       )}
-    </div>
+    </>
   );
 };
 

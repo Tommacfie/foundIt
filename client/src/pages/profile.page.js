@@ -20,7 +20,7 @@ const ProfileView = () => {
   });
 
   return (
-    <div>
+    <>
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
@@ -28,9 +28,9 @@ const ProfileView = () => {
           {!myList.length ? (
             <h2>No items to display</h2>
           ) : (
-            <div className="profile-screen">
-              <h3 className="profile-header">Your Items</h3>
-              <ItemsList className="items-list" data={myList} />
+            <div className="profile-page">
+              <h3 className="profile-page__header">Your Items</h3>
+              <ItemsList className="profile-page__items-list" data={myList} />
             </div>
           )}
           <div
@@ -39,14 +39,14 @@ const ProfileView = () => {
               flexDirection: "column",
               alignItems: "center",
             }}
-            className="logout-button"
+            className="profile-page__logout-button"
             onClick={() => logout()}
           >
             <ButtonStd text={"Logout"} />
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

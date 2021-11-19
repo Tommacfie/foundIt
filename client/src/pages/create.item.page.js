@@ -7,9 +7,9 @@ import "../scss/pages/create.item.page.scss";
 const CreateItem = () => {
   const { isAuthorised } = useContext(LoginContext);
   return (
-    <div>
+    <>
       {!isAuthorised ? <Redirect to="/auth/login" /> : <ItemSubmitForm />}
-    </div>
+    </>
   );
 };
 

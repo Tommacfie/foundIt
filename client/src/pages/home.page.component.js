@@ -18,16 +18,16 @@ const HomeScreen = () => {
   });
 
   return (
-    <div>
+    <>
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
         <div className="home-screen">
-          <h3 className="home-header">Home</h3>
+          <h3 className="home-screen__header">Home</h3>
           <ItemsList data={items} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -4,9 +4,11 @@ import "./scss/layouts/App.scss";
 
 const App = () => {
   return (
+    <div className='app'>
     <Router>
       <Layouts />
-    </Router>
+      </Router>
+      </div>
   );
 };
 

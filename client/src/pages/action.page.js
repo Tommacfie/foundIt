@@ -8,7 +8,7 @@ const ActionScreen = (props) => {
   const { isAuthorised } = useContext(LoginContext);
 
   return (
-    <div>
+    <div className='option-component'>
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (

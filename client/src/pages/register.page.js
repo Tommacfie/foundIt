@@ -9,17 +9,17 @@ const RegisterScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
 
   return (
-    <div>
+    <>
       {isAuthorised ? (
         <Redirect to="/app/home" />
       ) : (
-        <div className="register-container">
-          <h1 className="register-header">Register</h1>
+        <div className="register-page">
+          <h1 className="register-page__header">Register</h1>
           <RegisterFormComponent />
           <Link to="/auth/login">Back to Login</Link>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
