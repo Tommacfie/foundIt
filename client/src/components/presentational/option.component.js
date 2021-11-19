@@ -1,8 +1,11 @@
 import { useContext } from "react";
+import { LoginContext } from "../../helpers.js/context";
 import { ItemContext } from "../../helpers.js/context";
+import { Redirect } from "react-router-dom";
 import ButtonLarge from "./button-large.component";
 
 const OptionComponent = (props) => {
+  const { isAuthorised } = useContext(LoginContext);
   const { setItemData } = useContext(ItemContext);
 
   const setLostOrFound = (arg) => {
@@ -14,31 +17,41 @@ const OptionComponent = (props) => {
   };
   return (
     <div className="option-component">
-      <h2 className='option-component__header'>{props.title}</h2>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-        onClick={() => setLostOrFound(true)}
-      >
-        <ButtonLarge text={props.topButtonText} link={props.topButtonLink} />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-        onClick={() => setLostOrFound(false)}
-      >
-        <ButtonLarge
-          text={props.bottomButtonText}
-          link={props.bottomButtonLink}
-        />
-      </div>
-    </div>
+      {!isAuthorised ? (
+        <Redirect to="/auth/login" />
+      ) : (
+        <>
+          <h2 className='option-component__header'>{props.title}</h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            onClick={() => setLostOrFound(true)}
+          >
+            <ButtonLarge
+              text={props.topButtonText}
+              link={props.topButtonLink} />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            onClick={() => setLostOrFound(false)}
+          >
+            <ButtonLarge
+              text={props.bottomButtonText}
+              link={props.bottomButtonLink}
+            />
+          </div>
+        </>
+      )}
+        </div>
+
+
   );
 };
 

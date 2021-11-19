@@ -1,7 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext } from "react";
 import HomeScreen from "../../pages/home.page.component";
-import ActionScreen from "../../pages/action.page";
+// import ActionScreen from "../../pages/action.page";
 import ProfileView from "../../pages/profile.page";
 import CreateItem from "../../pages/create.item.page";
 import ItemDetailsDisplay from "../containers/item-details-display.component";
@@ -13,6 +13,7 @@ import {
   ItemContext,
   ItemsContext,
 } from "../../helpers.js/context";
+import OptionComponent from "../presentational/option.component";
 
 const AppLayout = () => {
   const { isAuthorised } = useContext(LoginContext);
@@ -33,7 +34,7 @@ const AppLayout = () => {
 
         <ItemContext.Provider value={{ itemData, setItemData }}>
           <Route path="/app/create" exact>
-            <ActionScreen
+            <OptionComponent
               title={"Have you lost OR found an item?"}
               topButtonText={"LOST"}
               bottomButtonText={"FOUND"}
@@ -62,7 +63,7 @@ const AppLayout = () => {
             <ItemDetailsDisplay />{" "}
           </Route>
           <Route path="/app/postSubmit" exact>
-            <ActionScreen
+            <OptionComponent
               title={"Thankyou for your submission"}
               topButtonText={"Return to Home"}
               bottomButtonText={"Submit another item"}
