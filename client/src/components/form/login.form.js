@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import Api from "../../services/api.service";
 import { LoginContext, UserContext } from "../../helpers.js/context";
 import ButtonStd from "../presentational/button-std.component";
-import "../../scss/components/login.form.scss";
 
 const LoginForm = () => {
   const [userInput, setUserInput] = useState({ email: "", password: "" });

@@ -1,0 +1,23 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin input {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--main-bg);
+  font-size: 20px;
+  box-shadow: 0 0 5px 2px var(--shadow);
+  background-color: var(--tomato-faded);
+
+}

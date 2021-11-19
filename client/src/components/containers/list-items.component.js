@@ -1,5 +1,4 @@
 import Item from "./item.component";
-import "../../scss/components/list-items.component.scss";
 
 const ItemsList = (props) => {
   return (

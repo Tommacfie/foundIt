@@ -1,5 +1,3 @@
-import "../../scss/components/image-large.component.scss";
-
 const ImageLarge = (props) => {
   return (
     <div className='image-large'>

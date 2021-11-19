@@ -1,5 +1,4 @@
 import create from "../../assets/create.png";
-import "../../scss/components/icon-create.component.scss";
 
 const CreateIcon = () => {
   return (

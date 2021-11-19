@@ -1,5 +1,4 @@
 import example from "../../assets/default-img.png";
-import "../../scss/components/image-small.component.scss";
 
 const ImageSmall = (props) => {
   return (

@@ -3,7 +3,6 @@ import { Redirect } from "react-router-dom";
 import ItemsList from "../components/containers/list-items.component";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 import Api from "../services/api.service";
-import "../scss/pages/home.page.component.scss";
 
 const HomeScreen = () => {
   const { currentUser } = useContext(UserContext);

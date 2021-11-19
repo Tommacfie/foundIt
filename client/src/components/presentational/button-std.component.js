@@ -1,5 +1,3 @@
-import "../../scss/components/button-std.component.scss";
-
 const ButtonStd = (props) => {
   return (
     <div className="button-std">
