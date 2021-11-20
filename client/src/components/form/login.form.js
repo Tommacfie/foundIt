@@ -18,10 +18,14 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const loggedIn = await Api.login(userInput);
-    if (loggedIn) {
-      setCurrentUser(loggedIn);
-      setIsAuthorised(true);
+    try {
+      const loggedIn = await Api.login(userInput);
+      if (loggedIn) {
+        setCurrentUser(loggedIn);
+        setIsAuthorised(true);
+      }
+    } catch (error) {
+      alert('Error logging in!');
     }
   };
 

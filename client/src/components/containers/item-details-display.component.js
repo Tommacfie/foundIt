@@ -10,7 +10,6 @@ const ItemDetailsDisplay = () => {
   const { currentUser } = useContext(UserContext);
 
   const submitItem = async () => {
-    console.log("Item submit!");
     const userId = currentUser._id;
     try {
       const image = await Api.postImage(itemData.formData);
