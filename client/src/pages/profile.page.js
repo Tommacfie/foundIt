@@ -41,7 +41,7 @@ const ProfileView = () => {
             className="profile-page__logout-button"
             onClick={() => logout()}
           >
-            <ButtonStd text={"Logout"} />
+            <button className='button-std' onClick={logout}>Logout</button>
           </div>
         </>
       )}
