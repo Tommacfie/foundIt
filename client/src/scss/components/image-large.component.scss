@@ -1,12 +1,12 @@
 .image-large {
   &__image {
-  display: block;
-  max-height: 300px;
-  max-width: 250px;
-  height: auto;
-  width: auto;
-  margin: 5px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px 5px rgba(99, 99, 99, 0.103);
+    display: block;
+    max-height: 300px;
+    max-width: 250px;
+    height: auto;
+    width: auto;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(99, 99, 99, 0.103);
   }
 }

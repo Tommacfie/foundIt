@@ -1,6 +1,6 @@
 const ImageLarge = (props) => {
   return (
-    <div className='image-large'>
+    <div className="image-large">
       {props.image === undefined ? (
         <h2>NO IMAGE TO DISPLAY</h2>
       ) : (

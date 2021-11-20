@@ -14,9 +14,7 @@
 @mixin input {
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
   padding: 20px;
-  font-size: 20px;
 }
 @mixin focus {
   box-shadow: 0 0 5px 2px $shadow;

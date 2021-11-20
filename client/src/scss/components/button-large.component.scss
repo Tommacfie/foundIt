@@ -1,10 +1,8 @@
 .button-lrg {
+  @include flex-column;
+  align-items: center;
   height: 10vh;
   width: 60vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border: 1px solid $shadow;
   border-radius: 15px;
   font-size: 20px;

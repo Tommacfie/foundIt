@@ -5,7 +5,7 @@ const ButtonBack = (props) => {
   return (
     <div className="button-back">
       <Link to={`${props.link}`}>
-        <img src={back} alt={'back button'}/>
+        <img src={back} alt={"back button"} />
       </Link>
     </div>
   );

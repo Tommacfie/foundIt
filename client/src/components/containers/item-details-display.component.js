@@ -11,30 +11,34 @@ const ItemDetailsDisplay = () => {
   const { currentUser } = useContext(UserContext);
 
   const submitItem = async () => {
+    console.log("Item submit!");
     const userId = currentUser._id;
-
-    const image = await Api.postImage(itemData.formData);
-    await Api.postItem(
-      { ...itemData, submittedBy: userId, image: image.data.url },
-      currentUser.accessToken
-    );
-    await Api.getItems(currentUser.accessToken);
-    history.push(`/app/postSubmit`);
-    setItemData({});
+    try {
+      const image = await Api.postImage(itemData.formData);
+      await Api.postItem(
+        { ...itemData, submittedBy: userId, image: image.data.url },
+        currentUser.accessToken
+      );
+      await Api.getItems(currentUser.accessToken);
+      history.push(`/app/postSubmit`);
+      setItemData({});
+    } catch (error) {
+      alert(error);
+    }
   };
   // const image = URL.createObjectURL(itemData.image);
 
   return (
     <div className="item-details-display">
-      <h1 className='item-details-display__heading'>
+      <h1 className="item-details-display__heading">
         {itemData.title}, {itemData.brand}
       </h1>
       <ImageLarge image={URL.createObjectURL(itemData.image)} />
-      <h3 className='item-details-display__location'>{itemData.location}</h3>
-      <p className='item-details-display__description'>{itemData.description}</p>
-      <div onClick={() => submitItem()}>
-        <ButtonStd text={"Submit"} />
-      </div>
+      <h3 className="item-details-display__location">{itemData.location}</h3>
+      <p className="item-details-display__description">
+        {itemData.description}
+      </p>
+      <button className='button-std' onClick={submitItem}>Submit</button>
     </div>
   );
 };

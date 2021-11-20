@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { LoginContext, UserContext } from "../../helpers.js/context";
-import ButtonStd from "../presentational/button-std.component";
 import Api from "../../services/api.service";
 
 const RegisterForm = () => {
@@ -61,7 +60,7 @@ const RegisterForm = () => {
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="register-form__form-group" >
+      <div className="register-form__form-group">
         <input
           className="register-form__input"
           type="email"
@@ -81,9 +80,9 @@ const RegisterForm = () => {
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div style={{ marginBottom: "10px" }} onClick={handleSubmit}>
-        <ButtonStd text={"Register"} />
-      </div>
+      <button text={"Register"} onClick={handleSubmit}>
+        Register
+      </button>
     </form>
   );
 };

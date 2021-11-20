@@ -23,7 +23,7 @@ const ProfileView = () => {
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
-        <div>
+        <>
           {!myList.length ? (
             <h2>No items to display</h2>
           ) : (
@@ -43,7 +43,7 @@ const ProfileView = () => {
           >
             <ButtonStd text={"Logout"} />
           </div>
-        </div>
+        </>
       )}
     </>
   );

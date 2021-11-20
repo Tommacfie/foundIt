@@ -1,9 +1,9 @@
 .item-submit-form {
-@include flex-column;
-&__input {
-  @include input;
-}
-&__input:focus {
-@include focus;
-}
+  @include flex-column;
+  &__input {
+    @include input;
+  }
+  &__input:focus {
+    @include focus;
+  }
 }

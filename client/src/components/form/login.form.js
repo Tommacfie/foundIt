@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import Api from "../../services/api.service";
 import { LoginContext, UserContext } from "../../helpers.js/context";
-import ButtonStd from "../presentational/button-std.component";
 
 const LoginForm = () => {
   const [userInput, setUserInput] = useState({ email: "", password: "" });
@@ -50,13 +49,9 @@ const LoginForm = () => {
             autoComplete="current-password"
           />
         </div>
-        <div
-          style={{ marginBottom: "10px" }}
-          className="login-button"
-          onClick={handleSubmit}
-        >
-          <ButtonStd text={"Login"} />
-        </div>
+        <button className="button-std" text={"Login"} onClick={handleSubmit}>
+          Login
+        </button>
       </form>
     </>
   );

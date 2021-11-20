@@ -1,8 +1,8 @@
 const ButtonStd = (props) => {
   return (
-    <div className="button-std">
-      <h3>{props.text}</h3>
-    </div>
+    <button className="button-std" onClick={() => props.onClick()}>
+      {props.text}
+    </button>
   );
 };
 export default ButtonStd;

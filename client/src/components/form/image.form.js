@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { ItemContext } from "../../helpers.js/context";
 import ImageLarge from "../presentational/image-lrg.component";
-import ButtonStd from "../presentational/button-std.component";
 
 const ImageForm = () => {
   const history = useHistory();
@@ -23,11 +22,11 @@ const ImageForm = () => {
 
   return (
     <div className="image-form">
-      <h1 className='image-form__header'>IMAGEFORM</h1>
+      <h1 className="image-form__header">IMAGEFORM</h1>
       {imageRender.length ? (
         <ImageLarge image={imageRender} />
       ) : (
-        <h1 className='image-form__header--no-image'>no image</h1>
+        <h1 className="image-form__header--no-image">no image</h1>
       )}
       <input
         className="image-input"
@@ -44,9 +43,7 @@ const ImageForm = () => {
           setImageRender(URL.createObjectURL(event.target.files[0]));
         }}
       />
-      <div onClick={() => handleSubmit()}>
-        <ButtonStd text={"Submit"} />
-      </div>
+      <button className='button-std' onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
