@@ -1,8 +1,6 @@
-import React from "react";
-import { useContext, useEffect } from "react";
-import ItemsList from "../components/containers/list-items.component";
+import React, { useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import "./home.screen.component.css";
+import ItemsList from "../components/containers/list-items.component";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 import Api from "../services/api.service";
 
@@ -19,16 +17,16 @@ const HomeScreen = () => {
   });
 
   return (
-    <div>
+    <>
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
         <div className="home-screen">
-          <h3 className="home-header">Home</h3>
+          <h3 className="home-screen__header">Home</h3>
           <ItemsList data={items} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

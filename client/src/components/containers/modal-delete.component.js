@@ -1,4 +1,3 @@
-import "./modal-delete.component.css";
 import ButtonStd from "../presentational/button-std.component";
 
 const ModalDelete = () => {

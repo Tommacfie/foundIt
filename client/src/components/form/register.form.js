@@ -1,10 +1,6 @@
-import React from "react";
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { LoginContext, UserContext } from "../../helpers.js/context";
-import ButtonStd from "../presentational/button-std.component";
-
 import Api from "../../services/api.service";
-import "./register.form.css";
 
 const RegisterForm = () => {
   const [userData, setUserData] = useState({
@@ -43,46 +39,50 @@ const RegisterForm = () => {
   };
 
   return (
-    <form className="register-form" autoComplete="off">
-      <div className="form-group">
+    <form className="register-form">
+      <div className="register-form__form-group">
         <input
-          className="form-control"
+          className="register-form__input"
           type="text"
           name="firstName"
           placeholder={"first name"}
+          autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group">
         <input
-          className="form-control"
+          className="register-form__input"
           type="text"
           name="lastName"
           placeholder={"last name"}
+          autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group">
         <input
-          className="form-control"
+          className="register-form__input"
           type="email"
           name="email"
           placeholder={"email"}
+          autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div className="form-group" autoComplete="off">
+      <div className="register-form__form-group">
         <input
-          className="form-control"
+          className="register-form__input"
           type="password"
           name="password"
           placeholder={"password"}
+          autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <div style={{ marginBottom: "10px" }} onClick={handleSubmit}>
-        <ButtonStd text={"Register"} />
-      </div>
+      <button className='button-std' onClick={handleSubmit}>
+        Register
+      </button>
     </form>
   );
 };

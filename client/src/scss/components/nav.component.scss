@@ -1,0 +1,8 @@
+.navbar {
+  @include flex-row;
+}
+.button {
+  width: 33.33vw;
+  margin: auto;
+  text-align: center;
+}

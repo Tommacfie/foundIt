@@ -1,10 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import Api from "../../services/api.service";
 import { LoginContext, UserContext } from "../../helpers.js/context";
-import { useContext } from "react";
-import ButtonStd from "../presentational/button-std.component";
-import "./login.form.css";
 
 const LoginForm = () => {
   const [userInput, setUserInput] = useState({ email: "", password: "" });
@@ -31,35 +27,33 @@ const LoginForm = () => {
 
   //FIX ME - add validation to form fields
   return (
-    <div>
-      <form className="login-form" autoComplete="off">
-        <div className="form-group">
+    <>
+      <form className="login-form">
+        <div className="login-form__form-group">
           <input
-            className="form-control"
+            className="login-form__input"
             type="text"
             name="email"
             onChange={(event) => handleInputChange(event)}
             placeholder="email address"
+            autoComplete="email"
           />
         </div>
-        <div className="form-group">
+        <div className="login-form__form-group">
           <input
-            className="form-control"
+            className="login-form__input"
             type="password"
             name="password"
             onChange={(event) => handleInputChange(event)}
             placeholder="password"
+            autoComplete="current-password"
           />
         </div>
-        <div
-          style={{ marginBottom: "10px" }}
-          className="login-button"
-          onClick={handleSubmit}
-        >
-          <ButtonStd text={"Login"} />
-        </div>
+        <button className="button-std" text={"Login"} onClick={handleSubmit}>
+          Login
+        </button>
       </form>
-    </div>
+    </>
   );
 };
 

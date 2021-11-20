@@ -1,0 +1,9 @@
+.button-lrg {
+  @include flex-column;
+  align-items: center;
+  height: 10vh;
+  width: 60vw;
+  border: 1px solid $shadow;
+  border-radius: 15px;
+  font-size: 20px;
+}

@@ -1,12 +1,14 @@
-import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Layouts from "./components/navigational/layouts.component";
+import "./scss/main.scss";
 
 const App = () => {
   return (
-    <Router>
-      <Layouts />
-    </Router>
+    <div className="app">
+      <Router>
+        <Layouts />
+      </Router>
+    </div>
   );
 };
 

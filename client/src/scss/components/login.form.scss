@@ -1,0 +1,13 @@
+.login-form {
+  @include flex-column;
+  &__input {
+    @include input;
+  }
+  &__input:focus {
+    @include focus;
+    outline: none;
+  }
+  &__input:focus::placeholder {
+    color: transparent;
+  }
+}

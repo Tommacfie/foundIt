@@ -94,6 +94,7 @@ const populateDb = async () => {
       });
     }
   } catch (error) {
+    console.log("error populating database", error);
     return error;
   }
 };

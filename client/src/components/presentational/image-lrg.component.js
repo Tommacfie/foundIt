@@ -1,18 +1,16 @@
-import "./image-large.component.css";
-
 const ImageLarge = (props) => {
   return (
-    <div>
+    <div className="image-large">
       {props.image === undefined ? (
         <h2>NO IMAGE TO DISPLAY</h2>
       ) : (
-        <div className="image-large-container">
+        <>
           <img
-            className="image-large"
+            className="image-large__image"
             src={`${props.image}`}
             alt="Item large"
           />
-        </div>
+        </>
       )}
     </div>
   );

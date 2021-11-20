@@ -3,7 +3,6 @@ import { useContext } from "react";
 
 import ItemsList from "../components/containers/list-items.component";
 import ButtonStd from "../components/presentational/button-std.component";
-import "./profile.screen.css";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 
 const ProfileView = () => {
@@ -20,17 +19,17 @@ const ProfileView = () => {
   });
 
   return (
-    <div>
+    <>
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
-        <div>
+        <>
           {!myList.length ? (
             <h2>No items to display</h2>
           ) : (
-            <div className="profile-screen">
-              <h3 className="profile-header">Your Items</h3>
-              <ItemsList className="items-list" data={myList} />
+            <div className="profile-page">
+              <h3 className="profile-page__header">Your Items</h3>
+              <ItemsList className="profile-page__items-list" data={myList} />
             </div>
           )}
           <div
@@ -39,14 +38,14 @@ const ProfileView = () => {
               flexDirection: "column",
               alignItems: "center",
             }}
-            className="logout-button"
+            className="profile-page__logout-button"
             onClick={() => logout()}
           >
-            <ButtonStd text={"Logout"} />
+            <button className='button-std' onClick={logout}>Logout</button>
           </div>
-        </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

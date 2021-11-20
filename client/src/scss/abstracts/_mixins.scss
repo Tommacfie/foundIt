@@ -1,0 +1,21 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@mixin input {
+  margin-bottom: 10px;
+  border: none;
+  padding: 20px;
+}
+@mixin focus {
+  box-shadow: 0 0 5px 2px $shadow;
+}

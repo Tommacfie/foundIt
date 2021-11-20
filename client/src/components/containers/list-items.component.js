@@ -1,9 +1,8 @@
-import Item from "../containers/item.component";
-import "./list-items.component.css";
+import Item from "./item.component";
 
 const ItemsList = (props) => {
   return (
-    <div className="list-items">
+    <div className="items-list">
       {props.data.map((item) => {
         return <Item data={item} key={item._id} />;
       })}
