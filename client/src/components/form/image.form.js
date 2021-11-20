@@ -43,7 +43,9 @@ const ImageForm = () => {
           setImageRender(URL.createObjectURL(event.target.files[0]));
         }}
       />
-      <button className='button-std' onClick={handleSubmit}>Submit</button>
+      <button className="button-std" onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   );
 };

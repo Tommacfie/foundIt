@@ -2,7 +2,6 @@ import { Redirect } from "react-router-dom";
 import { useContext } from "react";
 
 import ItemsList from "../components/containers/list-items.component";
-import ButtonStd from "../components/presentational/button-std.component";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 
 const ProfileView = () => {
@@ -41,7 +40,9 @@ const ProfileView = () => {
             className="profile-page__logout-button"
             onClick={() => logout()}
           >
-            <button className='button-std' onClick={logout}>Logout</button>
+            <button className="button-std" onClick={logout}>
+              Logout
+            </button>
           </div>
         </>
       )}

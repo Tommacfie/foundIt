@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import ImageLarge from "../presentational/image-lrg.component";
 import { ItemContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
-import ButtonStd from "../presentational/button-std.component";
 
 const ItemDetailsDisplay = () => {
   const history = useHistory();
@@ -26,7 +25,6 @@ const ItemDetailsDisplay = () => {
       alert(error);
     }
   };
-  // const image = URL.createObjectURL(itemData.image);
 
   return (
     <div className="item-details-display">
@@ -38,7 +36,9 @@ const ItemDetailsDisplay = () => {
       <p className="item-details-display__description">
         {itemData.description}
       </p>
-      <button className='button-std' onClick={submitItem}>Submit</button>
+      <button className="button-std" onClick={submitItem}>
+        Submit
+      </button>
     </div>
   );
 };

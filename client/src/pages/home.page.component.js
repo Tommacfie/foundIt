@@ -10,11 +10,12 @@ const HomeScreen = () => {
   const { items, setItems } = useContext(ItemsContext);
 
   useEffect(() => {
-    (async () => {
+    const fetchItems = async () => {
       const items = await Api.getItems(currentUser.accessToken);
       setItems(items);
-    })();
-  });
+    }
+    fetchItems();
+  }, []);
 
   return (
     <>

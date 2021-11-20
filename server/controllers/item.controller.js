@@ -1,6 +1,7 @@
 const Item = require("../models/item.model");
 
 exports.getItems = async (req, res) => {
+  console.log("Get!");
   try {
     const items = await Item.find();
     res.send(items);
