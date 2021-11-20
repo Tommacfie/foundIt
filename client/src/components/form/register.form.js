@@ -80,7 +80,7 @@ const RegisterForm = () => {
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <button className='button-std' onClick={handleSubmit}>
+      <button className="button-std" onClick={handleSubmit}>
         Register
       </button>
     </form>
