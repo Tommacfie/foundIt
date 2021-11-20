@@ -18,15 +18,16 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const loggedIn = await Api.login(userInput);
-      if (loggedIn) {
-        setCurrentUser(loggedIn);
-        setIsAuthorised(true);
-      }
-    } catch (error) {
-      alert('Error logging in!');
+    const { email, password } = userInput;
+    if (!email || !password) return alert("Please complete all fields");
+
+    const loggedIn = await Api.login(userInput);
+    if (loggedIn.firstName) {
+      setCurrentUser(loggedIn);
+      setIsAuthorised(true);
+      return;
     }
+    return alert(loggedIn.message);
   };
 
   //FIX ME - add validation to form fields
