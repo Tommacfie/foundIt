@@ -42,11 +42,11 @@ exports.authenticate = async (req, res, next) => {
         next();
       } else {
         res.status(401);
-        res.json({ message: "Invalid Password" });
+        res.send({ message: "Invalid Password" });
       }
     } else {
       res.status(404);
-      res.json({ message: "User doesn't exist" });
+      res.send({ message: "User doesn't exist" });
     }
   } catch (error) {
     res.send(error);

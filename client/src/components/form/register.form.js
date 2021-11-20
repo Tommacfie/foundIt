@@ -3,17 +3,14 @@ import { LoginContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 
 const RegisterForm = () => {
-  const [userInput, setuserInput] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
+  const emptyUser = { firstName: "", lastName: "", email: "", password: "" };
+
+  const [userInput, setUserInput] = useState(emptyUser);
   const { setIsAuthorised } = useContext(LoginContext);
   const { setCurrentUser } = useContext(UserContext);
 
   const handleInputChange = (event) => {
-    setuserInput((prevState) => {
+    setUserInput((prevState) => {
       return {
         ...prevState,
         [event.target.name]: event.target.value,
@@ -25,11 +22,15 @@ const RegisterForm = () => {
     event.preventDefault();
     const { firstName, lastName, email, password } = userInput;
     if (!firstName || !lastName || !email || !password)
-      return alert("Please complete all fields");
+    return alert("Please complete all fields");
 
     const registerResponse = await Api.register(userInput);
-    if (!registerResponse.firstName) return alert(registerResponse.message);
-
+    if (!registerResponse.firstName) {
+      setUserInput(emptyUser);
+      console.log('userinput', userInput);
+      alert(registerResponse.message);
+      return;
+    }
     const newUser = await Api.login(userInput);
     setCurrentUser(newUser);
     setIsAuthorised(true);

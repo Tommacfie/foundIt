@@ -3,7 +3,8 @@ import Api from "../../services/api.service";
 import { LoginContext, UserContext } from "../../helpers.js/context";
 
 const LoginForm = () => {
-  const [userInput, setUserInput] = useState({ email: "", password: "" });
+  const emptyInput = {email: "", password: ""}
+  const [userInput, setUserInput] = useState(emptyInput);
   const { setIsAuthorised } = useContext(LoginContext);
   const { setCurrentUser } = useContext(UserContext);
 
@@ -22,15 +23,16 @@ const LoginForm = () => {
     if (!email || !password) return alert("Please complete all fields");
 
     const loggedIn = await Api.login(userInput);
-    if (loggedIn.firstName) {
+    if (loggedIn.email) {
       setCurrentUser(loggedIn);
       setIsAuthorised(true);
       return;
     }
+    setUserInput(emptyInput);
+    console.log('here', event.target);
     return alert(loggedIn.message);
   };
 
-  //FIX ME - add validation to form fields
   return (
     <>
       <form className="login-form">

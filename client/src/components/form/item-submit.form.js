@@ -30,8 +30,7 @@ const ItemSubmitForm = () => {
       !userData.brand ||
       !userData.description
     ) {
-      console.log("no empty fields!");
-      return;
+      return alert("No empty fields!");
     }
 
     setItemData({ ...itemData, ...userData });
