@@ -1,14 +1,8 @@
-.navBar-container {
-  display: flex;
-  flex-direction: row;
-  height: 70px;
-  border-top: 1px solid var(--border);
-  background-color: var(--main-bg);
+.navbar {
+@include flex-row;
 }
 .button {
   width: 33.33vw;
   margin: auto;
   text-align: center;
-  filter: opacity(0.3);
-  color: var(--icons);
 }

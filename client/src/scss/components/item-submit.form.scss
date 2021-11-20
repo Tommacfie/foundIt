@@ -1,7 +1,9 @@
-.lost-found-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.item-submit-form {
+@include flex-column;
+&__input {
+  @include input;
+}
+&__input:focus {
+@include focus;
+}
 }
