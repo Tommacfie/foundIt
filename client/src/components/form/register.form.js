@@ -22,14 +22,20 @@ const RegisterForm = () => {
     event.preventDefault();
     const { firstName, lastName, email, password } = userInput;
     if (!firstName || !lastName || !email || !password)
-    return alert("Please complete all fields");
+      return alert("Please complete all fields");
 
     const registerResponse = await Api.register(userInput);
     if (!registerResponse.firstName) {
-      setUserInput(emptyUser);
-      console.log('userinput', userInput);
+      console.log("userinput", userInput);
       alert(registerResponse.message);
-      return;
+      return setUserInput((prevState) => {
+        return {
+          ...prevState,
+          email: "",
+          password:""
+        }
+      }
+        );
     }
     const newUser = await Api.login(userInput);
     setCurrentUser(newUser);
@@ -44,6 +50,7 @@ const RegisterForm = () => {
           type="text"
           name="firstName"
           placeholder={"first name"}
+          value={`${userInput.firstName}`}
           autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
@@ -54,6 +61,7 @@ const RegisterForm = () => {
           type="text"
           name="lastName"
           placeholder={"last name"}
+          value={`${userInput.lastName}`}
           autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
@@ -64,6 +72,7 @@ const RegisterForm = () => {
           type="email"
           name="email"
           placeholder={"email"}
+          value={`${userInput.email}`}
           autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />
@@ -74,6 +83,7 @@ const RegisterForm = () => {
           type="password"
           name="password"
           placeholder={"password"}
+          value={`${userInput.password}`}
           autoComplete="on"
           onChange={(event) => handleInputChange(event)}
         />

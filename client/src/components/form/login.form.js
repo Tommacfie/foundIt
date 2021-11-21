@@ -3,7 +3,7 @@ import Api from "../../services/api.service";
 import { LoginContext, UserContext } from "../../helpers.js/context";
 
 const LoginForm = () => {
-  const emptyInput = {email: "", password: ""}
+  const emptyInput = { email: "", password: "" };
   const [userInput, setUserInput] = useState(emptyInput);
   const { setIsAuthorised } = useContext(LoginContext);
   const { setCurrentUser } = useContext(UserContext);
@@ -29,7 +29,7 @@ const LoginForm = () => {
       return;
     }
     setUserInput(emptyInput);
-    console.log('here', event.target);
+    console.log("here", event.target);
     return alert(loggedIn.message);
   };
 
