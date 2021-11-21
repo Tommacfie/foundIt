@@ -29,7 +29,6 @@ const LoginForm = () => {
       return;
     }
     setUserInput(emptyInput);
-    console.log("here", event.target);
     return alert(loggedIn.message);
   };
 
@@ -41,6 +40,7 @@ const LoginForm = () => {
             className="login-form__input"
             type="text"
             name="email"
+            value={`${userInput.email}`}
             onChange={(event) => handleInputChange(event)}
             placeholder="email address"
             autoComplete="email"
@@ -51,6 +51,7 @@ const LoginForm = () => {
             className="login-form__input"
             type="password"
             name="password"
+            value={`${userInput.password}`}
             onChange={(event) => handleInputChange(event)}
             placeholder="password"
             autoComplete="current-password"
