@@ -9,8 +9,12 @@ const ImageForm = () => {
   const { itemData, setItemData } = useContext(ItemContext);
   const [image, setImage] = useState({});
   const [imageRender, setImageRender] = useState({});
+  const [imageUploaded, setImageUploaded] = useState(false);
 
   const handleSubmit = async () => {
+
+    if (!imageUploaded) return alert('Please upload an image');
+
     const formData = new FormData();
     formData.append("file", image);
     formData.append("upload_preset", "foundit");
@@ -36,6 +40,7 @@ const ImageForm = () => {
         onChange={(event) => {
           setImage(event.target.files[0]);
           setImageRender(URL.createObjectURL(event.target.files[0]));
+          setImageUploaded(true);
         }}
       />
       <button className="button-std" onClick={handleSubmit}>
