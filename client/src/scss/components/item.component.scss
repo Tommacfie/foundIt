@@ -1,7 +1,13 @@
 .item {
+  @include flex-column;
+  height: 15vh;
+  width: 30vw;
   &__image {
     height: 5vh;
     height: 5vw;
+  }
+  &__header--location {
+color: red;
   }
 }
 .lost {
