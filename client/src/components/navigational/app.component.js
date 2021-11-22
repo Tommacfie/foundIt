@@ -6,7 +6,6 @@ import ProfileView from "../../pages/profile.page";
 import CreateItem from "../../pages/create.item.page";
 import ItemDetailsDisplay from "../containers/item-details-display.component";
 import ImageForm from "../form/image.form";
-import Header from "../presentational/header.component";
 import NavBar from "./nav.component";
 import {
   LoginContext,
@@ -23,7 +22,6 @@ const AppLayout = () => {
   return (
     <>
       {!isAuthorised && <Redirect to="/auth/login" />}
-      <Header />
       <ItemsContext.Provider value={{ items, setItems }}>
         <Route path="/app/home" exact>
           <HomeScreen data={items} />

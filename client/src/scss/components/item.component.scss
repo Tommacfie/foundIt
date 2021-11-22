@@ -1,8 +1,8 @@
 .item {
   &__lost {
-    border: 1px solid red;
+    border: 1px solid $tomato;
   }
   &__found {
-    border: 1px solid blue;
+    border: 1px solid $shadow;
   }
 }

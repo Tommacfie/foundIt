@@ -13,8 +13,10 @@
 }
 @mixin input {
   margin-bottom: 10px;
-  border: none;
   padding: 20px;
+  width: 80vw;
+  height: 5vh;
+  border: none;
 }
 @mixin focus {
   box-shadow: 0 0 5px 2px $shadow;

@@ -1,5 +1,6 @@
 .app {
   height: 100vh;
+  padding: 3vh 0;
   width: 100vw;
   @include flex-column;
 }
