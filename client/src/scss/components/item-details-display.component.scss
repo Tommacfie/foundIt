@@ -1,7 +1,5 @@
 .item-details-display {
   @include flex-column;
+  margin: auto;
   width: 80vw;
-  height: 60vh;
-  padding: 4vh;
-  text-align: center;
 }

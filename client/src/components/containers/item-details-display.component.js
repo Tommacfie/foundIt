@@ -27,9 +27,9 @@ const ItemDetailsDisplay = () => {
 
   return (
     <div className="item-details-display">
-      <h2 className="item-details-display__heading">
+      <h1 className="item-details-display__heading">
         {itemData.title}, {itemData.brand}
-      </h2>
+      </h1>
       <ImageLarge image={URL.createObjectURL(itemData.image)} />
       <h3 className="item-details-display__location">{itemData.location}</h3>
       <p className="item-details-display__description">

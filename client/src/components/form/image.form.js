@@ -12,8 +12,7 @@ const ImageForm = () => {
   const [imageUploaded, setImageUploaded] = useState(false);
 
   const handleSubmit = async () => {
-
-    if (!imageUploaded) return alert('Please upload an image');
+    if (!imageUploaded) return alert("Please upload an image");
 
     const formData = new FormData();
     formData.append("file", image);
@@ -28,7 +27,7 @@ const ImageForm = () => {
     <div className="image-form">
       <h1 className="image-form__header">IMAGE SUBMISSION FORM</h1>
       {imageRender.length ? (
-        <ImageLarge image={imageRender} />
+        <ImageLarge class={"image-form__image-preview"} image={imageRender} />
       ) : (
         <h1 className="image-form__header--no-image">no image</h1>
       )}

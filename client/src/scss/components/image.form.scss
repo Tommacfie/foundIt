@@ -1,8 +1,15 @@
 .image-form {
   @include flex-column;
   margin: auto;
-}
-
-input {
-  @include flex-column;
+  width: 80vw;
+  &__header {
+    text-align: center;
+  }
+  &__input {
+    margin: 15px 0;
+  }
+  &__image-preview {
+height: 40vh;
+width: 80vw;
+  }
 }

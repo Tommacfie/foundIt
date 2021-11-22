@@ -30,7 +30,7 @@ const ItemSubmitForm = () => {
       !userData.brand ||
       !userData.description
     ) {
-      return alert("No empty fields!");
+      return alert("Please complete all fields");
     }
 
     setItemData({ ...itemData, ...userData });
@@ -43,6 +43,10 @@ const ItemSubmitForm = () => {
   //FIX ME - add validation to form fields
   return (
     <form className="item-submit-form" autoComplete="off">
+      <h1 className="item-submit-form__header">{`${
+        itemData.lostOrFound ? "Lost" : "Found"
+      } Item Form`}</h1>
+
       <div className="item-submit-form__form-group">
         <input
           className="item-submit-form__input"
@@ -66,7 +70,9 @@ const ItemSubmitForm = () => {
           className="item-submit-form__input"
           type="text"
           name="location"
-          placeholder={"where did you lose/find the item?"}
+          placeholder={`where did you ${
+            itemData.lostOrFound ? "lose" : "find"
+          } the item?`}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
