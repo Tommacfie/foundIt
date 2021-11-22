@@ -32,7 +32,7 @@ const itemsArray = [
     description: "Brand new, white watch face and some wear on the strap",
     brand: "Rolex",
     image:
-      "https://res.cloudinary.com/diuadqc2m/image/upload/v1634982535/11111watch_b0mcez.webp",
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637586060/watch_gzkkry.jpg",
     location: "Winchester pub, Oxford st",
     lostOrFound: true,
     submittedBy: "",
@@ -43,7 +43,7 @@ const itemsArray = [
       "He ran towards me in the park, I couldn't see the owner anywhere",
     brand: "Husky",
     image:
-      "https://res.cloudinary.com/diuadqc2m/image/upload/v1634903567/11111Husky_wnlt5x.jpg",
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637586096/husky_yzsyrk.jpg",
     location: "Victoria Park, Waterloo - by the playground",
     lostOrFound: false,
     submittedBy: "",
@@ -53,17 +53,18 @@ const itemsArray = [
     description: "Half-eaten, looks like it was a BMT with some pickles on it",
     brand: "Subway",
     image:
-      "https://res.cloudinary.com/diuadqc2m/image/upload/v1634982238/1111sandwich_jbigyl.jpg",
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637586111/sandwich_os9mmt.jpg",
     location: "76a bus to Bakersfield",
     lostOrFound: false,
     submittedBy: "",
   },
   {
-    title: "Wife",
-    description: "We were at the Cavern and she disappeared with a doorman",
-    brand: "Blonde",
+    title: "Engagement Ring",
+    description:
+      "It's gold with a diamond in it. We were at the Cavern and I dropped it somewhere by the stage.",
+    brand: "Cartier",
     image:
-      "https://res.cloudinary.com/diuadqc2m/image/upload/v1635145746/3_The-Cavern-Club-on-Mathew-Street-Liverpool_rwh6in.jpg",
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637586077/engagement-ring_nsnb7d.jpg",
     location: "The Cavern Club",
     lostOrFound: true,
     submittedBy: "",

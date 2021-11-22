@@ -1,8 +1,14 @@
 .item {
-  &__lost {
-    border: 1px solid $tomato;
-  }
-  &__found {
-    border: 1px solid $shadow;
-  }
+&__image {
+  height: 3vh;
+  height: 3vw;
+}
+&__text {
+}
+}
+.lost {
+  border: 1px solid $tomato;
+}
+.found {
+  border: 1px solid $shadow;
 }

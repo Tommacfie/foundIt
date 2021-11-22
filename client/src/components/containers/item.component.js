@@ -4,7 +4,7 @@ const Item = (props) => {
   const displayDetails = () => {};
   return (
     <div
-      className={`item__${props.data.lostOrFound ? "lost" : "found"}`}
+      className={`item ${props.data.lostOrFound ? "lost" : "found"}`}
       onClick={() => displayDetails()}
     >
       <div className="item__image">

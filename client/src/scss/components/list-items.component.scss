@@ -1,3 +1,4 @@
 .items-list {
   @include flex-row;
+  width: 80vw;
 }
