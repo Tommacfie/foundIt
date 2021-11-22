@@ -7,7 +7,7 @@
 @mixin flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -16,8 +16,8 @@
   padding: 20px;
   width: 80vw;
   height: 5vh;
-  border: none;
+  border: 1px solid transparent;
 }
 @mixin focus {
-  box-shadow: 0 0 5px 2px $shadow;
+  border-color: $tomato;
 }

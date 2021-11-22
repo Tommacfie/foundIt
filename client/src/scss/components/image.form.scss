@@ -1,11 +1,15 @@
 .image-form {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-input {
-  background-color: var(--silver-bg);
+  @include flex-column;
+  margin: auto;
+  width: 80vw;
+  &__header {
+    text-align: center;
+  }
+  &__input {
+    margin: 15px 0;
+  }
+  &__image-preview {
+height: 40vh;
+width: 80vw;
+  }
 }

@@ -24,7 +24,7 @@ const HomeScreen = () => {
         <Redirect to="/auth/login" />
       ) : (
         <div className="home-screen">
-          <h3 className="home-screen__header">Home</h3>
+          <h1 className="home-screen__header">Home</h1>
           <ItemsList data={items} />
         </div>
       )}

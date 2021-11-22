@@ -1,4 +1,4 @@
-import profile from "../../assets/profile.png";
+import profile from "../../assets/profile.svg";
 
 const ProfileIcon = () => {
   return (

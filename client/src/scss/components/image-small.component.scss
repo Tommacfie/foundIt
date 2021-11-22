@@ -1,9 +1,3 @@
-.image-small-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .image-small {
   &__image {
     display: block;
@@ -12,7 +6,5 @@
     height: auto;
     width: auto;
     margin: 5px;
-    border-radius: 5px;
-    // box-shadow: 0 0 5px 5px rgba(99, 99, 99, 0.103);
   }
 }

@@ -20,7 +20,7 @@ const OptionComponent = (props) => {
         <Redirect to="/auth/login" />
       ) : (
         <>
-          <h2 className="option-component__header">{props.title}</h2>
+          <h1 className="option-component__header">{props.title}</h1>
           <Link to={`${props.topButtonLink}`}>
             <button className="button-lrg" onClick={() => setLostOrFound(true)}>
               {props.topButtonText}

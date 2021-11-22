@@ -1,7 +1,8 @@
 .option-component {
-@include flex-column;
-  height: 300px;
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 0 15px 1px $shadow;
+  @include flex-column;
+  justify-content: space-between;
+  margin: auto;
+  height: 40vh;
+  width: 80vw;
+  text-align: center;
 }

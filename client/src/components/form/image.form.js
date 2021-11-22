@@ -9,8 +9,11 @@ const ImageForm = () => {
   const { itemData, setItemData } = useContext(ItemContext);
   const [image, setImage] = useState({});
   const [imageRender, setImageRender] = useState({});
+  const [imageUploaded, setImageUploaded] = useState(false);
 
   const handleSubmit = async () => {
+    if (!imageUploaded) return alert("Please upload an image");
+
     const formData = new FormData();
     formData.append("file", image);
     formData.append("upload_preset", "foundit");
@@ -22,25 +25,21 @@ const ImageForm = () => {
 
   return (
     <div className="image-form">
-      <h1 className="image-form__header">IMAGEFORM</h1>
+      <h1 className="image-form__header">IMAGE SUBMISSION FORM</h1>
       {imageRender.length ? (
-        <ImageLarge image={imageRender} />
+        <ImageLarge class={"image-form__image-preview"} image={imageRender} />
       ) : (
         <h1 className="image-form__header--no-image">no image</h1>
       )}
       <input
-        className="image-input"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
+        className="image-form__input"
         type="file"
         accept="image/*"
         capture="environment"
         onChange={(event) => {
           setImage(event.target.files[0]);
           setImageRender(URL.createObjectURL(event.target.files[0]));
+          setImageUploaded(true);
         }}
       />
       <button className="button-std" onClick={handleSubmit}>

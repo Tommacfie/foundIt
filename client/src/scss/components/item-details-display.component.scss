@@ -1,13 +1,5 @@
 .item-details-display {
+  @include flex-column;
+  margin: auto;
   width: 80vw;
-  height: 60vh;
-  padding: 4vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--tomato-detail);
-  box-shadow: 0 0 9px 5px var(--shadow);
-  text-align: center;
 }

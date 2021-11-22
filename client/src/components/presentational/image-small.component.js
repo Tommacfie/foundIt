@@ -2,7 +2,7 @@ import example from "../../assets/default-img.png";
 
 const ImageSmall = (props) => {
   return (
-    <div className="image-small">
+    <>
       {props.image === "No image provided" ? (
         <img className="image-small" src={example} alt="item thumbnail"></img>
       ) : (
@@ -12,7 +12,7 @@ const ImageSmall = (props) => {
           alt="item thumnail"
         />
       )}
-    </div>
+    </>
   );
 };
 export default ImageSmall;

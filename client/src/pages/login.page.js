@@ -13,7 +13,10 @@ const LoginScreen = () => {
         <div className="login-page">
           <Logo />
           <LoginFormComponent />
-          <Link to="/auth/register">Register</Link>
+          <p>Don't have an account?</p>
+          <Link to="/auth/register" className="login-page__register-link">
+            Register
+          </Link>
         </div>
       ) : (
         <Redirect to="/app/home" />

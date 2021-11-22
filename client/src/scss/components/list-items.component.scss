@@ -1,3 +1,5 @@
 .items-list {
   @include flex-row;
+  justify-content: space-evenly;
+  width: 80vw;
 }

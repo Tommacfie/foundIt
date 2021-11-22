@@ -14,8 +14,11 @@ const RegisterScreen = () => {
       ) : (
         <div className="register-page">
           <h1 className="register-page__header">Register</h1>
-          <RegisterFormComponent />
-          <Link to="/auth/login">Back to Login</Link>
+            <RegisterFormComponent />
+            <p>Already have an account?</p>
+          <Link to="/auth/login" className="register-page__login-link">
+            Back to Login
+          </Link>
         </div>
       )}
     </>

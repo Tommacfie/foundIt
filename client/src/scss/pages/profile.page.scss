@@ -1,16 +1,5 @@
-.profile-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.profile-page {
   height: 80vh;
-}
-
-.profile-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 7vh;
-  font-size: 40px;
-  margin-bottom: 5px;
+  @include flex-column;
+  justify-content: flex-start;
 }
