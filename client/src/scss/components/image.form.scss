@@ -1,9 +1,9 @@
 .image-form {
-@include flex-column;
-margin: auto;
+  @include flex-column;
+  margin: auto;
 }
 
 input {
-@include flex-column;
-background-color: aquamarine;
+  @include flex-column;
+  background-color: aquamarine;
 }

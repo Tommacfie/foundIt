@@ -1,10 +1,10 @@
 .item {
-&__image {
-  height: 3vh;
-  height: 3vw;
-}
-&__text {
-}
+  &__image {
+    height: 3vh;
+    height: 3vw;
+  }
+  &__text {
+  }
 }
 .lost {
   border: 1px solid $tomato;

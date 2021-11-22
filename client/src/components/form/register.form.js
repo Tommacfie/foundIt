@@ -31,10 +31,9 @@ const RegisterForm = () => {
         return {
           ...prevState,
           email: "",
-          password:""
-        }
-      }
-        );
+          password: "",
+        };
+      });
     }
     const newUser = await Api.login(userInput);
     setCurrentUser(newUser);

@@ -7,15 +7,15 @@ import ProfileIcon from "../presentational/icon-profile.component";
 const NavBar = () => {
   return (
     <div className="navbar">
-        <Link to="/app/home">
-          <HomeIcon />
-        </Link>
-        <Link to="/app/create">
-          <CreateIcon />
-        </Link>
-        <Link to="/app/profile">
-          <ProfileIcon />
-        </Link>
+      <Link to="/app/home">
+        <HomeIcon />
+      </Link>
+      <Link to="/app/create">
+        <CreateIcon />
+      </Link>
+      <Link to="/app/profile">
+        <ProfileIcon />
+      </Link>
     </div>
   );
 };

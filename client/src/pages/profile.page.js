@@ -31,9 +31,9 @@ const ProfileView = () => {
               <ItemsList className="profile-page__items-list" data={myList} />
             </div>
           )}
-            <button className="button-std" onClick={logout}>
-              Logout
-            </button>
+          <button className="button-std" onClick={logout}>
+            Logout
+          </button>
         </>
       )}
     </>

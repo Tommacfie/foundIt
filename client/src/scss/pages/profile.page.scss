@@ -1,9 +1,5 @@
 .profile-page {
   height: 80vh;
   @include flex-column;
-justify-content: center;
-&__header {
-margin-top: 0;
+  justify-content: flex-start;
 }
-}
-

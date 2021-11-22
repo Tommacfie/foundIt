@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: $silver-bg;
-  font-family: 'Roboto', sans-serif;
+  // background: linear-gradient(to bottom, $tomato, $main-bg);
+  font-family: "Roboto", sans-serif;
   color: $base-font;
 }
 *,
@@ -15,4 +16,5 @@ body {
 a {
   text-decoration: none;
   color: $base-font;
+  height: 45px;
 }
