@@ -1,11 +1,9 @@
 .image-form {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@include flex-column;
+margin: auto;
 }
 
-.image-input {
-  background-color: var(--silver-bg);
+input {
+@include flex-column;
+background-color: aquamarine;
 }

@@ -1,10 +1,5 @@
 .header-container {
+@include flex-column;
   width: 100vw;
   padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--main-bg);
 }

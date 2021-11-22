@@ -1,4 +1,4 @@
-import create from "../../assets/create.png";
+import create from "../../assets/create.svg";
 
 const CreateIcon = () => {
   return (

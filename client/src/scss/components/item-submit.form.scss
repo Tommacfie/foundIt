@@ -1,5 +1,6 @@
 .item-submit-form {
   @include flex-column;
+  margin: auto;
   &__input {
     @include input;
   }
