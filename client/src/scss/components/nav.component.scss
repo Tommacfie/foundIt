@@ -1,9 +1,4 @@
 .navbar {
+  width: 80vw;
   @include flex-row;
-}
-.button {
-  width: 33.33vw;
-  margin: auto;
-  text-align: center;
-  color: $shadow;
 }
