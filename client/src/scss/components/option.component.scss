@@ -1,11 +1,7 @@
 .option-component {
+@include flex-column;
   height: 300px;
   width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
   padding: 20px;
-  background-color: var(--tomato-option);
-  box-shadow: 0 0 15px 1px var(--shadow);
+  box-shadow: 0 0 15px 1px $shadow;
 }

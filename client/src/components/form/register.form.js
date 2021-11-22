@@ -26,7 +26,6 @@ const RegisterForm = () => {
 
     const registerResponse = await Api.register(userInput);
     if (!registerResponse.firstName) {
-      console.log("userinput", userInput);
       alert(registerResponse.message);
       return setUserInput((prevState) => {
         return {

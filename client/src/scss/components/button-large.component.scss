@@ -1,6 +1,6 @@
 .button-lrg {
   @include flex-column;
-  align-items: center;
+  justify-content: center;
   height: 10vh;
   width: 60vw;
   border: 1px solid $shadow;

@@ -1,0 +1,8 @@
+.item {
+  &__lost {
+    border: 1px solid red;
+  }
+  &__found {
+    border: 1px solid blue;
+  }
+}
