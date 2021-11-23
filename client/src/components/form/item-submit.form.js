@@ -45,7 +45,7 @@ const ItemSubmitForm = () => {
     <form className="item-submit-form" autoComplete="off">
       <h1 className="item-submit-form__header">{`Tell us more about your ${
         itemData.lostOrFound ? "lost" : "found"
-      } item`}</h1>
+      } item...`}</h1>
 
       <div className="item-submit-form__form-group">
         <input

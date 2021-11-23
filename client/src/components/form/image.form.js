@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { ItemContext } from "../../helpers.js/context";
 import ImageLarge from "../presentational/image-lrg.component";
+import Placeholder from '../../assets/add-image.png';
 
 const ImageForm = () => {
   const history = useHistory();
@@ -25,11 +26,11 @@ const ImageForm = () => {
 
   return (
     <div className="image-form">
-      <h1 className="image-form__header">Please submit an image</h1>
+      <h1 className="image-form__header">Please submit an image...</h1>
       {imageUploaded ? (
         <ImageLarge class={"image-form__image-preview"} image={imageRender} />
       ) : (
-        <p className="image-form__header--no-image">***image preview***</p>
+        <ImageLarge class={"image-form__image-preview"} image={Placeholder} />
       )}
       <input
         className="image-form__input"

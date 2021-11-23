@@ -4,6 +4,7 @@
   width: 80vw;
   &__header {
     @include header;
+    font-size: 3.5rem;
   }
   &__input {
     margin: 15px 0;
