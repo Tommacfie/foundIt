@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { ItemContext } from "../../helpers.js/context";
 import ImageLarge from "../presentational/image-lrg.component";
-import Placeholder from '../../assets/add-image.png';
+import Placeholder from "../../assets/add-img.png";
 
 const ImageForm = () => {
   const history = useHistory();
@@ -43,11 +43,11 @@ const ImageForm = () => {
           setImageUploaded(true);
         }}
       />
-      {imageUploaded &&
-        < button className="button-std-light" onClick={handleSubmit}>
-      Submit
-    </button>
-      }
+      {imageUploaded && (
+        <button className="button-std-light" onClick={handleSubmit}>
+          Submit
+        </button>
+      )}
     </div>
   );
 };

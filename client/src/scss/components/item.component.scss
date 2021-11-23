@@ -2,6 +2,7 @@
   @include flex-row;
   flex-wrap: nowrap;
   height: 12vh;
+  max-height: 12vh;
   width: 80vw;
   margin-bottom: 2vh;
   padding: 1vh;
@@ -11,8 +12,8 @@
 
   &__image {
     display: block;
-    max-height: 12vh;
-    max-width: 12vw;
+    max-height: 10vh;
+    max-width: 10vw;
     height: auto;
     width: auto;
   }
@@ -20,7 +21,7 @@
     // padding: 1em;
   }
   &__description {
-font-size: 1rem;
+    font-size: 1rem;
   }
   &__header {
     &--location {

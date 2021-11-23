@@ -85,7 +85,11 @@ const ItemSubmitForm = () => {
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <button className="button-std-dark" data={userData} onClick={handleSubmit}>
+      <button
+        className="button-std-dark"
+        data={userData}
+        onClick={handleSubmit}
+      >
         Next
       </button>
     </form>
