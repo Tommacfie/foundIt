@@ -25,6 +25,30 @@ const usersArray = [
     email: "s@s.com",
     password: "dcba",
   },
+  {
+    firstName: "Pat",
+    lastName: "Butcher",
+    email: "p@b.com",
+    password: "pb1888",
+  },
+  {
+    firstName: "Rocky",
+    lastName: "Erikkson",
+    email: "r@e.com",
+    password: "13243546",
+  },
+  {
+    firstName: "Neko",
+    lastName: "Collier",
+    email: "n@collier.com",
+    password: "dc123456",
+  },
+  {
+    firstName: "Bazyl",
+    lastName: "Brush",
+    email: "bazy@fox.com",
+    password: "foxy123",
+  },
 ];
 const itemsArray = [
   {
@@ -66,6 +90,50 @@ const itemsArray = [
     image:
       "https://res.cloudinary.com/diuadqc2m/image/upload/v1637586077/engagement-ring_nsnb7d.jpg",
     location: "The Cavern Club",
+    lostOrFound: true,
+    submittedBy: "",
+  },
+  {
+    title: "Wallet",
+    description:
+      "Hi - I found this expensive looking brown wallet at the bus stop on Aigburth rd. Unfortunately there were no cards or identifying information left inside.",
+    brand: "Leather",
+    image:
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637677356/21_pocket_wallet_faggio_3.2200x0.1615569417_scvml2.jpg",
+    location: "56a Bus stop, Aigburth rd",
+    lostOrFound: false,
+    submittedBy: "",
+  },
+  {
+    title: "Scarf",
+    description:
+      "I must have dropped it when shopping with my kids. Please return it - it was very expensive!",
+    brand: "M&S",
+    image:
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637682537/scarf_fnlkof.jpg",
+    location: "Clayton Square shopping center",
+    lostOrFound: true,
+    submittedBy: "",
+  },
+  {
+    title: "Pearl Earring",
+    description:
+      "I found a single earring (like the ones pictured) on the sink in the ladies' bathroom.",
+    brand: "Cartier",
+    image:
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637677182/bsc-001-fw-er-x.l-main_zgpf1q.png",
+    location: "Lydiate Village Fete",
+    lostOrFound: false,
+    submittedBy: "",
+  },
+  {
+    title: "Child's Toy",
+    description:
+      "Hi all, I think my child threw his toy from the pram as we were walking to the station. Please return this - he's distraught without it!",
+    brand: "Toy Story",
+    image:
+      "https://res.cloudinary.com/diuadqc2m/image/upload/v1637677258/gh-best-toys-every-age-index-1572461597_fwju6a.png",
+    location: "St Johns' rd",
     lostOrFound: true,
     submittedBy: "",
   },
