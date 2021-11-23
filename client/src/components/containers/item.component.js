@@ -1,11 +1,28 @@
+import { useContext } from "react";
 import ImageSmall from "../presentational/image-small.component";
+import { useHistory } from "react-router-dom";
+import { ItemContext } from "../../helpers.js/context";
 
 const Item = (props) => {
-  const displayDetails = () => {};
+  const history = useHistory();
+  const { itemData, setItemData } = useContext(ItemContext);
+
+  const clickLink = async () => {
+    setItemData({
+      lostOrFound: props.data.lostOrFound,
+      title: props.data.title,
+      brand: props.data.brand,
+      location: props.data.location,
+      image: props.data.image,
+      description: props.data.descreiption,
+    });
+    // history.push("/app/detail");
+  };
+
   return (
     <div
       className={`item ${props.data.lostOrFound ? "lost" : "found"}`}
-      onClick={() => displayDetails()}
+      onClick={clickLink}
     >
       <>
         <ImageSmall class={"item__image"} image={props.data.image} />
@@ -13,7 +30,6 @@ const Item = (props) => {
       <div className="item__text">
         <h2 className="item__header">{`${props.data.title}`}</h2>
         <p className="item__header--location">{`${props.data.location}`}</p>
-        {/* <p className="item__description">{props.data.description}</p> */}
       </div>
     </div>
   );

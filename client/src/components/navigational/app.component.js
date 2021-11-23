@@ -69,6 +69,9 @@ const AppLayout = () => {
               bottomButtonLink={"/app/create"}
             />
           </Route>
+          <Route path="/app/detail" exact>
+            <ItemDetailsDisplay />{" "}
+          </Route>
         </ItemContext.Provider>
       </ItemsContext.Provider>
       <Redirect from="/app" to="/app/home" exact />
