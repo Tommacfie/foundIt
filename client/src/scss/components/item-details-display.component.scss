@@ -1,8 +1,22 @@
 .item-details-display {
   @include flex-column;
   margin: auto;
+  height:80vh;
   width: 80vw;
   &__header {
     @include header;
+    font-size: 4rem;;
+  }
+  &__subheader {
+    font-size: 2rem;
+  }
+  &__description {
+    width: 70vw;
+    background-color: $glass;
+    font-size: 1.5rem;
+    padding: 2em 2em;
+  }
+  &__image {
+   @include image-large;
   }
 }

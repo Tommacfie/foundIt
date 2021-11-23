@@ -31,8 +31,8 @@ const ItemDetailsDisplay = () => {
       <h2 className="item-details-display__subheader">
         {itemData.title}, {itemData.brand}
       </h2>
-      <ImageLarge image={URL.createObjectURL(itemData.image)} />
       <p className="item-details-display__location">{itemData.location}</p>
+      <ImageLarge class="item-details-display__image" image={URL.createObjectURL(itemData.image)} />
       <p className="item-details-display__description">
         {itemData.description}
       </p>

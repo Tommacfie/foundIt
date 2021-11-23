@@ -11,7 +11,6 @@
     width: 50vw;
   }
   &__image-preview {
-    height: 40vh;
-    width: 80vw;
+@include image-large;
   }
 }

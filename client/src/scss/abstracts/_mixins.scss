@@ -53,3 +53,11 @@
   color: $base-font;
   border: 1px solid white;
 }
+@mixin image-large {
+    display: block;
+  max-height: 60vh;
+  max-width: 70vw;
+  height: auto;
+  width: auto;
+  margin: 5px;
+}
