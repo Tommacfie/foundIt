@@ -36,7 +36,7 @@ const ItemDetailsDisplay = () => {
       <p className="item-details-display__description">
         {itemData.description}
       </p>
-      <button className="button-std" onClick={submitItem}>
+      <button className="button-std-dark" onClick={submitItem}>
         Submit
       </button>
     </div>

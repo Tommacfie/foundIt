@@ -4,8 +4,8 @@
   height: 12vh;
   width: 80vw;
   margin-bottom: 2vh;
-  padding: 2vh;
-  background-color: rgba(255, 255, 255, 0.397);
+  padding: 1vh;
+  background-color: $glass;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 
@@ -16,8 +16,15 @@
     height: auto;
     width: auto;
   }
+  &__text {
+    // padding: 1em;
+  }
+  &__description {
+font-size: 1rem;
+  }
   &__header {
     &--location {
+      font-style: italic;
     }
   }
 }

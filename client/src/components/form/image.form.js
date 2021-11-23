@@ -26,10 +26,10 @@ const ImageForm = () => {
   return (
     <div className="image-form">
       <h1 className="image-form__header">Please submit an image</h1>
-      {imageRender.length ? (
+      {imageUploaded ? (
         <ImageLarge class={"image-form__image-preview"} image={imageRender} />
       ) : (
-        <p className="image-form__header--no-image">image preview</p>
+        <p className="image-form__header--no-image">***image preview***</p>
       )}
       <input
         className="image-form__input"
@@ -42,9 +42,11 @@ const ImageForm = () => {
           setImageUploaded(true);
         }}
       />
-      <button className="button-std" onClick={handleSubmit}>
-        Submit
-      </button>
+      {imageUploaded &&
+        < button className="button-std-light" onClick={handleSubmit}>
+      Submit
+    </button>
+      }
     </div>
   );
 };

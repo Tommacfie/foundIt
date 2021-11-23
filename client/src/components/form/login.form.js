@@ -57,7 +57,7 @@ const LoginForm = () => {
             autoComplete="current-password"
           />
         </div>
-        <button className="button-std" text={"Login"} onClick={handleSubmit}>
+        <button className="button-std-dark" text={"Login"} onClick={handleSubmit}>
           Login
         </button>
       </form>

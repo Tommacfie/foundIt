@@ -13,7 +13,7 @@ const Item = (props) => {
       <div className="item__text">
         <h2 className="item__header">
           {`${props.data.title} `}-
-          <span className="item__header--location">{` ${props.data.location}`}</span>
+          <p className="item__header--location">{` ${props.data.location}`}</p>
         </h2>
         <p className="item__description">{props.data.description}</p>
       </div>

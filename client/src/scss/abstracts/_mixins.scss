@@ -26,6 +26,7 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 2vh;
+  width: 80vw;
 }
 @mixin list {
   @include flex-column;
@@ -34,4 +35,21 @@
   height: 70vh;
   width: 80vw;
   overflow-y: scroll;
+}
+@mixin button-std-dark {
+  width: 80vw;
+  height: 5vh;
+  margin-bottom: 10px;
+  border: none;
+  background-color: $tomato;
+  color: $base-font;
+}
+@mixin button-std-light {
+  width: 80vw;
+  height: 5vh;
+  margin-bottom: 10px;
+  border: none;
+  background-color: $glass;
+  color: $base-font;
+  border: 1px solid white;
 }
