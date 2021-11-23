@@ -2,4 +2,7 @@
   height: 80vh;
   @include flex-column;
   justify-content: flex-start;
+  &__items-list {
+    @include list;
+  }
 }

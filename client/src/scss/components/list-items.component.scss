@@ -1,7 +1,2 @@
 .items-list {
-  @include flex-column;
-  flex-shrink: 0;
-  height: 50vh;
-  width: 80vw;
-  overflow-y: scroll;
 }

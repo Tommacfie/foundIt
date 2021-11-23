@@ -26,3 +26,11 @@
   width: 100vw;
   padding-top: 1vh;
 }
+@mixin list {
+    @include flex-column;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    height: 70vh;
+    width: 80vw;
+    overflow-y: scroll;
+}

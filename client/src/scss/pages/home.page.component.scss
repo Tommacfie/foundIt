@@ -1,5 +1,8 @@
-.home-screen {
-  width: 90vw;
+.home-page {
+  height: 80vh;
   @include flex-column;
-  overflow-y: hidden;
+  &__items-list {
+    @include list;
+    height:75vh;
+  }
 }

@@ -23,9 +23,9 @@ const HomeScreen = () => {
       {!isAuthorised ? (
         <Redirect to="/auth/login" />
       ) : (
-        <div className="home-screen">
-          <h1 className="home-screen__header">Home</h1>
-          <ItemsList data={items} />
+        <div className="home-page">
+          <h1 className="home-page__header">Home</h1>
+          <ItemsList class={"home-page__items-list"} data={items} />
         </div>
       )}
     </>
