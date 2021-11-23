@@ -32,7 +32,10 @@ const ItemDetailsDisplay = () => {
         {itemData.title}, {itemData.brand}
       </h2>
       <p className="item-details-display__location">{itemData.location}</p>
-      <ImageLarge class="item-details-display__image" image={URL.createObjectURL(itemData.image)} />
+      <ImageLarge
+        class="item-details-display__image"
+        image={URL.createObjectURL(itemData.image)}
+      />
       <p className="item-details-display__description">
         {itemData.description}
       </p>

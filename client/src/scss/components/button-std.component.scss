@@ -1,6 +1,5 @@
 .button-std-dark {
   @include button-std-dark;
-  border: 1px solid rgba(255, 255, 255, 0.555);
 }
 .button-std-light {
   @include button-std-light;

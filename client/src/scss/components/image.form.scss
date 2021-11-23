@@ -11,6 +11,6 @@
     width: 50vw;
   }
   &__image-preview {
-@include image-large;
+    @include image-large;
   }
 }
