@@ -23,14 +23,15 @@
 }
 @mixin header {
   @include flex-row;
-  width: 100vw;
-  padding-top: 1vh;
+  justify-content: center;
+  // width: 90vw;
+  margin-bottom: 2vh;
 }
 @mixin list {
-    @include flex-column;
-    flex-shrink: 0;
-    justify-content: flex-start;
-    height: 70vh;
-    width: 80vw;
-    overflow-y: scroll;
+  @include flex-column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  height: 70vh;
+  width: 80vw;
+  overflow-y: scroll;
 }

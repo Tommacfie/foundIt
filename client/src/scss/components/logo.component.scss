@@ -1,7 +1,6 @@
 .logo {
   @include flex-row;
-  font-size: 7.5vh;
-  margin: 0;
+margin-bottom: 2vh;
   &__icon {
     width: 16vw;
   }

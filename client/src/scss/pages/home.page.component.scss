@@ -3,6 +3,9 @@
   @include flex-column;
   &__items-list {
     @include list;
-    height:75vh;
+    height: 75vh;
+  }
+  &__header {
+    @include header;
   }
 }

@@ -5,4 +5,7 @@
   &__items-list {
     @include list;
   }
+  &__header {
+    @include header;
+  }
 }
