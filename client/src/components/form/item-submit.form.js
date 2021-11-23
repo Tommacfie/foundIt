@@ -43,16 +43,18 @@ const ItemSubmitForm = () => {
   //FIX ME - add validation to form fields
   return (
     <form className="item-submit-form" autoComplete="off">
-      <h1 className="item-submit-form__header">{`Tell us more about your ${
+      <h1 className="item-submit-form__header">{`Tell us more about the item you ${
         itemData.lostOrFound ? "lost" : "found"
-      } item...`}</h1>
+      }...`}</h1>
 
       <div className="item-submit-form__form-group">
         <input
           className="item-submit-form__input"
           type="text"
           name="title"
-          placeholder={"title"}
+          placeholder={`what did you ${
+            itemData.lostOrFound ? "lose" : "find"
+          }?`}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
@@ -61,7 +63,7 @@ const ItemSubmitForm = () => {
           className="item-submit-form__input"
           type="text"
           name="brand"
-          placeholder={"brand or model"}
+          placeholder={"brand, model, material etc"}
           onChange={(event) => handleInputChange(event)}
         />
       </div>
@@ -81,7 +83,7 @@ const ItemSubmitForm = () => {
           className="item-submit-form__input"
           type="text"
           name="description"
-          placeholder={"description"}
+          placeholder={"please describe the item..."}
           onChange={(event) => handleInputChange(event)}
         />
       </div>

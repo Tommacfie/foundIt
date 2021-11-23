@@ -44,8 +44,8 @@ const ImageForm = () => {
         }}
       />
       {imageUploaded && (
-        <button className="button-std-light" onClick={handleSubmit}>
-          Submit
+        <button className="button-std-dark" onClick={handleSubmit}>
+          Submit and continue...
         </button>
       )}
     </div>
