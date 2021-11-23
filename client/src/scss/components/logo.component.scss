@@ -1,4 +1,8 @@
 .logo {
+  @include flex-row;
   font-size: 7.5vh;
   margin: 0;
+  &__icon {
+    width: 16vw;
+  }
 }

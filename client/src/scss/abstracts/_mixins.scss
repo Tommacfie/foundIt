@@ -21,3 +21,8 @@
 @mixin focus {
   border-color: $tomato;
 }
+@mixin header {
+  @include flex-row;
+  width: 100vw;
+  padding-top: 1vh;
+}

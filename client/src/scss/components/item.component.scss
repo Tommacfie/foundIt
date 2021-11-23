@@ -1,18 +1,21 @@
 .item {
-  @include flex-column;
-  height: 15vh;
-  width: 30vw;
+  @include flex-row;
+  height: 10vh;
+  width: 70vw;
+  margin-bottom: 2vh;
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   &__image {
     height: 5vh;
     height: 5vw;
   }
   &__header--location {
-color: red;
+    color: red;
   }
 }
 .lost {
-  border: 1px solid $tomato;
+  // border: 1px solid $tomato;
 }
 .found {
-  border: 1px solid $shadow;
+  // border: 1px solid $shadow;
 }
