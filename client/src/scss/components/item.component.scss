@@ -1,8 +1,9 @@
 .item {
   @include flex-row;
   flex-wrap: nowrap;
-  height: 12vh;
-  max-height: 12vh;
+  align-items: flex-start;
+  flex-shrink: 0;
+  height: 10vh;
   width: 80vw;
   margin-bottom: 2vh;
   padding: 1vh;
@@ -12,13 +13,17 @@
 
   &__image {
     display: block;
-    max-height: 10vh;
-    max-width: 10vw;
+    max-height: 12vh;
+    max-width: 12vw;
     height: auto;
     width: auto;
+
   }
   &__text {
-    // padding: 1em;
+    margin: auto;
+    margin-top: 0;
+    margin-left: 3vw;
+    text-align: left;
   }
   &__description {
     font-size: 1rem;

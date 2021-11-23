@@ -43,6 +43,7 @@
   border: none;
   background-color: $tomato;
   color: $base-font;
+  border: 1px solid rgba(255, 255, 255, 0.692);
 }
 @mixin button-std-light {
   width: 80vw;
@@ -52,4 +53,12 @@
   background-color: $glass;
   color: $base-font;
   border: 1px solid white;
+}
+@mixin image-large {
+  display: block;
+  max-height: 80vh;
+  max-width: 80vw;
+  height: auto;
+  width: auto;
+  margin: 5px;
 }
