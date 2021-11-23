@@ -2,4 +2,7 @@
   @include flex-column;
   margin: auto;
   width: 80vw;
+  &__header {
+    @include header;
+  }
 }

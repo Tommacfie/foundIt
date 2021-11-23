@@ -27,15 +27,16 @@ const ItemDetailsDisplay = () => {
 
   return (
     <div className="item-details-display">
-      <h1 className="item-details-display__heading">
+      <h1 className="item-details-display__header">Item Submission</h1>
+      <h2 className="item-details-display__subheader">
         {itemData.title}, {itemData.brand}
-      </h1>
+      </h2>
       <ImageLarge image={URL.createObjectURL(itemData.image)} />
-      <h3 className="item-details-display__location">{itemData.location}</h3>
+      <p className="item-details-display__location">{itemData.location}</p>
       <p className="item-details-display__description">
         {itemData.description}
       </p>
-      <button className="button-std" onClick={submitItem}>
+      <button className="button-std-dark" onClick={submitItem}>
         Submit
       </button>
     </div>

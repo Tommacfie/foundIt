@@ -5,4 +5,8 @@
   height: 40vh;
   width: 80vw;
   text-align: center;
+  &__header {
+    @include header;
+    font-size: 3.5rem;
+  }
 }

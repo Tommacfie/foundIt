@@ -4,12 +4,12 @@ const ImageSmall = (props) => {
   return (
     <>
       {props.image === "No image provided" ? (
-        <img className="image-small" src={example} alt="item thumbnail"></img>
+        <img className={props.class} src={example} alt="item thumbnail"></img>
       ) : (
         <img
-          className="image-small__image"
+          className={props.class}
           src={`${props.image}`}
-          alt="item thumnail"
+          alt="item thumbnail"
         />
       )}
     </>

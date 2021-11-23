@@ -1,4 +1,10 @@
 .logo {
-  font-size: 7.5vh;
-  margin: 0;
+  @include flex-row;
+  margin-bottom: 2vh;
+  &__text {
+    font-family: "Comfortaa", "sans-serif";
+  }
+  &__icon {
+    width: 16vw;
+  }
 }

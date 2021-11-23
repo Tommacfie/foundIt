@@ -1,18 +1,37 @@
 .item {
-  @include flex-column;
-  height: 15vh;
-  width: 30vw;
+  @include flex-row;
+  flex-wrap: nowrap;
+  height: 12vh;
+  max-height: 12vh;
+  width: 80vw;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  background-color: $glass;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+
   &__image {
-    height: 5vh;
-    height: 5vw;
+    display: block;
+    max-height: 10vh;
+    max-width: 10vw;
+    height: auto;
+    width: auto;
   }
-  &__header--location {
-color: red;
+  &__text {
+    // padding: 1em;
+  }
+  &__description {
+    font-size: 1rem;
+  }
+  &__header {
+    &--location {
+      font-style: italic;
+    }
   }
 }
 .lost {
-  border: 1px solid $tomato;
+  // border: 1px solid $tomato;
 }
 .found {
-  border: 1px solid $shadow;
+  // border: 1px solid $shadow;
 }

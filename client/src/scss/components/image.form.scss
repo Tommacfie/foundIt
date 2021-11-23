@@ -3,13 +3,15 @@
   margin: auto;
   width: 80vw;
   &__header {
-    text-align: center;
+    @include header;
+    font-size: 3.5rem;
   }
   &__input {
     margin: 15px 0;
+    width: 50vw;
   }
   &__image-preview {
-height: 40vh;
-width: 80vw;
+    height: 40vh;
+    width: 80vw;
   }
 }

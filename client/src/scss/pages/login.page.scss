@@ -2,4 +2,12 @@
   @include flex-column;
   height: 100vh;
   justify-content: center;
+  &__register-link {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+  p {
+    margin-top: 1vh;
+  }
 }

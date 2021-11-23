@@ -28,10 +28,10 @@ const ProfileView = () => {
           ) : (
             <div className="profile-page">
               <h1 className="profile-page__header">Your Items</h1>
-              <ItemsList className="profile-page__items-list" data={myList} />
+              <ItemsList class={"profile-page__items-list"} data={myList} />
             </div>
           )}
-          <button className="button-std" onClick={logout}>
+          <button className="button-std-light" onClick={logout}>
             Logout
           </button>
         </>

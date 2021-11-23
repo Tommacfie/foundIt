@@ -1,8 +1,7 @@
-.button-std {
-  width: 80vw;
-  height: 5vh;
-  margin-bottom: 10px;
-  border: none;
-  background-color: $tomato;
-  color: $base-font;
+.button-std-dark {
+  @include button-std-dark;
+  border: 1px solid rgba(255, 255, 255, 0.692);
+}
+.button-std-light {
+  @include button-std-light;
 }

@@ -14,8 +14,8 @@ const LoginScreen = () => {
           <Logo />
           <LoginFormComponent />
           <p>Don't have an account?</p>
-          <Link to="/auth/register" className="login-page__register-link">
-            Register
+          <Link to="/auth/register">
+            <p className="login-page__register-link">Register</p>
           </Link>
         </div>
       ) : (

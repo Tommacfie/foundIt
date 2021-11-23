@@ -43,9 +43,9 @@ const ItemSubmitForm = () => {
   //FIX ME - add validation to form fields
   return (
     <form className="item-submit-form" autoComplete="off">
-      <h1 className="item-submit-form__header">{`${
-        itemData.lostOrFound ? "Lost" : "Found"
-      } Item Form`}</h1>
+      <h1 className="item-submit-form__header">{`Tell us more about your ${
+        itemData.lostOrFound ? "lost" : "found"
+      } item...`}</h1>
 
       <div className="item-submit-form__form-group">
         <input
@@ -85,7 +85,11 @@ const ItemSubmitForm = () => {
           onChange={(event) => handleInputChange(event)}
         />
       </div>
-      <button className="button-std" data={userData} onClick={handleSubmit}>
+      <button
+        className="button-std-dark"
+        data={userData}
+        onClick={handleSubmit}
+      >
         Next
       </button>
     </form>
