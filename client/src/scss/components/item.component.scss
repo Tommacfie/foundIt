@@ -1,17 +1,24 @@
 .item {
   @include flex-row;
-  height: 10vh;
-  width: 70vw;
+  flex-wrap: nowrap;
+  height: 12vh;
+  width: 80vw;
   margin-bottom: 2vh;
+  padding: 2vh;
   background-color: rgba(255, 255, 255, 0.397);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
+
   &__image {
-    height: 5vh;
-    height: 5vw;
+    display: block;
+    max-height: 12vh;
+    max-width: 12vw;
+    height: auto;
+    width: auto;
   }
-  &__header--location {
-    color: red;
+  &__header {
+    &--location {
+    }
   }
 }
 .lost {

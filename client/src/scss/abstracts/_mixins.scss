@@ -24,7 +24,7 @@
 @mixin header {
   @include flex-row;
   justify-content: center;
-  // width: 90vw;
+  text-align: center;
   margin-bottom: 2vh;
 }
 @mixin list {

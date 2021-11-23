@@ -6,4 +6,7 @@
   &__header {
     @include header;
   }
+  &__login-link {
+    font-size: 2rem;
+  }
 }

@@ -25,11 +25,11 @@ const ImageForm = () => {
 
   return (
     <div className="image-form">
-      <h1 className="image-form__header">IMAGE SUBMISSION FORM</h1>
+      <h1 className="image-form__header">Please submit an image</h1>
       {imageRender.length ? (
         <ImageLarge class={"image-form__image-preview"} image={imageRender} />
       ) : (
-        <h1 className="image-form__header--no-image">no image</h1>
+        <p className="image-form__header--no-image">image preview</p>
       )}
       <input
         className="image-form__input"

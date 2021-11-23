@@ -1,6 +1,9 @@
 .item-submit-form {
   @include flex-column;
   margin: auto;
+  &__header {
+    @include header;
+  }
   &__input {
     @include input;
   }

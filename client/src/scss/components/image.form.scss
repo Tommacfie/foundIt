@@ -3,7 +3,7 @@
   margin: auto;
   width: 80vw;
   &__header {
-    text-align: center;
+    @include header;
   }
   &__input {
     margin: 15px 0;

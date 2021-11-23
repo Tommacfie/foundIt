@@ -8,14 +8,14 @@ const Item = (props) => {
       onClick={() => displayDetails()}
     >
       <>
-        <ImageSmall image={props.data.image} />
+        <ImageSmall class={"item__image"} image={props.data.image} />
       </>
       <div className="item__text">
-        <h3 className="item__header">
-          {props.data.title} -{" "}
-          <span className="item__header--location">{props.data.location}</span>
-        </h3>
-        {/* <p className="item__description">{props.data.description}</p> */}
+        <h2 className="item__header">
+          {`${props.data.title} `}-
+          <span className="item__header--location">{` ${props.data.location}`}</span>
+        </h2>
+        <p className="item__description">{props.data.description}</p>
       </div>
     </div>
   );
