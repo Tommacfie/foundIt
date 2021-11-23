@@ -28,7 +28,7 @@ There's a few things you need to do to get started:
 
 ### Prerequsites
 
-- npm
+- install 'Node Package Manager' (npm)
 
 ```
 npm install npm@latest -g
