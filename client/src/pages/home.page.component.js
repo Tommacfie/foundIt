@@ -25,7 +25,11 @@ const HomeScreen = () => {
       ) : (
         <div className="home-page">
           <h1 className="home-page__header">Home</h1>
-            <ItemsList class={"home-page__items-list"} data={items} fetch={fetchItems}/>
+          <ItemsList
+            class={"home-page__items-list"}
+            data={items}
+            fetch={fetchItems}
+          />
         </div>
       )}
     </>

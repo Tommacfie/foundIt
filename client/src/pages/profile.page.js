@@ -1,18 +1,29 @@
 import { Redirect } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import ItemsList from "../components/containers/list-items.component";
 import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
 
+import Api from "../services/api.service";
+
 const ProfileView = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { items } = useContext(ItemsContext);
+  const { items, setItems } = useContext(ItemsContext);
 
   const logout = () => {
     setCurrentUser({});
     setIsAuthorised(false);
   };
+  const fetchItems = async () => {
+    const items = await Api.getItems(currentUser.accessToken);
+    setItems(items);
+  };
+
+  useEffect(() => {
+    fetchItems();
+  }, [items]);
+
   const myList = items.filter((item) => {
     return item.submittedBy === currentUser._id;
   });

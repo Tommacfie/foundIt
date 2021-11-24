@@ -2,14 +2,13 @@ import { useContext } from "react";
 import ImageSmall from "../presentational/image-small.component";
 import { useHistory } from "react-router-dom";
 import { ItemsContext, UserContext } from "../../helpers.js/context";
-import Api from '../../services/api.service';
+import Api from "../../services/api.service";
 
 const Item = (props) => {
   const history = useHistory();
   const { currentUser } = useContext(UserContext);
 
   const clickLink = async () => {
-
     try {
       await Api.deleteItem(props.data._id, currentUser.accessToken);
       await Api.getItems(currentUser.accessToken);
