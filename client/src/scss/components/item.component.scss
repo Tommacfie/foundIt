@@ -1,7 +1,7 @@
 .item {
   @include flex-row;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   height: 10vh;
   width: 80vw;
@@ -14,13 +14,13 @@
   &__image {
     display: block;
     max-height: 12vh;
-    max-width: 12vw;
+    max-width: 13vw;
     height: auto;
     width: auto;
   }
   &__text {
     margin: auto;
-    margin-top: 0;
+    // margin-top: 0;
     margin-left: 3vw;
     text-align: left;
   }
@@ -32,10 +32,4 @@
       font-style: italic;
     }
   }
-}
-.lost {
-  // border: 1px solid $tomato;
-}
-.found {
-  // border: 1px solid $shadow;
 }

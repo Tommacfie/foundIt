@@ -60,6 +60,9 @@ const AppLayout = () => {
           <Route path="/app/create/found/detail" exact>
             <ItemDetailsDisplay />{" "}
           </Route>
+          <Route path="/app/detail" exact>
+            <ItemDetailsDisplay />{" "}
+          </Route>
           <Route path="/app/postSubmit" exact>
             <OptionComponent
               title={"Thankyou for your submission"}
@@ -68,9 +71,6 @@ const AppLayout = () => {
               topButtonLink={"/app/home"}
               bottomButtonLink={"/app/create"}
             />
-          </Route>
-          <Route path="/app/detail" exact>
-            <ItemDetailsDisplay />{" "}
           </Route>
         </ItemContext.Provider>
       </ItemsContext.Provider>
