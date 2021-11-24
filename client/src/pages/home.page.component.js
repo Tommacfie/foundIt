@@ -16,7 +16,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     fetchItems();
-  }, [items]);
+  }, []);
 
   return (
     <>
@@ -25,19 +25,18 @@ const HomeScreen = () => {
       ) : (
         <>
           {!items.length ? (
-              <h1>No items to display</h1>
-            ) : (
-              <div className="home-page">
-                <h1 className="home-page__header">Home</h1>
-                <ItemsList
-                  class={"home-page__items-list"}
-                  data={items}
-                  fetch={fetchItems}
-                />
-              </div>
-            )
-            }
-            </>
+            <h1>No items to display</h1>
+          ) : (
+            <div className="home-page">
+              <h1 className="home-page__header">Home</h1>
+              <ItemsList
+                class={"home-page__items-list"}
+                data={items}
+                fetch={fetchItems}
+              />
+            </div>
+          )}
+        </>
       )}
     </>
   );

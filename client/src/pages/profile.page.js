@@ -15,14 +15,14 @@ const ProfileView = () => {
     setCurrentUser({});
     setIsAuthorised(false);
   };
+
+useEffect(() => {
   const fetchItems = async () => {
     const items = await Api.getItems(currentUser.accessToken);
     setItems(items);
-  };
-
-  useEffect(() => {
-    fetchItems();
-  }, [items]);
+  }
+  fetchItems();
+},[]);
 
   const myList = items.filter((item) => {
     return item.submittedBy === currentUser._id;

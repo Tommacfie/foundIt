@@ -5,13 +5,14 @@ import { ItemsContext, UserContext } from "../../helpers.js/context";
 import Api from "../../services/api.service";
 
 const Item = (props) => {
-  const history = useHistory();
   const { currentUser } = useContext(UserContext);
+  const { items, setItemsContext} = useContext(ItemsContext)
 
   const clickLink = async () => {
     try {
       await Api.deleteItem(props.data._id, currentUser.accessToken);
-      await Api.getItems(currentUser.accessToken);
+      const updatedItems = await Api.getItems(currentUser.accessToken);
+      setItemsContext(updatedItems);
     } catch (error) {
       console.log(error);
     }
