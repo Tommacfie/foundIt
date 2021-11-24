@@ -9,6 +9,7 @@
   &__input {
     margin: 15px 0;
     width: 50vw;
+    border-radius: 0;
   }
   &__image-preview {
     @include image-large;
