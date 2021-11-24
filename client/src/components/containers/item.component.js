@@ -8,15 +8,20 @@ const Item = (props) => {
   const { itemData, setItemData } = useContext(ItemContext);
 
   const clickLink = async () => {
-    setItemData({
-      lostOrFound: props.data.lostOrFound,
-      title: props.data.title,
-      brand: props.data.brand,
-      location: props.data.location,
-      image: props.data.image,
-      description: props.data.descreiption,
-    });
-    // history.push("/app/detail");
+    try {
+      //  setItemData({
+      //   lostOrFound: props.data.lostOrFound,
+      //   title: props.data.title,
+      //   brand: props.data.brand,
+      //   location: props.data.location,
+      //   image: props.data.image,
+      //   description: props.data.descreiption,
+      // });
+
+    } catch (error) {
+      console.log(error);
+    }
+    history.push("/app/detail");
   };
 
   return (

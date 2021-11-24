@@ -1,7 +1,7 @@
 .item {
   @include flex-row;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   height: 10vh;
   width: 80vw;
@@ -20,7 +20,7 @@
   }
   &__text {
     margin: auto;
-    margin-top: 0;
+    // margin-top: 0;
     margin-left: 3vw;
     text-align: left;
   }
