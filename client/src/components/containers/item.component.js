@@ -1,27 +1,21 @@
 import { useContext } from "react";
 import ImageSmall from "../presentational/image-small.component";
 import { useHistory } from "react-router-dom";
-import { ItemContext } from "../../helpers.js/context";
+import { ItemsContext, UserContext } from "../../helpers.js/context";
+import Api from '../../services/api.service';
 
 const Item = (props) => {
   const history = useHistory();
-  const { itemData, setItemData } = useContext(ItemContext);
+  const { currentUser } = useContext(UserContext);
 
   const clickLink = async () => {
-    try {
-      //  setItemData({
-      //   lostOrFound: props.data.lostOrFound,
-      //   title: props.data.title,
-      //   brand: props.data.brand,
-      //   location: props.data.location,
-      //   image: props.data.image,
-      //   description: props.data.descreiption,
-      // });
 
+    try {
+      await Api.deleteItem(props.data._id, currentUser.accessToken);
+      await Api.getItems(currentUser.accessToken);
     } catch (error) {
       console.log(error);
     }
-    history.push("/app/detail");
   };
 
   return (

@@ -60,9 +60,6 @@ const AppLayout = () => {
           <Route path="/app/create/found/detail" exact>
             <ItemDetailsDisplay />{" "}
           </Route>
-          <Route path="/app/detail" exact>
-            <ItemDetailsDisplay />{" "}
-          </Route>
           <Route path="/app/postSubmit" exact>
             <OptionComponent
               title={"Thankyou for your submission"}
