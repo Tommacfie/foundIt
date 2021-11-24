@@ -14,7 +14,7 @@
   &__image {
     display: block;
     max-height: 12vh;
-    max-width: 12vw;
+    max-width: 13vw;
     height: auto;
     width: auto;
   }
@@ -32,10 +32,4 @@
       font-style: italic;
     }
   }
-}
-.lost {
-  // border: 1px solid $tomato;
-}
-.found {
-  // border: 1px solid $shadow;
 }
