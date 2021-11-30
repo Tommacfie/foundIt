@@ -13,6 +13,7 @@ const Item = (props) => {
       await Api.deleteItem(props.data._id, currentUser.accessToken);
       const updatedItems = await Api.getItems(currentUser.accessToken);
       setItemsContext(updatedItems);
+
     } catch (error) {
       console.log(error);
     }

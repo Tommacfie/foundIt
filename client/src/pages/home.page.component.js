@@ -9,14 +9,13 @@ const HomeScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
   const { items, setItems } = useContext(ItemsContext);
 
+useEffect(() => {
   const fetchItems = async () => {
     const items = await Api.getItems(currentUser.accessToken);
     setItems(items);
-  };
-
-  useEffect(() => {
-    fetchItems();
-  }, []);
+  }
+  fetchItems();
+},[]);
 
   return (
     <>
@@ -32,11 +31,10 @@ const HomeScreen = () => {
               <ItemsList
                 class={"home-page__items-list"}
                 data={items}
-                fetch={fetchItems}
               />
             </div>
           )}
-        </>
+      </>
       )}
     </>
   );

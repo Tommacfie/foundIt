@@ -15,6 +15,9 @@ const ProfileView = () => {
     setCurrentUser({});
     setIsAuthorised(false);
   };
+  const myList = items.filter((item) => {
+    return item.submittedBy === currentUser._id;
+  });
 
 useEffect(() => {
   const fetchItems = async () => {
@@ -24,9 +27,6 @@ useEffect(() => {
   fetchItems();
 },[]);
 
-  const myList = items.filter((item) => {
-    return item.submittedBy === currentUser._id;
-  });
 
   return (
     <>
