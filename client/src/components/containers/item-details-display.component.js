@@ -21,6 +21,7 @@ const ItemDetailsDisplay = () => {
       history.push(`/app/postSubmit`);
       setItemData({});
     } catch (error) {
+      console.log(error);
       alert("Error submitting item. Please try again.");
     }
   };

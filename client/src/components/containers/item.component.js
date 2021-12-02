@@ -6,14 +6,13 @@ import Api from "../../services/api.service";
 
 const Item = (props) => {
   const { currentUser } = useContext(UserContext);
-  const { items, setItemsContext} = useContext(ItemsContext)
+  const { items, setItemsContext } = useContext(ItemsContext);
 
   const clickLink = async () => {
     try {
       await Api.deleteItem(props.data._id, currentUser.accessToken);
       const updatedItems = await Api.getItems(currentUser.accessToken);
       setItemsContext(updatedItems);
-
     } catch (error) {
       console.log(error);
     }

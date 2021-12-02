@@ -9,13 +9,13 @@ const HomeScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
   const { items, setItems } = useContext(ItemsContext);
 
-useEffect(() => {
-  const fetchItems = async () => {
-    const items = await Api.getItems(currentUser.accessToken);
-    setItems(items);
-  }
-  fetchItems();
-},[]);
+  useEffect(() => {
+    const fetchItems = async () => {
+      const items = await Api.getItems(currentUser.accessToken);
+      setItems(items);
+    };
+    fetchItems();
+  }, []);
 
   return (
     <>
@@ -28,13 +28,10 @@ useEffect(() => {
           ) : (
             <div className="home-page">
               <h1 className="home-page__header">Home</h1>
-              <ItemsList
-                class={"home-page__items-list"}
-                data={items}
-              />
+              <ItemsList class={"home-page__items-list"} data={items} />
             </div>
           )}
-      </>
+        </>
       )}
     </>
   );

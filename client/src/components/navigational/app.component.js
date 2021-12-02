@@ -1,7 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import HomeScreen from "../../pages/home.page.component";
-import Api from '../../services/api.service';
+import Api from "../../services/api.service";
 import ProfileView from "../../pages/profile.page";
 import CreateItem from "../../pages/create.item.page";
 import ItemDetailsDisplay from "../containers/item-details-display.component";
@@ -11,7 +11,7 @@ import {
   LoginContext,
   ItemContext,
   ItemsContext,
-  UserContext
+  UserContext,
 } from "../../helpers.js/context";
 import OptionComponent from "../presentational/option.component";
 
@@ -21,7 +21,7 @@ const AppLayout = () => {
   const [items, setItems] = useState([]); // items from db
   const [itemData, setItemData] = useState({}); //currently submitting items
 
-    const fetchItems = async () => {
+  const fetchItems = async () => {
     const items = await Api.getItems(currentUser.accessToken);
     setItems(items);
   };

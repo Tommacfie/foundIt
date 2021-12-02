@@ -19,14 +19,13 @@ const ProfileView = () => {
     return item.submittedBy === currentUser._id;
   });
 
-useEffect(() => {
-  const fetchItems = async () => {
-    const items = await Api.getItems(currentUser.accessToken);
-    setItems(items);
-  }
-  fetchItems();
-},[]);
-
+  useEffect(() => {
+    const fetchItems = async () => {
+      const items = await Api.getItems(currentUser.accessToken);
+      setItems(items);
+    };
+    fetchItems();
+  }, []);
 
   return (
     <>

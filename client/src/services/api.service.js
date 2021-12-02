@@ -65,10 +65,21 @@ Api.postItem = async (item, authorisation) => {
     const postedItem = await response.json();
     return postedItem;
   } catch (error) {
-    console.log(error);
+    console.log('Error in postItem:', error);
     return error;
   }
 };
+
+Api.postImage = async (image) => {
+  try {
+    const response = await Axios.post(Config.imageServer, image);
+    return response;
+  } catch (error) {
+    console.log('Error in postImage:', error);
+    return error;
+  }
+};
+export default Api;
 
 Api.deleteItem = async (id, authorisation) => {
   try {
@@ -87,14 +98,3 @@ Api.deleteItem = async (id, authorisation) => {
     return error;
   }
 };
-
-Api.postImage = async (image) => {
-  try {
-    const response = await Axios.post(Config.imageServer, image);
-    return response;
-  } catch (error) {
-    console.log(error);
-    return error;
-  }
-};
-export default Api;

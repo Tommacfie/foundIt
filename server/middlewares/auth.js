@@ -21,6 +21,7 @@ exports.authenticate = async (req, res, next) => {
           accessTokenString
           // { expiresIn: '5min' }
         );
+
         const refreshToken = jwt.sign(
           { userId: user._id },
           accessTokenStringRefresh
@@ -29,7 +30,6 @@ exports.authenticate = async (req, res, next) => {
         refreshTokens.push(refreshToken);
 
         const { firstName, lastName, email, _id } = user;
-
         res.json({
           firstName,
           lastName,
