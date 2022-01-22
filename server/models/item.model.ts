@@ -1,6 +1,6 @@
-const mongoose = require("./index");
+import Mongoose from "./index";
 
-const { Schema } = mongoose;
+const { Schema } = Mongoose;
 
 const itemModel = new Schema({
   title: {
@@ -34,6 +34,6 @@ const itemModel = new Schema({
   },
 });
 
-const Item = mongoose.model("Item", itemModel);
+const Item = Mongoose.model("Item", itemModel);
 
-module.exports = Item;
+export default Item;

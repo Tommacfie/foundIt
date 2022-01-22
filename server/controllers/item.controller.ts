@@ -1,6 +1,7 @@
-const Item = require("../models/item.model");
+import Item from "../models/item.model";
+import { Request, Response } from "express";
 
-exports.getItems = async (req, res) => {
+export const getItems = async (_req: Request, res: Response) => {
   try {
     const items = await Item.find();
     res.send(items);
@@ -11,7 +12,7 @@ exports.getItems = async (req, res) => {
   }
 };
 
-exports.postItem = async (req, res) => {
+export const postItem = async (req: Request, res: Response) => {
   try {
     const item = await Item.create(req.body);
     res.send(item);
@@ -22,7 +23,7 @@ exports.postItem = async (req, res) => {
   }
 };
 
-exports.deleteItem = async (req, res) => {
+export const deleteItem = async (req: Request, res: Response) => {
   try {
     const itemId = req.body._id;
     const item = await Item.findByIdAndDelete({ _id: itemId });

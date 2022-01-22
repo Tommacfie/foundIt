@@ -1,4 +1,7 @@
+/* eslint-disable no-await-in-loop */
 const fetch = require("node-fetch");
+
+import fetch from "node-fetch";
 
 const usersArray = [
   {
@@ -141,6 +144,7 @@ const itemsArray = [
 
 const populateDb = async () => {
   try {
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < usersArray.length; i++) {
       const response = await fetch("http://localhost:3001/register", {
         method: "POST",
@@ -153,7 +157,6 @@ const populateDb = async () => {
       const { _id } = userObj;
 
       itemsArray[i].submittedBy = _id;
-
       await fetch("http://localhost:3001/test/items", {
         method: "POST",
         headers: {
@@ -161,6 +164,7 @@ const populateDb = async () => {
         },
         body: JSON.stringify(itemsArray[i]),
       });
+      console.log("Added data field");
     }
   } catch (error) {
     console.log("error populating database", error);

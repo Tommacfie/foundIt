@@ -1,7 +1,8 @@
-const bcrypt = require("bcrypt");
-const User = require("../models/user.model");
+import bcrypt from "bcrypt";
+import User from "../models/user.model";
+import { Request, Response } from "express";
 
-exports.createUser = async (req, res) => {
+export const createUser = async (req: Request, res: Response) => {
   try {
     const email = req.body.email;
     const password = req.body.password;
@@ -25,7 +26,7 @@ exports.createUser = async (req, res) => {
 
 // This function is used for testing only
 // It bypasses the JWT authentication and allows you to view all users in the database
-exports.getUser = async (req, res) => {
+export const getUser = async (_req: Request, res: Response) => {
   try {
     const users = await User.find();
     res.send(users);

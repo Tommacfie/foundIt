@@ -1,11 +1,16 @@
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
-const User = require("../models/user.model");
-const { accessTokenString, accessTokenStringRefresh } = require("../config");
+import bcrypt from "bcrypt";
+import User from "../models/user.model";
+import { Request, Response, NextFunction } from "express";
+import Jwt from "jsonwebtoken";
+import { accessTokenString, accessTokenStringRefresh } from "../config";
 
-let refreshTokens = [];
+let refreshTokens: string[] = [];
 
-exports.authenticate = async (req, res, next) => {
+export const authenticate = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     const user = await User.findOne({ email: req.body.email });
 
@@ -16,13 +21,13 @@ exports.authenticate = async (req, res, next) => {
       );
 
       if (validatePassword) {
-        const accessToken = jwt.sign(
+        const accessToken = Jwt.sign(
           { userId: user._id },
           accessTokenString
           // { expiresIn: '5min' }
         );
 
-        const refreshToken = jwt.sign(
+        const refreshToken = Jwt.sign(
           { userId: user._id },
           accessTokenStringRefresh
         );
@@ -54,13 +59,25 @@ exports.authenticate = async (req, res, next) => {
   }
 };
 
-exports.authorise = async (req, res, next) => {
-  try {
-    const authHeader = req.headers.authorization;
-    if (authHeader) {
-      const token = authHeader.split(" ")[1];
+interface ExtendedRequest extends Request {
+  user: Jwt.JwtPayload;
+}
 
-      jwt.verify(token, accessTokenString, (error, user) => {
+export const authorise = async (
+  req: ExtendedRequest,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const authHeader: string = req?.headers?.authorization || "";
+
+    if (authHeader !== "") {
+      const token: string | undefined = authHeader.split(" ")[1];
+
+      if (token === undefined)
+        return res.status(401).send("Unauthorised access");
+
+      Jwt.verify(token, accessTokenString, (error: any, user: any) => {
         if (error) return res.status(403).send("Invalid token");
         req.user = user;
         next();
@@ -74,7 +91,7 @@ exports.authorise = async (req, res, next) => {
   }
 };
 
-exports.logout = async (req, res) => {
+export const logout = async (req: Request, res: Response) => {
   const { token } = req.body;
   refreshTokens = refreshTokens.filter((t) => t !== token);
   res.send("Logged out");
