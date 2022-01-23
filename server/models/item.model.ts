@@ -1,8 +1,9 @@
 import Mongoose from "./index";
+import { IItem } from "../utils/types";
 
-const { Schema } = Mongoose;
+const { Schema, model } = Mongoose;
 
-const itemModel = new Schema({
+const itemModel = new Schema<IItem>({
   title: {
     type: String,
     required: true,
@@ -34,6 +35,6 @@ const itemModel = new Schema({
   },
 });
 
-const Item = Mongoose.model("Item", itemModel);
+const Item = model<IItem>("Item", itemModel);
 
 export default Item;

@@ -1,11 +1,7 @@
-import { Schema, model } from "mongoose";
+import Mongoose from "./index";
+import { IUser } from "../utils/types/index";
 
-interface IUser {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
+const { Schema, model } = Mongoose;
 
 const userModel = new Schema<IUser>({
   firstName: {

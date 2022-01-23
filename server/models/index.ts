@@ -1,7 +1,11 @@
 import Mongoose from "mongoose";
+
+const mongoose = Mongoose;
+
 import { dataBase } from "../config";
 
-Mongoose.connect(dataBase, () => {
+mongoose.connect(dataBase, () => {
   console.log("Connected to mongoose server");
 });
-export default Mongoose;
+
+export default mongoose;

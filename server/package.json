@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.ts",
     "build": "tsc -p tsconfig.json",
-    "populate": "node utils/populate.db.js",
+    "populate": "node utils/populate.db.ts",
     "drop": "node utils/drop.db.ts",
     "format": "prettier \"./**/*.{js,jsx,ts,tsx,html,css}\" --write ",
     "lint": "eslint \"./**/*.{js,jsx,ts,tsx,html,css}\" --quiet"
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/jwt-simple": "^0.5.33",

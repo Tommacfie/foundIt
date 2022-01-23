@@ -1,9 +1,11 @@
 /* eslint-disable no-await-in-loop */
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
+// const Mongoose = require("..models/index");
+// import fetch from "node-fetch";
 
-import fetch from "node-fetch";
+import { IUser, IItem } from "./types";
 
-const usersArray = [
+const usersArray: IUser[] = [
   {
     firstName: "Tim",
     lastName: "MacDonald",
@@ -53,7 +55,8 @@ const usersArray = [
     password: "foxy123",
   },
 ];
-const itemsArray = [
+
+const itemsArray: IItem[] = [
   {
     title: "Gold Watch",
     description: "Brand new, white watch face and some wear on the strap",
@@ -156,7 +159,9 @@ const populateDb = async () => {
       const userObj = await response.json();
       const { _id } = userObj;
 
-      itemsArray[i].submittedBy = _id;
+      if (itemsArray.length) {
+        itemsArray[0].submittedBy = _id;
+      }
       await fetch("http://localhost:3001/test/items", {
         method: "POST",
         headers: {
