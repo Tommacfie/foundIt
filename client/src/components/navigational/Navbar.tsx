@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import CreateIcon from "../presentational/NavButtonCreate";
 import HomeIcon from "../presentational/NavButtonHome";

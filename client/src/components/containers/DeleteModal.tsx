@@ -1,4 +1,4 @@
-import ButtonStd from "../presentational/button-std.component";
+import ButtonStd from "../presentational/ButtonStandard";
 
 const ModalDelete = () => {
   return (

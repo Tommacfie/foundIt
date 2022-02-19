@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import ItemsList from "../components/containers/list-items.component";
-import { LoginContext, UserContext, ItemsContext } from "../helpers/context";
-import Api from "../services/ApiService";
+import ItemsList from "../components/containers/ItemList";
+import { LoginContext, UserContext, ItemsContext } from "../helpers/Context";
+import * as Api from "../services/ApiService";
 
 const HomeScreen = () => {
   const { currentUser } = useContext(UserContext);

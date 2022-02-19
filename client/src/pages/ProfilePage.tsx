@@ -1,10 +1,10 @@
 import { Redirect } from "react-router-dom";
 import { useContext, useEffect } from "react";
 
-import ItemsList from "../components/containers/list-items.component";
-import { LoginContext, UserContext, ItemsContext } from "../helpers/context";
+import ItemsList from "../components/containers/ItemList";
+import { LoginContext, UserContext, ItemsContext } from "../helpers/Context";
 
-import Api from "../services/ApiService";
+import {getItems} from "../services/ApiService";
 
 const ProfileView = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);
@@ -21,7 +21,7 @@ const ProfileView = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const items = await Api.getItems(currentUser.accessToken);
+      const items = await getItems(currentUser.accessToken);
       setItems(items);
     };
     fetchItems();

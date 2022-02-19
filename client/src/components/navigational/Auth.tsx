@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
-import RegisterScreen from "../../pages/register.page";
-import LoginScreen from "../../pages/login.page";
+import RegisterScreen from "../../pages/RegisterPage";
+import LoginScreen from "../../pages/LoginPage";
 
 const AuthComponent = () => {
   return (

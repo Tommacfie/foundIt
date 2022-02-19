@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import ImageSmall from "../presentational/image-small.component";
-import { useHistory } from "react-router-dom";
-import { ItemsContext, UserContext } from "../../helpers/context";
+import ImageSmall from "../presentational/ImageSmall";
+import { ItemsContext, UserContext } from "../../helpers/Context";
 import * as Api from "../../services/ApiService";
 
 const Item = (props) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import LogoIcon from "../../assets/magnifying-glass.svg";
 
 const Logo = () => {

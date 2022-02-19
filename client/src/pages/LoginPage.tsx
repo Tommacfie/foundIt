@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
-import Logo from "../components/presentational/logo.component";
-import LoginFormComponent from "../components/form/login.form";
-import { LoginContext } from "../helpers/context";
+import Logo from "../components/presentational/Logo";
+import LoginFormComponent from "../components/form/LoginForm";
+import { LoginContext } from "../helpers/Context";
 
 const LoginScreen = () => {
   const { isAuthorised } = useContext(LoginContext);

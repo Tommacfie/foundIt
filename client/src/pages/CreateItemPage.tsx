@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { Redirect } from "react-router-dom";
-import ItemSubmitForm from "../components/form/item-submit.form";
-import { LoginContext } from "../helpers/context";
+import ItemSubmitForm from "../components/form/ItemSubmitForm";
+import { LoginContext } from "../helpers/Context";
 
 const CreateItem = () => {
   const { isAuthorised } = useContext(LoginContext);

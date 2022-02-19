@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { ItemContext } from "../../helpers/context";
-import ImageLarge from "../presentational/image-lrg.component";
+import { ItemContext } from "../../helpers/Context";
+import ImageLarge from "../presentational/ImageLarge";
 import Placeholder from "../../assets/add-img.png";
 
 const ImageForm = () => {

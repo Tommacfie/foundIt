@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
-import * as Api from "../../services/ApiService";
-import { LoginContext, UserContext } from "../../helpers/context";
+import { useState, useContext } from "react";
+import  {login} from "../../services/ApiService";
+import { LoginContext, UserContext } from "../../helpers/Context";
 
 const LoginForm = () => {
   const emptyInput = { email: "", password: "" };
@@ -22,7 +22,7 @@ const LoginForm = () => {
     const { email, password } = userInput;
     if (!email || !password) return alert("Please complete all fields");
 
-    const loggedIn = await Api.login(userInput);
+    const loggedIn = await login(userInput);
     if (loggedIn.email) {
       setCurrentUser(loggedIn);
       setIsAuthorised(true);

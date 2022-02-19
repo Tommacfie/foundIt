@@ -1,19 +1,19 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
-import HomeScreen from "../../pages/homepage";
-import * as Api from "../../services/apiservice";
-import ProfileView from "../../pages/profilepage";
-import CreateItem from "../../pages/createitempage";
-import ItemDetailsDisplay from "../containers/itemdetailsdisplay";
-import ImageForm from "../form/imageform";
+import HomeScreen from "../../pages/HomePage";
+import * as Api from "../../services/ApiService";
+import ProfileView from "../../pages/ProfilePage";
+import CreateItem from "../../pages/CreateItemPage";
+import ItemDetailsDisplay from "../containers/ItemDetailsDisplay";
+import ImageForm from "../form/ImageForm";
 import NavBar from "./Navbar";
 import {
   LoginContext,
   ItemContext,
   ItemsContext,
   UserContext,
-} from "../../helpers/context";
-import OptionComponent from "../presentational/option.component";
+} from "../../helpers/Context";
+import OptionComponent from "../presentational/Option";
 
 const AppLayout = () => {
   const { isAuthorised } = useContext(LoginContext);

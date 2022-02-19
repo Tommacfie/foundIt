@@ -1,8 +1,8 @@
 import Axios from "axios";
 import Config from "../config";
-import { Item, User } from "../interfaces/Types";
+import { Item, UserLogin, UserRegistration } from "../interfaces/Types";
 
-export const login = async (userData:User) => {
+export const login = async (userData:UserLogin) => {
   try {
     const response = await fetch(`${Config.server}/login`, {
       method: "POST",
@@ -19,7 +19,7 @@ export const login = async (userData:User) => {
   }
 };
 
-export const register = async (userData:User) => {
+export const register = async (userData:UserRegistration) => {
   try {
     const response = await fetch(`${Config.server}/register`, {
       method: "POST",

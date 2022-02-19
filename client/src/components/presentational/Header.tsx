@@ -1,5 +1,4 @@
-import React from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 
 const Header = () => {
   return (

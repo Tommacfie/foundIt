@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
-import { LoginContext, UserContext } from "../../helpers/context";
-import Api from "../../services/ApiService";
+import { useState, useContext } from "react";
+import { LoginContext, UserContext } from "../../helpers/Context";
+import * as Api from "../../services/ApiService";
 
 const RegisterForm = () => {
   const emptyUser = { firstName: "", lastName: "", email: "", password: "" };

@@ -1,8 +1,8 @@
 import { Redirect, Link } from "react-router-dom";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
-import RegisterFormComponent from "../components/form/register.form";
-import { LoginContext } from "../helpers/context";
+import RegisterFormComponent from "../components/form/RegisterForm";
+import { LoginContext } from "../helpers/Context";
 
 const RegisterScreen = () => {
   const { isAuthorised } = useContext(LoginContext);
