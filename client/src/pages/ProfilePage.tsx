@@ -2,9 +2,9 @@ import { Redirect } from "react-router-dom";
 import { useContext, useEffect } from "react";
 
 import ItemsList from "../components/containers/list-items.component";
-import { LoginContext, UserContext, ItemsContext } from "../helpers.js/context";
+import { LoginContext, UserContext, ItemsContext } from "../helpers/context";
 
-import Api from "../services/api.service";
+import Api from "../services/ApiService";
 
 const ProfileView = () => {
   const { isAuthorised, setIsAuthorised } = useContext(LoginContext);

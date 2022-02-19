@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { LoginContext } from "../../helpers.js/context";
-import { ItemContext } from "../../helpers.js/context";
+import { LoginContext } from "../../helpers/context";
+import { ItemContext } from "../../helpers/context";
 import { Redirect, Link } from "react-router-dom";
 
 const OptionComponent = (props) => {

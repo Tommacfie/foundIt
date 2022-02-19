@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { ItemContext } from "../../helpers.js/context";
+import { ItemContext } from "../../helpers/context";
 
 const ItemSubmitForm = () => {
   const [userData, setUserData] = useState({

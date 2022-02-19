@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 
 dotenv.config();
-const Config = {};
+let Config: { server: string, imageServer: string };
 
 Config.server = process.env.REACT_APP_DATABASESERVER;
 Config.imageServer = process.env.REACT_APP_IMAGESERVER;

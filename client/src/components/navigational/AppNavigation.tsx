@@ -1,18 +1,18 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
-import HomeScreen from "../../pages/home.page.component";
-import Api from "../../services/api.service";
-import ProfileView from "../../pages/profile.page";
-import CreateItem from "../../pages/create.item.page";
-import ItemDetailsDisplay from "../containers/item-details-display.component";
-import ImageForm from "../form/image.form";
-import NavBar from "./nav.component";
+import HomeScreen from "../../pages/homepage";
+import * as Api from "../../services/apiservice";
+import ProfileView from "../../pages/profilepage";
+import CreateItem from "../../pages/createitempage";
+import ItemDetailsDisplay from "../containers/itemdetailsdisplay";
+import ImageForm from "../form/imageform";
+import NavBar from "./Navbar";
 import {
   LoginContext,
   ItemContext,
   ItemsContext,
   UserContext,
-} from "../../helpers.js/context";
+} from "../../helpers/context";
 import OptionComponent from "../presentational/option.component";
 
 const AppLayout = () => {

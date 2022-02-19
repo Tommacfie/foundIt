@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import Api from "../../services/api.service";
-import { LoginContext, UserContext } from "../../helpers.js/context";
+import * as Api from "../../services/ApiService";
+import { LoginContext, UserContext } from "../../helpers/context";
 
 const LoginForm = () => {
   const emptyInput = { email: "", password: "" };

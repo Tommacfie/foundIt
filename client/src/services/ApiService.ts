@@ -1,9 +1,7 @@
 import Axios from "axios";
 import Config from "../config";
 
-const Api = {};
-
-Api.login = async (userData) => {
+export const login = async (userData) => {
   try {
     const response = await fetch(`${Config.server}/login`, {
       method: "POST",
@@ -20,7 +18,7 @@ Api.login = async (userData) => {
   }
 };
 
-Api.register = async (userData) => {
+export const register = async (userData) => {
   try {
     const response = await fetch(`${Config.server}/register`, {
       method: "POST",
@@ -37,7 +35,7 @@ Api.register = async (userData) => {
   }
 };
 
-Api.getItems = async (authorisation) => {
+export const getItems = async (authorisation) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       headers: {
@@ -52,7 +50,7 @@ Api.getItems = async (authorisation) => {
   }
 };
 
-Api.postItem = async (item, authorisation) => {
+export const postItem = async (item, authorisation) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       method: "POST",
@@ -70,7 +68,7 @@ Api.postItem = async (item, authorisation) => {
   }
 };
 
-Api.postImage = async (image) => {
+export const postImage = async (image) => {
   try {
     const response = await Axios.post(Config.imageServer, image);
     return response;
@@ -79,9 +77,8 @@ Api.postImage = async (image) => {
     return error;
   }
 };
-export default Api;
 
-Api.deleteItem = async (id, authorisation) => {
+export const deleteItem = async (id, authorisation) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       method: "DELETE",

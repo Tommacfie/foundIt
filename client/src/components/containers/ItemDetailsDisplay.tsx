@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import ImageLarge from "../presentational/image-lrg.component";
-import { ItemContext, UserContext } from "../../helpers.js/context";
-import Api from "../../services/api.service";
+import { ItemContext, UserContext } from "../../helpers/context";
+import * as Api from "../../services/apiservice";
 
 const ItemDetailsDisplay = () => {
   const history = useHistory();
