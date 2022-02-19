@@ -1,9 +1,16 @@
 import { useContext } from "react";
-import { LoginContext } from "../../helpers/context";
-import { ItemContext } from "../../helpers/context";
+import { LoginContext } from "../../helpers/Context";
+import { ItemContext } from "../../helpers/Context";
 import { Redirect, Link } from "react-router-dom";
 
-const OptionComponent = (props) => {
+const OptionComponent = (props: {
+  title: string;
+  topButtonText: string;
+  topButtonLink: string;
+  bottomButtonText: string;
+  bottomButtonLink: string;
+  setItemData: () => void
+}) => {
   const { isAuthorised } = useContext(LoginContext);
   const { setItemData } = useContext(ItemContext);
 

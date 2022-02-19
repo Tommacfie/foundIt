@@ -1,7 +1,8 @@
 import Axios from "axios";
 import Config from "../config";
+import { Item, User } from "../interfaces/Types";
 
-export const login = async (userData) => {
+export const login = async (userData:User) => {
   try {
     const response = await fetch(`${Config.server}/login`, {
       method: "POST",
@@ -18,7 +19,7 @@ export const login = async (userData) => {
   }
 };
 
-export const register = async (userData) => {
+export const register = async (userData:User) => {
   try {
     const response = await fetch(`${Config.server}/register`, {
       method: "POST",
@@ -35,7 +36,7 @@ export const register = async (userData) => {
   }
 };
 
-export const getItems = async (authorisation) => {
+export const getItems = async (authorisation:string) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       headers: {
@@ -50,7 +51,7 @@ export const getItems = async (authorisation) => {
   }
 };
 
-export const postItem = async (item, authorisation) => {
+export const postItem = async (item:Item, authorisation:string) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       method: "POST",
@@ -68,7 +69,7 @@ export const postItem = async (item, authorisation) => {
   }
 };
 
-export const postImage = async (image) => {
+export const postImage = async (image: string) => {
   try {
     const response = await Axios.post(Config.imageServer, image);
     return response;
@@ -78,7 +79,7 @@ export const postImage = async (image) => {
   }
 };
 
-export const deleteItem = async (id, authorisation) => {
+export const deleteItem = async (id:string, authorisation:string) => {
   try {
     const response = await fetch(`${Config.server}/items`, {
       method: "DELETE",

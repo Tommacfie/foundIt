@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CreateIcon from "../presentational/IconCreate";
-import HomeIcon from "../presentational/icon-home.component";
-import ProfileIcon from "../presentational/icon-profile.component";
+import CreateIcon from "../presentational/NavButtonCreate";
+import HomeIcon from "../presentational/NavButtonHome";
+import ProfileIcon from "../presentational/NavButtonProfile";
 
 const NavBar = () => {
   return (

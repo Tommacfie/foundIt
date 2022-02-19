@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, ChangeEventHandler, ChangeEvent } from "react";
 import { useHistory } from "react-router-dom";
 import { ItemContext } from "../../helpers/context";
 
@@ -22,7 +22,7 @@ const ItemSubmitForm = () => {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:SubmitEvent) => {
     event.preventDefault();
     if (
       !userData.title ||
