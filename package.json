@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd server && npm run start\" \"cd client && npm run start\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Tommacfie/FoundIt/issues"
   },
-  "homepage": "https://github.com/Tommacfie/FoundIt#readme"
+  "homepage": "https://github.com/Tommacfie/FoundIt#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
 }

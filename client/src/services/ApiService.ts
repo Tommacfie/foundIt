@@ -1,10 +1,10 @@
 import Axios from "axios";
-import Config from "../config";
+import { server, imageServer } from "../config";
 import { Item, UserLogin, UserRegistration } from "../interfaces/Types";
 
 export const login = async (userData:UserLogin) => {
   try {
-    const response = await fetch(`${Config.server}/login`, {
+    const response = await fetch(`${server}/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -21,7 +21,7 @@ export const login = async (userData:UserLogin) => {
 
 export const register = async (userData:UserRegistration) => {
   try {
-    const response = await fetch(`${Config.server}/register`, {
+    const response = await fetch(`${server}/register`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -38,7 +38,7 @@ export const register = async (userData:UserRegistration) => {
 
 export const getItems = async (authorisation:string) => {
   try {
-    const response = await fetch(`${Config.server}/items`, {
+    const response = await fetch(`${server}/items`, {
       headers: {
         authorization: `Bearer ${authorisation}`,
       },
@@ -53,7 +53,7 @@ export const getItems = async (authorisation:string) => {
 
 export const postItem = async (item:Item, authorisation:string) => {
   try {
-    const response = await fetch(`${Config.server}/items`, {
+    const response = await fetch(`${server}/items`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -71,7 +71,7 @@ export const postItem = async (item:Item, authorisation:string) => {
 
 export const postImage = async (image: string) => {
   try {
-    const response = await Axios.post(Config.imageServer, image);
+    const response = await Axios.post(imageServer, image);
     return response;
   } catch (error) {
     console.log('Error in postImage:', error);
@@ -81,7 +81,7 @@ export const postImage = async (image: string) => {
 
 export const deleteItem = async (id:string, authorisation:string) => {
   try {
-    const response = await fetch(`${Config.server}/items`, {
+    const response = await fetch(`${server}/items`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

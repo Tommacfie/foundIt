@@ -1,7 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import HomeScreen from "../../pages/HomePage";
-import * as Api from "../../services/ApiService";
+import {getItems} from "../../services/ApiService";
 import ProfileView from "../../pages/ProfilePage";
 import CreateItem from "../../pages/CreateItemPage";
 import ItemDetailsDisplay from "../containers/ItemDetailsDisplay";
@@ -22,7 +22,7 @@ const AppLayout = () => {
   const [itemData, setItemData] = useState({}); //currently submitting items
 
   const fetchItems = async () => {
-    const items = await Api.getItems(currentUser.accessToken);
+    const items = await getItems(currentUser.accessToken);
     setItems(items);
   };
 
