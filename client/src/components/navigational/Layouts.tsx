@@ -10,7 +10,7 @@ const Layouts = () => {
   const [currentUser, setCurrentUser] = useState({}); //User login information
 
   return (
-    <LoginContext.Provider value={{ isAuthorised, setIsAuthorised }}>
+    <LoginContext.Provider value={{ isAuthorised}}>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <Switch>
           <Route path="/auth">

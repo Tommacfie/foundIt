@@ -11,5 +11,5 @@ export interface IItem {
   image: string;
   location: string;
   lostOrFound: boolean;
-  submittedBy: string | undefined;
+  submittedBy: string;
 }

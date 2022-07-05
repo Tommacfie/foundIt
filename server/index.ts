@@ -4,8 +4,7 @@ import router from "./router";
 import { PORT } from "./config";
 
 const app = Express();
-
-app.use(cors());
+app.use(cors);
 app.use(Express.json());
 app.use(router);
 

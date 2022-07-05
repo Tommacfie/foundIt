@@ -1,7 +1,7 @@
 /* eslint-disable no-await-in-loop */
 // const fetch = require("node-fetch");
 // const Mongoose = require("..models/index");
-// import fetch from "node-fetch";
+import fetch from "node-fetch";
 
 import { IUser, IItem } from "./types";
 
@@ -160,8 +160,9 @@ const populateDb = async () => {
       const { _id } = userObj;
 
       if (itemsArray.length) {
-        itemsArray[0].submittedBy = _id;
+        itemsArray[i].submittedBy = _id;
       }
+      ``;
       await fetch("http://localhost:3001/test/items", {
         method: "POST",
         headers: {
